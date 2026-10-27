@@ -1,0 +1,53 @@
+{
+  "accepted_from_index": {
+    "10-K": "2026-03-13 16:06:24",
+    "10-Q": "2026-08-28 16:11:28",
+    "earnings_8-K": "2026-08-20 06:59:01"
+  },
+  "arguments": {
+    "peers": [
+      "COST",
+      "TGT",
+      "BJ"
+    ],
+    "price": null,
+    "step": null,
+    "ticker": "WMT"
+  },
+  "company": {
+    "cik": "0000104169",
+    "name": "Walmart Inc.",
+    "ticker": "WMT"
+  },
+  "filings": {
+    "10-K": {
+      "accepted": "2026-03-13T20:06:24.000Z",
+      "accession": "0000104169-26-000055",
+      "filing_date": "2026-03-13",
+      "form": "10-K",
+      "items": "",
+      "primary_document": "wmt-20260131.htm",
+      "report_date": "2026-01-31"
+    },
+    "10-Q": {
+      "accepted": "2026-08-28T20:11:28.000Z",
+      "accession": "0000104169-26-000154",
+      "filing_date": "2026-08-28",
+      "form": "10-Q",
+      "items": "",
+      "primary_document": "wmt-20260731.htm",
+      "report_date": "2026-07-31"
+    },
+    "earnings_8-K": {
+      "accepted": "2026-08-20T10:59:01.000Z",
+      "accession": "0000104169-26-000145",
+      "filing_date": "2026-08-20",
+      "form": "8-K",
+      "items": "2.02,9.01",
+      "primary_document": "wmt-20260820.htm",
+      "report_date": "2026-08-20"
+    }
+  },
+  "release_url": "https://www.sec.gov/Archives/edgar/data/104169/000010416926000145/earningsreleasefy27q2.htm",
+  "run_time": "2026-10-27T09:24:43.008760-04:00"
+}

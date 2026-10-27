@@ -1,0 +1,161 @@
+{
+  "BJ": {
+    "company": {
+      "cik": "0001531152",
+      "name": "BJ's Wholesale Club Holdings, Inc.",
+      "ticker": "BJ"
+    },
+    "facts": {
+      "operating_income": {
+        "accession": "0001531152-26-000007",
+        "end": "2026-01-31",
+        "filed": "2026-03-12",
+        "fiscal_period": "FY",
+        "fiscal_year": 2025,
+        "form": "10-K",
+        "prior_end": "2025-02-01",
+        "prior_start": "2024-02-04",
+        "prior_value": 772206000,
+        "start": "2025-02-02",
+        "tag": "OperatingIncomeLoss",
+        "unit": "USD",
+        "value": 816604000
+      },
+      "total_revenue": {
+        "accession": "0001531152-26-000007",
+        "end": "2026-01-31",
+        "filed": "2026-03-12",
+        "fiscal_period": "FY",
+        "fiscal_year": 2025,
+        "form": "10-K",
+        "prior_end": "2025-02-01",
+        "prior_start": "2024-02-04",
+        "prior_value": 20501804000,
+        "start": "2025-02-02",
+        "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "unit": "USD",
+        "value": 21457274000
+      }
+    },
+    "filing": {
+      "accepted": "2026-03-12T20:15:55.000Z",
+      "accession": "0001531152-26-000007",
+      "filing_date": "2026-03-12",
+      "form": "10-K",
+      "items": "",
+      "primary_document": "bj-20260131.htm",
+      "report_date": "2026-01-31"
+    },
+    "operating_margin": {
+      "arithmetic": "8.16604e+08 / 2.14573e+10",
+      "definition": "operating income / total revenue",
+      "value": 0.03805721080879146
+    }
+  },
+  "COST": {
+    "company": {
+      "cik": "0000909832",
+      "name": "COSTCO WHOLESALE CORP /NEW",
+      "ticker": "COST"
+    },
+    "facts": {
+      "operating_income": {
+        "accession": "0000909832-26-000093",
+        "end": "2026-08-30",
+        "filed": "2026-10-07",
+        "fiscal_period": "FY",
+        "fiscal_year": 2026,
+        "form": "10-K",
+        "prior_end": "2025-08-31",
+        "prior_start": "2024-09-02",
+        "prior_value": 10383000000,
+        "start": "2025-09-01",
+        "tag": "OperatingIncomeLoss",
+        "unit": "USD",
+        "value": 11685000000
+      },
+      "total_revenue": {
+        "accession": "0000909832-26-000093",
+        "end": "2026-08-30",
+        "filed": "2026-10-07",
+        "fiscal_period": "FY",
+        "fiscal_year": 2026,
+        "form": "10-K",
+        "prior_end": "2025-08-31",
+        "prior_start": "2024-09-02",
+        "prior_value": 275235000000,
+        "start": "2025-09-01",
+        "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "unit": "USD",
+        "value": 303154000000
+      }
+    },
+    "filing": {
+      "accepted": "2026-10-07T01:13:15.000Z",
+      "accession": "0000909832-26-000093",
+      "filing_date": "2026-10-07",
+      "form": "10-K",
+      "items": "",
+      "primary_document": "cost-20260830.htm",
+      "report_date": "2026-08-30"
+    },
+    "operating_margin": {
+      "arithmetic": "1.1685e+10 / 3.03154e+11",
+      "definition": "operating income / total revenue",
+      "value": 0.03854476602650798
+    }
+  },
+  "TGT": {
+    "company": {
+      "cik": "0000027419",
+      "name": "TARGET CORP",
+      "ticker": "TGT"
+    },
+    "facts": {
+      "operating_income": {
+        "accession": "0000027419-26-000016",
+        "end": "2026-01-31",
+        "filed": "2026-03-11",
+        "fiscal_period": "FY",
+        "fiscal_year": 2025,
+        "form": "10-K",
+        "prior_end": "2025-02-01",
+        "prior_start": "2024-02-04",
+        "prior_value": 5566000000,
+        "start": "2025-02-02",
+        "tag": "OperatingIncomeLoss",
+        "unit": "USD",
+        "value": 5117000000
+      },
+      "total_revenue": {
+        "accession": "0000027419-26-000016",
+        "end": "2026-01-31",
+        "filed": "2026-03-11",
+        "fiscal_period": "FY",
+        "fiscal_year": 2025,
+        "form": "10-K",
+        "prior_end": "2025-02-01",
+        "prior_start": "2024-02-04",
+        "prior_value": 106566000000,
+        "start": "2025-02-02",
+        "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "unit": "USD",
+        "value": 104780000000
+      }
+    },
+    "filing": {
+      "accepted": "2026-03-11T20:42:00.000Z",
+      "accession": "0000027419-26-000016",
+      "filing_date": "2026-03-11",
+      "form": "10-K",
+      "items": "",
+      "primary_document": "tgt-20260131.htm",
+      "report_date": "2026-01-31"
+    },
+    "operating_margin": {
+      "arithmetic": "5.117e+09 / 1.0478e+11",
+      "definition": "operating income / total revenue",
+      "value": 0.048835655659477
+    }
+  }
+}

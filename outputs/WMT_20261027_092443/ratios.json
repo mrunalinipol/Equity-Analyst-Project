@@ -1,0 +1,25 @@
+{
+  "debt_to_equity": {
+    "arithmetic": "(3.4624e+10 + 3.542e+09) / 9.9617e+10",
+    "definition": "(long-term debt noncurrent + current portion) / stockholders' equity",
+    "value": 0.38312737785719303
+  },
+  "free_cash_flow": {
+    "arithmetic": "4.1565e+10 - 2.6642e+10",
+    "definition": "cash from operations - additions to property and equipment",
+    "value": 14923000000.0
+  },
+  "operating_margin": {
+    "arithmetic": "2.9825e+10 / 7.13163e+11",
+    "definition": "operating income / total revenue",
+    "value": 0.041820733829433104
+  },
+  "return_on_average_equity": {
+    "arithmetic": "2.1893e+10 / ((9.9617e+10 + 9.1013e+10) / 2)",
+    "value": 0.22969102449771808
+  },
+  "revenue_growth": {
+    "arithmetic": "7.13163e+11 / 6.80985e+11 - 1",
+    "value": 0.047252142117667706
+  }
+}
