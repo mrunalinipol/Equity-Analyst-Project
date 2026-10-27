@@ -1,0 +1,12 @@
+# Local secrets
+.emv
+
+# macOS metadata
+.DS_Store
+
+# Local application downloads and extracted bundles
+work/Orca.app/
+work/orca-final2/
+work/orca-zip/
+work/orca-download/
+work/github-cli/
