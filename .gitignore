@@ -1,5 +1,12 @@
 # Local secrets
 .emv
+.env
+.env.*
+!.env.example
+
+# Python cache files
+__pycache__/
+*.py[cod]
 
 # macOS metadata
 .DS_Store
