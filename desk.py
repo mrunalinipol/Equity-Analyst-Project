@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Seven-step, filing-first equity-research data desk for FIN 67110 Lab 02."""
+"""Filing-first data desk and four-role report app for FIN 67110 Labs 02 and 03."""
 
 from __future__ import annotations
 
@@ -15,6 +15,7 @@ from urllib.parse import urljoin
 
 import requests
 from bs4 import BeautifulSoup
+from openai import OpenAI
 
 
 SEC_WWW = "https://www.sec.gov"
@@ -471,6 +472,588 @@ def print_ratios(ratios: dict[str, dict[str, Any]]) -> None:
         print(f"  {name}: {value:.4f}{suffix} | {ratio['arithmetic']}")
 
 
+RESEARCH_ANALYST_SYSTEM = (
+    "You are the Research Analyst on an equity-research desk (Francis & Zhang 2026, Figure 1).\n"
+    "Analyze the business model, competitive position, catalysts, and recent developments.\n"
+    "Use only the provided 10-K Business and MD&A excerpts and the earnings release.\n"
+    "Quote a provided line citation for every claim. Do not invent a line or claim.\n"
+    "Use these exact headings:\n"
+    "   ### Business Model and Operations\n"
+    "   ### Competitive Position and Moat\n"
+    "   ### Catalysts and Recent Developments"
+)
+
+FINANCIAL_ANALYST_SYSTEM = (
+    "You are the Financial Analyst on an equity-research desk (Francis & Zhang 2026, Figure 1).\n"
+    "Your task is to perform statement analysis from step 4's facts, step 5's ratios, "
+    "step 6's quarter evidence, and step 7's peer data.\n"
+    "State the source filing and the line, or the XBRL tag, period, and accession, for every number.\n"
+    "Copy each ratio's supplied arithmetic. Do not calculate a new number in the model.\n"
+    "State the definition when a filing offers two definitions.\n"
+    "Cover all 11 core claims in the expected output. Use only supplied values.\n"
+    "Use these exact headings:\n"
+    "   ### Statement Analysis and Trends\n"
+    "   ### Valuation Insights and Ratios\n"
+    "   ### Latest Quarter Performance\n"
+    "   ### Peer Comparisons"
+)
+
+INVESTMENT_ADVISOR_SYSTEM = (
+    "You are the Investment Advisor on an equity-research desk (Francis & Zhang 2026, Figure 1).\n"
+    "Your task is to synthesize the findings of the Research Analyst and the Financial Analyst into an investment thesis and recommendation.\n"
+    "Use only the two analyst outputs in the context.\n"
+    "State Buy, Hold, or Sell. State the one number that decides the recommendation.\n"
+    "Copy that number and its source from the analyst output. Do not add external facts.\n"
+    "Use these exact headings:\n"
+    "   ### Investment Thesis\n"
+    "   ### Recommendation\n"
+    "   ### The Deciding Number"
+)
+
+STRATEGY_MANAGER_SYSTEM = (
+    "You are the Strategy Manager on an equity-research desk (Francis & Zhang 2026, Figure 1).\n"
+    "Check the three role outputs for completeness, source support, and consistency.\n"
+    "The final report must have exactly five required parts.\n"
+    "Return one JSON object only. The object must have status, revision_role, "
+    "revision_instructions, and report_markdown.\n"
+    "Set status to 'revise' only when one role must correct a failing part. "
+    "Set revision_role to Research Analyst, Financial Analyst, Investment Advisor, or an empty string.\n"
+    "If the inputs pass, set status to 'pass' and compile report_markdown.\n"
+    "Do not add facts or numbers that are absent from the role outputs."
+)
+
+
+def extract_10k_excerpts(text: str) -> str:
+    lines = text.splitlines()
+    excerpts: list[str] = []
+
+    i1_start: int | None = None
+    for i, line in enumerate(lines):
+        clean = line.strip()
+        if re.match(r"^item\s+1[\.\:—\-\s]+business", clean, re.I) and i > 200:
+            i1_start = i
+            break
+    if i1_start is None:
+        for i, line in enumerate(lines):
+            clean = line.strip()
+            if re.match(r"^item\s+1[\.\:—\-]", clean, re.I) and i > 500:
+                i1_start = i
+                break
+
+    if i1_start is not None:
+        excerpts.append("=== 10-K ITEM 1 (BUSINESS) ===")
+        count = 0
+        for idx in range(i1_start, min(i1_start + 180, len(lines))):
+            val = lines[idx].strip()
+            if val:
+                excerpts.append(f"[10-K Line {idx + 1}] {val}")
+                count += 1
+                if count >= 80:
+                    break
+
+    i7_start: int | None = None
+    for i, line in enumerate(lines):
+        clean = line.strip()
+        if re.match(r"^item\s+7[\.\:—\-\s]+management", clean, re.I) and i > 200:
+            i7_start = i
+            break
+    if i7_start is not None:
+        excerpts.append("\n=== 10-K ITEM 7 (MD&A) ===")
+        count = 0
+        for idx in range(i7_start, min(i7_start + 180, len(lines))):
+            val = lines[idx].strip()
+            if val:
+                excerpts.append(f"[10-K Line {idx + 1}] {val}")
+                count += 1
+                if count >= 80:
+                    break
+
+    if not excerpts:
+        for idx, line in enumerate(lines[:120]):
+            val = line.strip()
+            if val:
+                excerpts.append(f"[10-K Line {idx + 1}] {val}")
+
+    return "\n".join(excerpts)
+
+
+def extract_release_excerpts(text: str) -> str:
+    lines = text.splitlines()
+    excerpts: list[str] = ["=== EXHIBIT 99.1 (EARNINGS RELEASE) ==="]
+    count = 0
+    for idx, line in enumerate(lines):
+        val = line.strip()
+        if val:
+            excerpts.append(f"[EX-99.1 Line {idx + 1}] {val}")
+            count += 1
+            if count >= 100:
+                break
+    return "\n".join(excerpts)
+
+
+def format_millions(value: float | int) -> str:
+    return f"{float(value) / 1_000_000:,.3f}".rstrip("0").rstrip(".")
+
+
+def verified_financial_claims(
+    filings: dict[str, Filing],
+    facts: dict[str, dict[str, Any]],
+    ratios: dict[str, dict[str, Any]],
+    evidence: dict[str, Any],
+    peers: dict[str, Any],
+) -> str:
+    """Create the sourced financial block in code. Models must not recalculate it."""
+    ten_k = filings["10-K"]
+    earnings_8k = filings["earnings_8-K"]
+
+    def fact_source(name: str) -> str:
+        fact = facts[name]
+        return (
+            f"10-K accession {fact['accession']}; XBRL tag `{fact['tag']}`; "
+            f"period ended {fact['end']}"
+        )
+
+    lines = [
+        "### Verified Core Claims — Copy Without Recalculation",
+        "",
+        f"1. **Total revenue:** ${format_millions(facts['total_revenue']['value'])} million. "
+        f"Source: {fact_source('total_revenue')}.",
+        f"2. **Revenue growth:** {ratios['revenue_growth']['value'] * 100:.4f}%. "
+        f"Arithmetic: `{ratios['revenue_growth']['arithmetic']}`. Source: {fact_source('total_revenue')} "
+        f"and prior period ended {facts['total_revenue']['prior_end']} in the same filing.",
+        f"3. **Operating income and operating margin:** "
+        f"${format_millions(facts['operating_income']['value'])} million and "
+        f"{ratios['operating_margin']['value'] * 100:.4f}%. "
+        f"Arithmetic: `{ratios['operating_margin']['arithmetic']}`. "
+        f"Definition: operating income / total revenue. Source: {fact_source('operating_income')} "
+        f"and {fact_source('total_revenue')}.",
+        f"4. **Net income attributable to the company:** "
+        f"${format_millions(facts['net_income']['value'])} million. Source: {fact_source('net_income')}.",
+        f"5. **GAAP diluted EPS:** ${float(facts['diluted_eps']['value']):.2f}. "
+        f"Source: {fact_source('diluted_eps')}.",
+        f"6. **Return on average equity:** {ratios['return_on_average_equity']['value'] * 100:.4f}%. "
+        f"Arithmetic: `{ratios['return_on_average_equity']['arithmetic']}`. "
+        f"Definition: net income / average current-year and prior-year stockholders' equity. "
+        f"Sources: {fact_source('net_income')} and {fact_source('stockholders_equity')}.",
+        f"7. **Debt to equity:** {ratios['debt_to_equity']['value']:.4f}x. "
+        f"Arithmetic: `{ratios['debt_to_equity']['arithmetic']}`. "
+        f"Definition: long-term debt, including its current portion, / stockholders' equity. "
+        f"Sources: {fact_source('long_term_debt_noncurrent')}; "
+        f"{fact_source('long_term_debt_current')}; and {fact_source('stockholders_equity')}.",
+        f"8. **Free cash flow:** ${format_millions(ratios['free_cash_flow']['value'])} million. "
+        f"Arithmetic: `{ratios['free_cash_flow']['arithmetic']}`. "
+        f"Definition: cash from operations - additions to property and equipment. "
+        f"Sources: {fact_source('cash_from_operations')} and {fact_source('capital_expenditures')}.",
+        f"9. **Latest-quarter total revenue:** ${float(evidence['quarter_total_revenue']):,.0f} million. "
+        f"Source: 8-K accession {earnings_8k.accession}, Exhibit 99.1 line "
+        f"`{evidence['quarter_total_revenue_line']}`.",
+        f"10. **Quarter revenue growth:** {evidence['quarter_revenue_growth'] * 100:.4f}%. "
+        f"Arithmetic: `{evidence['quarter_revenue_growth_arithmetic']}`. "
+        f"Source: 8-K accession {earnings_8k.accession}, Exhibit 99.1 line "
+        f"`{evidence['quarter_total_revenue_line']}`.",
+        f"11. **Latest-quarter GAAP diluted EPS:** ${float(evidence['quarter_diluted_eps']):.2f}. "
+        f"Source: 8-K accession {earnings_8k.accession}, Exhibit 99.1 line "
+        f"`{evidence['quarter_diluted_eps_line']}`.",
+    ]
+
+    if "price_to_earnings" in ratios:
+        ratio = ratios["price_to_earnings"]
+        lines.extend(
+            [
+                "",
+                f"**P/E:** {ratio['value']:.4f}x. Arithmetic: `{ratio['arithmetic']}`. "
+                f"The price is the user-supplied dated close. EPS source: {fact_source('diluted_eps')}.",
+            ]
+        )
+
+    lines.extend(["", "### Verified Peer Comparison — Total-Revenue Definition"])
+    for ticker, peer in peers.items():
+        revenue = peer["facts"]["total_revenue"]
+        operating = peer["facts"]["operating_income"]
+        margin = peer["operating_margin"]
+        lines.append(
+            f"- **{ticker}:** operating margin {margin['value'] * 100:.4f}%. "
+            f"Arithmetic: `{margin['arithmetic']}`. Definition: operating income / total revenue. "
+            f"Source: 10-K accession {peer['filing']['accession']}; period ended {revenue['end']}; "
+            f"revenue tag `{revenue['tag']}`; operating-income tag `{operating['tag']}`."
+        )
+    return "\n".join(lines)
+
+
+def get_model_client(env_path: Path) -> tuple[OpenAI, str]:
+    env = load_local_env(env_path)
+    api_key = env.get("API_KEY", "")
+    if not api_key:
+        raise ValueError("Missing API_KEY in .env")
+    base_url = env.get("BASE_URL", "https://genai.rcac.purdue.edu/api")
+    model = env.get("MODEL", "llama3.1:latest")
+    client = OpenAI(api_key=api_key, base_url=base_url, timeout=45.0)
+    return client, model
+
+
+def run_four_roles(
+    client: OpenAI,
+    model: str,
+    run_folder: Path,
+    filings: dict[str, Any],
+    facts: dict[str, Any],
+    ratios: dict[str, Any],
+    evidence: dict[str, Any],
+    peers: dict[str, Any],
+    run_time: datetime,
+    metadata: dict[str, Any],
+) -> Path:
+    print("Role: Strategy Manager", flush=True)
+
+    ten_k_path = run_folder / "latest_10-K.txt"
+    release_path = run_folder / "earnings_release_EX-99.1.txt"
+    ten_k_text = ten_k_path.read_text(encoding="utf-8") if ten_k_path.exists() else ""
+    release_text = release_path.read_text(encoding="utf-8") if release_path.exists() else ""
+
+    sec_10k = extract_10k_excerpts(ten_k_text)
+    sec_rel = extract_release_excerpts(release_text)
+
+    # 1. Research Analyst
+    print("Role: Research Analyst", flush=True)
+    research_task = {
+        "role": "Research Analyst",
+        "task": (
+            "Analyze business model, competitive position, catalysts, and recent developments. "
+            "Use only the provided 10-K and Exhibit 99.1 excerpts. "
+            "Every single claim, fact, or assertion must quote its line number (e.g. '[10-K Line X]' or '[EX-99.1 Line Y]')."
+        ),
+        "context": {
+            "10-K_excerpts": sec_10k,
+            "earnings_release_excerpts": sec_rel,
+        },
+        "expected_output": (
+            "Markdown text with sections:\n"
+            "### Business Model and Operations\n"
+            "### Competitive Position and Moat\n"
+            "### Catalysts and Recent Developments\n"
+            "Every claim must quote its line."
+        ),
+    }
+    research_resp = client.chat.completions.create(
+        model=model,
+        messages=[
+            {"role": "system", "content": RESEARCH_ANALYST_SYSTEM},
+            {"role": "user", "content": json.dumps(research_task)},
+        ],
+        max_tokens=1400,
+        temperature=0.2,
+    )
+    research_output = research_resp.choices[0].message.content or ""
+
+    # 2. Financial Analyst
+    print("Role: Financial Analyst", flush=True)
+    verified_block = verified_financial_claims(filings, facts, ratios, evidence, peers)
+    financial_task = {
+        "role": "Financial Analyst",
+        "task": (
+            "Perform statement analysis from step 4's facts, step 5's ratios, "
+            "step 6's quarter evidence, and step 7's peer data. "
+            "Every number must state its source filing and its line or XBRL tag and period. "
+            "Every ratio must show its exact arithmetic calculation. "
+            "State the definition wherever a filing offers two (e.g. Total Revenue vs Net Sales). "
+            "Do NOT calculate or invent numbers in the model; use strictly the provided values."
+        ),
+        "context": {
+            "source_filings": {name: asdict(filing) for name, filing in filings.items()},
+            "verified_claims_from_calculator": verified_block,
+            "step_4_facts": facts,
+            "step_5_ratios": ratios,
+            "step_6_quarter_evidence": evidence,
+            "step_7_peers": peers,
+        },
+        "expected_output": (
+            "Markdown text with sections:\n"
+            "### Statement Analysis and Trends\n"
+            "### Valuation Insights and Ratios\n"
+            "### Latest Quarter Performance\n"
+            "### Peer Comparisons\n"
+            "State these 11 core claims: total revenue; revenue growth; operating income and margin; "
+            "net income; GAAP diluted EPS; return on average equity; debt to equity; free cash flow; "
+            "latest-quarter revenue; quarter revenue growth; and latest-quarter GAAP diluted EPS. "
+            "Then state every supplied peer margin and P/E. "
+            "Copy the verified_claims_from_calculator block without changing a value, source, definition, or arithmetic. "
+            "Every figure must include its filing and line, or tag, period, and accession. "
+            "Every ratio must copy the supplied arithmetic."
+        ),
+    }
+    financial_resp = client.chat.completions.create(
+        model=model,
+        messages=[
+            {"role": "system", "content": FINANCIAL_ANALYST_SYSTEM},
+            {"role": "user", "content": json.dumps(financial_task)},
+        ],
+        max_tokens=2200,
+        temperature=0.2,
+    )
+    financial_output = financial_resp.choices[0].message.content or ""
+    rejected_financial_drafts: list[str] = []
+    revised_roles: set[str] = set()
+    required_financial_tokens = [
+        f"${format_millions(facts['total_revenue']['value'])} million",
+        f"{ratios['revenue_growth']['value'] * 100:.4f}%",
+        f"${format_millions(facts['operating_income']['value'])} million",
+        f"{ratios['operating_margin']['value'] * 100:.4f}%",
+        f"${format_millions(facts['net_income']['value'])} million",
+        f"${float(facts['diluted_eps']['value']):.2f}",
+        f"{ratios['return_on_average_equity']['value'] * 100:.4f}%",
+        f"{ratios['debt_to_equity']['value']:.4f}x",
+        f"${format_millions(ratios['free_cash_flow']['value'])} million",
+        f"${float(evidence['quarter_total_revenue']):,.0f} million",
+        f"{evidence['quarter_revenue_growth'] * 100:.4f}%",
+        f"${float(evidence['quarter_diluted_eps']):.2f}",
+    ]
+    if "price_to_earnings" in ratios:
+        required_financial_tokens.append(f"{ratios['price_to_earnings']['value']:.4f}x")
+    required_financial_tokens.extend(
+        f"{peer['operating_margin']['value'] * 100:.4f}%" for peer in peers.values()
+    )
+
+    if not all(token in financial_output for token in required_financial_tokens):
+        print("Role: Strategy Manager (financial checklist failed; one revision)", flush=True)
+        revised_roles.add("Financial Analyst")
+        rejected_financial_drafts.append(financial_output)
+        revision_task = dict(financial_task)
+        revision_task["task"] = (
+            "REVISION REQUIRED. Your draft changed or omitted verified values. "
+            "Copy verified_claims_from_calculator exactly. Do not recalculate, round differently, or omit a claim."
+        )
+        revision_resp = client.chat.completions.create(
+            model=model,
+            messages=[
+                {"role": "system", "content": FINANCIAL_ANALYST_SYSTEM},
+                {"role": "user", "content": json.dumps(revision_task)},
+            ],
+            max_tokens=2600,
+            temperature=0,
+        )
+        financial_output = revision_resp.choices[0].message.content or ""
+
+    if not all(token in financial_output for token in required_financial_tokens):
+        rejected_financial_drafts.append(financial_output)
+        financial_output = verified_block
+
+    # 3. Investment Advisor
+    print("Role: Investment Advisor", flush=True)
+    advisor_task = {
+        "role": "Investment Advisor",
+        "task": (
+            "Synthesize the findings of the Research Analyst and Financial Analyst into an investment thesis "
+            "and a Buy, Hold, or Sell recommendation. "
+            "Rely ONLY on the outputs of the two analysts provided in context, and nothing else. "
+            "State a clear recommendation: Buy, Hold, or Sell. "
+            "State the ONE number that decides this recommendation and quote its exact source/context."
+        ),
+        "context": {
+            "research_analyst_output": research_output,
+            "financial_analyst_output": financial_output,
+        },
+        "expected_output": (
+            "Markdown text with sections:\n"
+            "### Investment Thesis\n"
+            "### Recommendation\n"
+            "### The Deciding Number"
+        ),
+    }
+    advisor_resp = client.chat.completions.create(
+        model=model,
+        messages=[
+            {"role": "system", "content": INVESTMENT_ADVISOR_SYSTEM},
+            {"role": "user", "content": json.dumps(advisor_task)},
+        ],
+        max_tokens=1000,
+        temperature=0.2,
+    )
+    advisor_output = advisor_resp.choices[0].message.content or ""
+
+    required_sections = [
+        "## 1. Overview",
+        "## 2. Market Positioning and Growth Outlook",
+        "## 3. Valuation Insights",
+        "## 4. Future Developments and Strategic Recommendations",
+        "## 5. Investment Recommendation",
+    ]
+
+    def manager_call(round_number: int) -> tuple[dict[str, Any], str]:
+        print(f"Role: Strategy Manager (check {round_number})", flush=True)
+        manager_task = {
+            "role": "Strategy Manager",
+            "task": (
+                "Check the role outputs. Confirm that all five required report parts are present and consistent. "
+                "Check that the Financial Analyst states all 11 core claims, sources every number, copies ratio "
+                "arithmetic, and uses one revenue definition for peers. Check that the Investment Advisor gives "
+                "Buy, Hold, or Sell and names one deciding number. If one role fails, request one revision from "
+                "that role. Otherwise, compile the five-part Markdown report."
+            ),
+            "context": {
+                "research_analyst_output": research_output,
+                "financial_analyst_output": financial_output,
+                "investment_advisor_output": advisor_output,
+            },
+            "expected_output": {
+                "format": "JSON",
+                "keys": ["status", "revision_role", "revision_instructions", "report_markdown"],
+                "status_values": ["pass", "revise"],
+                "required_report_headings": required_sections,
+            },
+        }
+        response = client.chat.completions.create(
+            model=model,
+            messages=[
+                {"role": "system", "content": STRATEGY_MANAGER_SYSTEM},
+                {"role": "user", "content": json.dumps(manager_task)},
+            ],
+            response_format={"type": "json_object"},
+            max_tokens=3200,
+            temperature=0.1,
+        )
+        raw = response.choices[0].message.content or "{}"
+        try:
+            result = json.loads(raw)
+        except json.JSONDecodeError:
+            result = {
+                "status": "revise",
+                "revision_role": "Strategy Manager",
+                "revision_instructions": "Return valid JSON and compile all five report parts.",
+                "report_markdown": "",
+            }
+        return result, raw
+
+    manager_checks: list[dict[str, Any]] = []
+    manager_result, manager_raw = manager_call(1)
+    manager_checks.append({"round": 1, "parsed": manager_result, "raw": manager_raw})
+
+    revision_role = str(manager_result.get("revision_role", "")).strip()
+    revision_instructions = str(manager_result.get("revision_instructions", "")).strip()
+    if (
+        manager_result.get("status") == "revise"
+        and revision_role not in revised_roles
+        and revision_role in {
+        "Research Analyst",
+        "Financial Analyst",
+        "Investment Advisor",
+        }
+    ):
+        print(f"Role: {revision_role} (one revision)", flush=True)
+        revised_roles.add(revision_role)
+        if revision_role == "Research Analyst":
+            revision_task = dict(research_task)
+            revision_task["task"] = f"{research_task['task']}\nManager revision: {revision_instructions}"
+            response = client.chat.completions.create(
+                model=model,
+                messages=[
+                    {"role": "system", "content": RESEARCH_ANALYST_SYSTEM},
+                    {"role": "user", "content": json.dumps(revision_task)},
+                ],
+                max_tokens=1600,
+                temperature=0.1,
+            )
+            research_output = response.choices[0].message.content or research_output
+        elif revision_role == "Financial Analyst":
+            revision_task = dict(financial_task)
+            revision_task["task"] = f"{financial_task['task']}\nManager revision: {revision_instructions}"
+            response = client.chat.completions.create(
+                model=model,
+                messages=[
+                    {"role": "system", "content": FINANCIAL_ANALYST_SYSTEM},
+                    {"role": "user", "content": json.dumps(revision_task)},
+                ],
+                max_tokens=2400,
+                temperature=0.1,
+            )
+            financial_output = response.choices[0].message.content or financial_output
+        else:
+            revision_task = dict(advisor_task)
+            revision_task["task"] = f"{advisor_task['task']}\nManager revision: {revision_instructions}"
+            revision_task["context"] = {
+                "research_analyst_output": research_output,
+                "financial_analyst_output": financial_output,
+            }
+            response = client.chat.completions.create(
+                model=model,
+                messages=[
+                    {"role": "system", "content": INVESTMENT_ADVISOR_SYSTEM},
+                    {"role": "user", "content": json.dumps(revision_task)},
+                ],
+                max_tokens=1200,
+                temperature=0.1,
+            )
+            advisor_output = response.choices[0].message.content or advisor_output
+
+        manager_result, manager_raw = manager_call(2)
+        manager_checks.append({"round": 2, "parsed": manager_result, "raw": manager_raw})
+
+    report_markdown = str(manager_result.get("report_markdown", "")).strip()
+    manager_report_passes = (
+        all(section in report_markdown for section in required_sections)
+        and all(token in report_markdown for token in required_financial_tokens)
+        and "[10-K Line" in report_markdown
+        and any(word in report_markdown.lower() for word in ("buy", "hold", "sell"))
+        and any(token in advisor_output for token in required_financial_tokens)
+    )
+    if not manager_report_passes:
+        business_section = research_output.split("### Competitive Position and Moat", 1)[0].strip()
+        future_section = (
+            research_output.split("### Catalysts and Recent Developments", 1)[1].strip()
+            if "### Catalysts and Recent Developments" in research_output
+            else research_output.strip()
+        )
+        report_markdown = (
+            f"## 1. Overview\n\n{business_section}\n\n"
+            f"## 2. Market Positioning and Growth Outlook\n\n{research_output.strip()}\n\n"
+            f"## 3. Valuation Insights\n\n{verified_block}\n\n"
+            f"## 4. Future Developments and Strategic Recommendations\n\n{future_section}\n\n"
+            f"## 5. Investment Recommendation\n\n{advisor_output.strip()}"
+        )
+
+    first_required = report_markdown.find(required_sections[0])
+    if first_required > 0:
+        report_markdown = report_markdown[first_required:]
+
+    ten_k_filing = filings.get("10-K")
+    ten_q_filing = filings.get("10-Q")
+    eight_k_filing = filings.get("earnings_8-K")
+    ten_k_acc = getattr(ten_k_filing, "accession", "N/A") if ten_k_filing else "N/A"
+    ten_q_acc = getattr(ten_q_filing, "accession", "N/A") if ten_q_filing else "N/A"
+    eight_k_acc = getattr(eight_k_filing, "accession", "N/A") if eight_k_filing else "N/A"
+
+    line1 = f"# Filings Read: 10-K (accession: {ten_k_acc}), 10-Q (accession: {ten_q_acc}), 8-K (accession: {eight_k_acc})"
+    line2 = f"Run Time: {run_time.isoformat()}"
+
+    report_content = (
+        f"{line1}\n"
+        f"{line2}\n\n"
+        f"{report_markdown.rstrip()}\n"
+    )
+
+    role_record = {
+        "model": model,
+        "research_analyst": research_output,
+        "financial_analyst": financial_output,
+        "rejected_financial_drafts": rejected_financial_drafts,
+        "investment_advisor": advisor_output,
+        "strategy_manager_checks": manager_checks,
+        "manager_report_accepted": manager_report_passes,
+    }
+    write_json(run_folder / "role_outputs.json", role_record)
+    metadata["model_run"] = {
+        "provider": "Purdue GenAI Studio",
+        "model": model,
+        "manager_checks": len(manager_checks),
+        "manager_report_accepted": manager_report_passes,
+    }
+    write_json(run_folder / "run_metadata.json", metadata)
+
+    report_path = run_folder / "report.md"
+    report_path.write_text(report_content, encoding="utf-8")
+    print(f"Report saved to: {report_path}", flush=True)
+    return report_path
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("ticker", help="SEC ticker symbol, for example a listed company's ticker")
@@ -478,12 +1061,14 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--price", type=float, help="Share price used only for P/E")
     parser.add_argument("--step", type=int, choices=range(1, 8), help="Run and print only one numbered step")
     parser.add_argument("--output-root", default="outputs", help="Parent folder for saved run artifacts")
+    parser.add_argument("--no-roles", action="store_true", help="Skip running the four model roles after step 7")
     return parser.parse_args()
 
 
 def run() -> Path | None:
     args = parse_args()
-    env = load_local_env(Path(__file__).with_name(".env"))
+    env_path = Path(__file__).with_name(".env")
+    env = load_local_env(env_path)
     client = EdgarClient(env.get("SEC_USER_AGENT", ""))
     ticker = args.ticker.upper()
     target = args.step
@@ -620,6 +1205,22 @@ def run() -> Path | None:
 
     write_json(run_folder / "run_metadata.json", metadata)
     print(f"Saved run folder: {run_folder}")
+
+    if target is None and not args.no_roles:
+        model_client, model_name = get_model_client(env_path)
+        run_four_roles(
+            client=model_client,
+            model=model_name,
+            run_folder=run_folder,
+            filings=filings,
+            facts=facts,
+            ratios=ratios,
+            evidence=evidence,
+            peers=peer_results,
+            run_time=run_time,
+            metadata=metadata,
+        )
+
     return run_folder
 
 

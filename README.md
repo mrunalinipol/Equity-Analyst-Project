@@ -1,10 +1,10 @@
 # Equity Research Desk
 
-This repository contains the filing-first data desk for FIN 67110 Lab 02.
+This repository contains the filing-first data desk and four-role report app for FIN 67110 Labs 02 and 03.
 
 ## Setup
 
-Create an isolated Python environment and install the 2 declared packages:
+Create an isolated Python environment and install the declared packages:
 
 ```bash
 python -m venv .venv
@@ -16,17 +16,27 @@ The local `.env` file must contain:
 ```text
 API_KEY=your-model-provider-key
 SEC_USER_AGENT="Your Name your-email@purdue.edu"
+BASE_URL="https://genai.rcac.purdue.edu/api"
+MODEL="llama3.1:latest"
 ```
 
 The `.env` file is ignored by Git. Never force-add it.
 
-## Run the 7 steps
+## Run the seven steps and four roles
 
 ```bash
-.venv/bin/python desk.py COST --peers WMT,TGT,BJ --price 904.70
+.venv/bin/python desk.py COST --peers WMT,TGT,BJ --price 992.13
 ```
 
-The example uses Costco's September 23, 2026 close, the last close before its September 24 earnings release. Replace it with the dated price assigned by the instructor if that price differs. SEC filings do not contain a market price.
+The example uses Costco's October 27, 2026 close. Replace it with the dated price assigned by the instructor if that price differs. SEC filings do not contain a market price.
+
+The full command runs the seven data steps. It then runs the Research Analyst, Financial Analyst, Investment Advisor, and Strategy Manager. It saves `report.md` and `role_outputs.json` in the run folder.
+
+Run only the seven data steps:
+
+```bash
+.venv/bin/python desk.py COST --peers WMT,TGT,BJ --price 992.13 --no-roles
+```
 
 Run one numbered step:
 

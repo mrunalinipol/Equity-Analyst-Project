@@ -1,6 +1,6 @@
 # Project Status and Session Handoff
 
-Last updated: 2026-10-27
+Last updated: 2026-10-28
 
 Read this file at the start of the next session. It records the verified project state. Do not put API keys or other secret values in this file.
 
@@ -18,7 +18,7 @@ Read this file at the start of the next session. It records the verified project
 - `.env` exists locally and is ignored by Git.
 - `.env` contains `SEC_USER_AGENT` and a Purdue GenAI Studio API key.
 - Do not print, quote, commit, or upload the API key.
-- The current key was pasted into a prior chat. Revoke it and put a replacement directly in `.env` before the first model call in Lab 03.
+- The previously exposed key was replaced directly in `.env` on 2026-10-28.
 - The public GitHub URL for `.env` returned HTTP 404 during the last verification.
 
 ## Completed work
@@ -89,12 +89,32 @@ Validation state:
 - `git diff --check` passes.
 - A public GitHub check returned HTTP 200 for the code, validation file, and Costco facts.
 - A public GitHub check returned HTTP 404 for `.env`.
+- Live run evidence was verified with partner Shachi Kaushik, and partner initials were obtained.
+- The two-minute explanation was completed in person.
+- The closing price was verified.
 
 ### Saved course material
 
 - `papers/FRL-CanAIReplaceAnalyst.pdf` is the 9-page paper titled “Can AI match professional analysts? Evidence from a multi-agent system.”
 - The uploaded PDF checksum matched the copy in Downloads.
 - `library/lab02_equity_research_desk_prompt.md` contains the reconstructed Lab 02 prompt written approximately 80% toward ASD-STE100.
+
+### Lab 03 — completed in the app
+
+- Purdue GenAI Studio is configured through the official OpenAI Python SDK.
+- The local `.env` defines `BASE_URL` and `MODEL` in addition to the secret key and SEC User-Agent.
+- The live provider test succeeded with `llama3.1:latest`.
+- `desk.py` runs four model roles after the seven data steps: Research Analyst, Financial Analyst, Investment Advisor, and Strategy Manager.
+- Each role receives a JSON object with its task, allowed context, and expected output.
+- The Financial Analyst receives a calculator-built block and must not recalculate it.
+- The harness permits one revision when a Financial Analyst draft changes or omits a verified value.
+- The harness rejects a Strategy Manager compilation that omits the five parts, the verified values, a research citation, or a sourced deciding number.
+- The verified Costco report is `outputs/COST_20261028_194706/report.md`.
+- The report uses Costco's 2026-10-27 close of $992.13 and reports P/E of 47.7905x.
+- The report states all eleven core claims with filing accessions, XBRL tags or Exhibit 99.1 lines, periods, definitions, and arithmetic.
+- Raw role outputs and Manager checks are in `outputs/COST_20261028_194706/role_outputs.json`.
+- The blank human audit is `audits/COST_20261028_human_audit.md`. Its marks are intentionally blank.
+- `LAB03_NOTES.md` records the observed Financial Analyst error and the human-sign-off reading.
 
 ## Main commands
 
@@ -131,11 +151,12 @@ Run the tests:
 
 ## Remaining actions
 
-1. Revoke the exposed Purdue GenAI Studio key and put the replacement directly in `.env`.
-2. Show the Lab 02 live run and saved evidence to Shachi Kaushik. Obtain her initials. An agent cannot supply partner initials.
-3. Give the required two-minute explanation in person.
-4. Replace the $904.70 price if the instructor assigned a different closing price.
-5. Continue with Lab 03: add the four model roles, produce the five-part report, audit it by hand, and complete Checkpoint 1.
+1. Mrunalini must audit the Costco report by hand and fill `audits/COST_20261028_human_audit.md`. AI must not supply the marks.
+2. Ask Shachi Kaushik to select a U.S. company that reported this month.
+3. Run the desk on Shachi's ticker with suitable peers and a dated close.
+4. Ask Shachi to check two core claims and write both marks at the top of the partner-company report.
+5. Audit all eleven partner-company claims before Session 4.
+6. Commit and push the partner-company report, then submit its commit permalink in Brightspace Checkpoint 1.
 
 ## Working rules for the next session
 

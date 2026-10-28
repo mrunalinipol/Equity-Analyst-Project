@@ -1,6 +1,8 @@
+import json
 import unittest
+from pathlib import Path
 
-from desk import calculate_ratios, release_evidence
+from desk import Filing, calculate_ratios, release_evidence, verified_financial_claims
 
 
 class CalculationTests(unittest.TestCase):
@@ -52,6 +54,37 @@ class CalculationTests(unittest.TestCase):
         evidence = release_evidence(html)
         self.assertEqual(evidence["quarter_total_revenue"], 187_937)
         self.assertEqual(evidence["quarter_diluted_eps"], 0.80)
+
+    def test_verified_costco_block_keeps_known_answers(self) -> None:
+        folder = Path(__file__).resolve().parents[1] / "outputs" / "COST_20261028_194706"
+        facts = json.loads((folder / "facts.json").read_text(encoding="utf-8"))
+        ratios = json.loads((folder / "ratios.json").read_text(encoding="utf-8"))
+        evidence = json.loads((folder / "release_evidence.json").read_text(encoding="utf-8"))
+        peers = json.loads((folder / "peers.json").read_text(encoding="utf-8"))
+        metadata = json.loads((folder / "run_metadata.json").read_text(encoding="utf-8"))
+        filings = {name: Filing(**filing) for name, filing in metadata["filings"].items()}
+
+        block = verified_financial_claims(filings, facts, ratios, evidence, peers)
+
+        for expected in (
+            "$303,154 million",
+            "10.1437%",
+            "$11,685 million",
+            "3.8545%",
+            "$9,226 million",
+            "$20.76",
+            "28.4021%",
+            "0.1721x",
+            "$9,382 million",
+            "$95,723 million",
+            "11.1043%",
+            "$6.75",
+            "47.7905x",
+            "4.1821%",
+            "4.8836%",
+            "3.8057%",
+        ):
+            self.assertIn(expected, block)
 
 
 if __name__ == "__main__":
