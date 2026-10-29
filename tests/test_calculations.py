@@ -55,6 +55,18 @@ class CalculationTests(unittest.TestCase):
         self.assertEqual(evidence["quarter_total_revenue"], 187_937)
         self.assertEqual(evidence["quarter_diluted_eps"], 0.80)
 
+    def test_release_evidence_accepts_total_net_sales_label(self) -> None:
+        html = """
+        <table>
+          <tr><td>Total net sales <sup>(1)</sup></td><td>$94,036</td><td>$85,777</td></tr>
+          <tr><td>Diluted</td><td>$1.57</td><td>$1.40</td></tr>
+          <tr><td>Diluted</td><td>14,714,676</td><td>14,948,179</td></tr>
+        </table>
+        """
+        evidence = release_evidence(html)
+        self.assertEqual(evidence["quarter_total_revenue"], 94_036)
+        self.assertEqual(evidence["quarter_diluted_eps"], 1.57)
+
     def test_verified_costco_block_keeps_known_answers(self) -> None:
         folder = Path(__file__).resolve().parents[1] / "outputs" / "COST_20261028_194706"
         facts = json.loads((folder / "facts.json").read_text(encoding="utf-8"))

@@ -51,7 +51,7 @@ Read this file at the start of the next session. It records the verified project
 - Candidate XBRL tags are selected by the newest available fiscal year.
 - All main-company facts use the 10-K fiscal-year end selected for revenue.
 - Ratio arithmetic is calculated in code and printed.
-- Both `Total revenue` and `Total revenues` release labels are supported.
+- `Total revenue`, `Total revenues`, and Apple's `Total net sales` release labels are supported.
 - The full audit is in `LAB02_VALIDATION.md`.
 
 Verified Costco run:
@@ -84,7 +84,7 @@ Verified Walmart portability run:
 Validation state:
 
 - Python version: 3.13.15.
-- Three automated tests pass.
+- Five automated tests pass.
 - `python -m compileall` passes.
 - `git diff --check` passes.
 - A public GitHub check returned HTTP 200 for the code, validation file, and Costco facts.
@@ -115,6 +115,23 @@ Validation state:
 - Raw role outputs and Manager checks are in `outputs/COST_20261028_194706/role_outputs.json`.
 - The blank human audit is `audits/COST_20261028_human_audit.md`. Its marks are intentionally blank.
 - `LAB03_NOTES.md` records the observed Financial Analyst error and the human-sign-off reading.
+
+Apple assignment run:
+
+- Command: `.venv/bin/python desk.py AAPL --peers MSFT,GOOGL,DELL --price 338.19`.
+- Saved folder: `outputs/AAPL_20261028_202525`.
+- Fiscal 2025 total net sales: $416.161 billion.
+- Operating income: $133.050 billion.
+- Operating margin: 31.9708%.
+- Latest-quarter total net sales: $109.417 billion.
+- Latest-quarter diluted EPS: $2.02.
+- Price: $338.19, the unadjusted July 29, 2026 close.
+- P/E: 45.3338x.
+- Peers: MSFT, GOOGL, and DELL.
+- The Purdue model endpoint timed out twice. The saved report is explicitly
+  labeled `fallback`, which the Lab 03 instructions permit when the provider is down.
+- Apple report: `outputs/AAPL_20261028_202525/report.md`.
+- Apple human-audit worksheet: `audits/AAPL_20261028_human_audit.md`.
 
 ## Main commands
 
@@ -151,12 +168,11 @@ Run the tests:
 
 ## Remaining actions
 
-1. Mrunalini must audit the Costco report by hand and fill `audits/COST_20261028_human_audit.md`. AI must not supply the marks.
-2. Ask Shachi Kaushik to select a U.S. company that reported this month.
-3. Run the desk on Shachi's ticker with suitable peers and a dated close.
-4. Ask Shachi to check two core claims and write both marks at the top of the partner-company report.
-5. Audit all eleven partner-company claims before Session 4.
-6. Commit and push the partner-company report, then submit its commit permalink in Brightspace Checkpoint 1.
+1. Mrunalini must audit the Apple report by hand and fill `audits/AAPL_20261028_human_audit.md`. AI must not supply the marks.
+2. Shachi Kaushik must check two Apple core claims and write both marks at the top of the audit file.
+3. Mrunalini must audit all eleven Apple claims before Session 4.
+4. The Apple report and code must be committed and pushed.
+5. Submit the final commit permalink in Brightspace Checkpoint 1.
 
 ## Working rules for the next session
 

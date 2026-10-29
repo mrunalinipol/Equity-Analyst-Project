@@ -30,3 +30,21 @@ Source: <https://github.com/anthropics/financial-services>
 3. Run the same desk on that ticker with suitable peers and a dated close.
 4. Shachi must check two core claims in that report and write both marks at the top of its file.
 5. Mrunalini must audit all eleven partner-company claims before Session 4.
+
+## Apple assignment run
+
+- Apple was the assigned company. The command used was
+  `.venv/bin/python desk.py AAPL --peers MSFT,GOOGL,DELL --price 338.19`.
+- The $338.19 input is Apple's unadjusted July 29, 2026 close, the last close
+  before the July 30 earnings release. Source: <https://investor.apple.com/stock-price/>.
+- The latest Item 2.02 earnings 8-K available during the run was accession
+  `0000320193-26-000018`, accepted July 30, 2026 at 16:30:28.
+- Apple calls its top line “Total net sales.” The release reader now accepts
+  that label and excludes footnote markers from the arithmetic.
+- The saved run is `outputs/AAPL_20261028_202525`.
+- The Purdue provider timed out on the Research Analyst request at both the
+  original limit and one 180-second retry. The report is therefore labeled
+  `fallback`, as the course instructions require when the provider is down.
+- The report has the five required parts, 11 core claims, P/E, and the MSFT,
+  GOOGL, and DELL peer margins.
+- The human audit is `audits/AAPL_20261028_human_audit.md`.

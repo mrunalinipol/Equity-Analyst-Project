@@ -1,0 +1,53 @@
+{
+  "accepted_from_index": {
+    "10-K": "2025-10-31 06:01:26",
+    "10-Q": "2026-07-31 06:01:02",
+    "earnings_8-K": "2026-07-30 16:30:28"
+  },
+  "arguments": {
+    "peers": [
+      "MSFT",
+      "GOOGL",
+      "DELL"
+    ],
+    "price": 338.19,
+    "step": null,
+    "ticker": "AAPL"
+  },
+  "company": {
+    "cik": "0000320193",
+    "name": "Apple Inc.",
+    "ticker": "AAPL"
+  },
+  "filings": {
+    "10-K": {
+      "accepted": "2025-10-31T10:01:26.000Z",
+      "accession": "0000320193-25-000079",
+      "filing_date": "2025-10-31",
+      "form": "10-K",
+      "items": "",
+      "primary_document": "aapl-20250927.htm",
+      "report_date": "2025-09-27"
+    },
+    "10-Q": {
+      "accepted": "2026-07-31T10:01:02.000Z",
+      "accession": "0000320193-26-000020",
+      "filing_date": "2026-07-31",
+      "form": "10-Q",
+      "items": "",
+      "primary_document": "aapl-20260627.htm",
+      "report_date": "2026-06-27"
+    },
+    "earnings_8-K": {
+      "accepted": "2026-07-30T20:30:28.000Z",
+      "accession": "0000320193-26-000018",
+      "filing_date": "2026-07-30",
+      "form": "8-K",
+      "items": "2.02,9.01",
+      "primary_document": "aapl-20260730.htm",
+      "report_date": "2026-07-30"
+    }
+  },
+  "release_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000018/a8-kex991q3202606272026.htm",
+  "run_time": "2026-10-28T20:25:25.053670-04:00"
+}

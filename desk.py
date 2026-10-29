@@ -425,12 +425,24 @@ def numeric_cells(row: str) -> list[float]:
 
 def release_evidence(html: str) -> dict[str, Any]:
     rows = table_rows(html)
-    total_revenue = next((row for row in rows if re.search(r"\btotal revenues?\b", row, re.I)), "")
+    # Preserve the filer's label. Some issuers use "total revenue," while
+    # Apple uses "total net sales" for the same top-line concept.
+    total_revenue = next(
+        (row for row in rows if re.search(r"\btotal (?:revenues?|net sales)\b", row, re.I)),
+        "",
+    )
     diluted_candidates = [row for row in rows if re.match(r"^Diluted\b", row, re.I)]
-    diluted_eps = max(diluted_candidates, key=len, default="")
+    currency_candidates = [row for row in diluted_candidates if "$" in row]
+    diluted_eps = max(currency_candidates or diluted_candidates, key=len, default="")
     if not total_revenue or not diluted_eps:
         raise RuntimeError("The release table did not expose both total revenue and diluted EPS rows.")
-    revenue_values = numeric_cells(total_revenue)
+    revenue_for_numbers = re.sub(
+        r"(?i)(total (?:revenues?|net sales))\s*\(\d+\)",
+        r"\1",
+        total_revenue,
+        count=1,
+    )
+    revenue_values = numeric_cells(revenue_for_numbers)
     eps_values = numeric_cells(diluted_eps)
     if len(revenue_values) < 2 or not eps_values:
         raise RuntimeError("The release rows did not contain the expected numeric values.")
@@ -687,7 +699,10 @@ def get_model_client(env_path: Path) -> tuple[OpenAI, str]:
         raise ValueError("Missing API_KEY in .env")
     base_url = env.get("BASE_URL", "https://genai.rcac.purdue.edu/api")
     model = env.get("MODEL", "llama3.1:latest")
-    client = OpenAI(api_key=api_key, base_url=base_url, timeout=45.0)
+    # Purdue-hosted models can need more than 45 seconds for filing excerpts.
+    # Permit one SDK retry, but keep a finite timeout so the course fallback
+    # remains available when the provider is down.
+    client = OpenAI(api_key=api_key, base_url=base_url, timeout=180.0, max_retries=1)
     return client, model
 
 

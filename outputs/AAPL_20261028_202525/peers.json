@@ -1,0 +1,161 @@
+{
+  "DELL": {
+    "company": {
+      "cik": "0001571996",
+      "name": "Dell Technologies Inc.",
+      "ticker": "DELL"
+    },
+    "facts": {
+      "operating_income": {
+        "accession": "0001571996-26-000008",
+        "end": "2026-01-30",
+        "filed": "2026-03-16",
+        "fiscal_period": "FY",
+        "fiscal_year": 2026,
+        "form": "10-K",
+        "prior_end": "2025-01-31",
+        "prior_start": "2024-02-03",
+        "prior_value": 6237000000,
+        "start": "2025-02-01",
+        "tag": "OperatingIncomeLoss",
+        "unit": "USD",
+        "value": 8149000000
+      },
+      "total_revenue": {
+        "accession": "0001571996-26-000008",
+        "end": "2026-01-30",
+        "filed": "2026-03-16",
+        "fiscal_period": "FY",
+        "fiscal_year": 2026,
+        "form": "10-K",
+        "prior_end": "2025-01-31",
+        "prior_start": "2024-02-03",
+        "prior_value": 95567000000,
+        "start": "2025-02-01",
+        "tag": "Revenues",
+        "unit": "USD",
+        "value": 113538000000
+      }
+    },
+    "filing": {
+      "accepted": "2026-03-16T20:12:39.000Z",
+      "accession": "0001571996-26-000008",
+      "filing_date": "2026-03-16",
+      "form": "10-K",
+      "items": "",
+      "primary_document": "dell-20260130.htm",
+      "report_date": "2026-01-30"
+    },
+    "operating_margin": {
+      "arithmetic": "8.149e+09 / 1.13538e+11",
+      "definition": "operating income / total revenue",
+      "value": 0.07177332699184415
+    }
+  },
+  "GOOGL": {
+    "company": {
+      "cik": "0001652044",
+      "name": "Alphabet Inc.",
+      "ticker": "GOOGL"
+    },
+    "facts": {
+      "operating_income": {
+        "accession": "0001652044-26-000018",
+        "end": "2025-12-31",
+        "filed": "2026-02-05",
+        "fiscal_period": "FY",
+        "fiscal_year": 2025,
+        "form": "10-K",
+        "prior_end": "2024-12-31",
+        "prior_start": "2024-01-01",
+        "prior_value": 112390000000,
+        "start": "2025-01-01",
+        "tag": "OperatingIncomeLoss",
+        "unit": "USD",
+        "value": 129039000000
+      },
+      "total_revenue": {
+        "accession": "0001652044-26-000018",
+        "end": "2025-12-31",
+        "filed": "2026-02-05",
+        "fiscal_period": "FY",
+        "fiscal_year": 2025,
+        "form": "10-K",
+        "prior_end": "2024-12-31",
+        "prior_start": "2024-01-01",
+        "prior_value": 350018000000,
+        "start": "2025-01-01",
+        "tag": "Revenues",
+        "unit": "USD",
+        "value": 402836000000
+      }
+    },
+    "filing": {
+      "accepted": "2026-02-05T02:56:03.000Z",
+      "accession": "0001652044-26-000018",
+      "filing_date": "2026-02-05",
+      "form": "10-K",
+      "items": "",
+      "primary_document": "goog-20251231.htm",
+      "report_date": "2025-12-31"
+    },
+    "operating_margin": {
+      "arithmetic": "1.29039e+11 / 4.02836e+11",
+      "definition": "operating income / total revenue",
+      "value": 0.32032638592380025
+    }
+  },
+  "MSFT": {
+    "company": {
+      "cik": "0000789019",
+      "name": "MICROSOFT CORP",
+      "ticker": "MSFT"
+    },
+    "facts": {
+      "operating_income": {
+        "accession": "0001193125-26-323660",
+        "end": "2026-06-30",
+        "filed": "2026-07-29",
+        "fiscal_period": "FY",
+        "fiscal_year": 2026,
+        "form": "10-K",
+        "prior_end": "2025-06-30",
+        "prior_start": "2024-07-01",
+        "prior_value": 128528000000,
+        "start": "2025-07-01",
+        "tag": "OperatingIncomeLoss",
+        "unit": "USD",
+        "value": 155237000000
+      },
+      "total_revenue": {
+        "accession": "0001193125-26-323660",
+        "end": "2026-06-30",
+        "filed": "2026-07-29",
+        "fiscal_period": "FY",
+        "fiscal_year": 2026,
+        "form": "10-K",
+        "prior_end": "2025-06-30",
+        "prior_start": "2024-07-01",
+        "prior_value": 281724000000,
+        "start": "2025-07-01",
+        "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "unit": "USD",
+        "value": 331839000000
+      }
+    },
+    "filing": {
+      "accepted": "2026-07-29T20:08:01.000Z",
+      "accession": "0001193125-26-323660",
+      "filing_date": "2026-07-29",
+      "form": "10-K",
+      "items": "",
+      "primary_document": "msft-20260630.htm",
+      "report_date": "2026-06-30"
+    },
+    "operating_margin": {
+      "arithmetic": "1.55237e+11 / 3.31839e+11",
+      "definition": "operating income / total revenue",
+      "value": 0.4678081840892722
+    }
+  }
+}

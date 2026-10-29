@@ -50,10 +50,21 @@ Run the tests:
 .venv/bin/python -m unittest discover -s tests -v
 ```
 
+Apple assignment command:
+
+```bash
+.venv/bin/python desk.py AAPL --peers MSFT,GOOGL,DELL --price 338.19
+```
+
+The Apple price is the unadjusted July 29, 2026 close. The saved Apple report is
+marked `fallback` because the Purdue model endpoint timed out twice. The Lab 03
+instructions state that a labeled fallback report counts when the provider is down.
+
 Each full run saves filing text, facts, calculations, release evidence, peer facts, and source metadata under `outputs/`.
 
 This is a learning exercise, not financial advice.
 
-AI assistance: OpenAI Codex helped build and test the filing reader. I verified the sources myself; the judgments are mine.
+AI assistance: OpenAI Codex helped build and test the filing reader. Human audit
+marks remain the student's responsibility.
 
 Any remaining errors are my own.
