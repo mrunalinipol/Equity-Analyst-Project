@@ -132,6 +132,10 @@ Apple assignment run:
   labeled `fallback`, which the Lab 03 instructions permit when the provider is down.
 - Apple report: `outputs/AAPL_20261028_202525/report.md`.
 - Apple human-audit worksheet: `audits/AAPL_20261028_human_audit.md`.
+- Checkpoint 1 was submitted in Brightspace on 2026-10-28 at 8:33 PM.
+- Brightspace submission ID: `23584866`.
+- Submitted commit permalink:
+  <https://github.com/mrunalinipol/Equity-Analyst-Project/commit/c25b468906b1dec8dc66181ca4b9245e2fd23c69>.
 
 ## Main commands
 
@@ -171,8 +175,6 @@ Run the tests:
 1. Mrunalini must audit the Apple report by hand and fill `audits/AAPL_20261028_human_audit.md`. AI must not supply the marks.
 2. Shachi Kaushik must check two Apple core claims and write both marks at the top of the audit file.
 3. Mrunalini must audit all eleven Apple claims before Session 4.
-4. The Apple report and code must be committed and pushed.
-5. Submit the final commit permalink in Brightspace Checkpoint 1.
 
 ## Working rules for the next session
 
