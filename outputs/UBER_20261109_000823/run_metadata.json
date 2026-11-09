@@ -1,0 +1,54 @@
+{
+  "accepted_from_index": {
+    "10-K": "2026-02-13 16:08:17",
+    "10-Q": "2026-11-04 16:07:19",
+    "earnings_8-K": "2026-11-04 06:55:39"
+  },
+  "arguments": {
+    "peers": [
+      "AMD",
+      "YUM",
+      "DUOL",
+      "PLTR"
+    ],
+    "price": null,
+    "step": null,
+    "ticker": "UBER"
+  },
+  "company": {
+    "cik": "0001543151",
+    "name": "Uber Technologies, Inc",
+    "ticker": "UBER"
+  },
+  "filings": {
+    "10-K": {
+      "accepted": "2026-02-13T21:08:17.000Z",
+      "accession": "0001543151-26-000015",
+      "filing_date": "2026-02-13",
+      "form": "10-K",
+      "items": "",
+      "primary_document": "uber-20251231.htm",
+      "report_date": "2025-12-31"
+    },
+    "10-Q": {
+      "accepted": "2026-11-04T21:07:19.000Z",
+      "accession": "0001543151-26-000041",
+      "filing_date": "2026-11-04",
+      "form": "10-Q",
+      "items": "",
+      "primary_document": "uber-20260930.htm",
+      "report_date": "2026-09-30"
+    },
+    "earnings_8-K": {
+      "accepted": "2026-11-04T11:55:39.000Z",
+      "accession": "0001543151-26-000039",
+      "filing_date": "2026-11-04",
+      "form": "8-K",
+      "items": "2.02,5.02,9.01",
+      "primary_document": "uber-20261104.htm",
+      "report_date": "2026-11-04"
+    }
+  },
+  "release_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000039/uberq326earningspressrelea.htm",
+  "run_time": "2026-11-09T00:08:23.403769-05:00"
+}

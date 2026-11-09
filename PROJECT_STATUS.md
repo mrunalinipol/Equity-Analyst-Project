@@ -1,5 +1,32 @@
 # Project Status and Session Handoff
 
+## Lab 05 final technical run — 2026-11-09
+
+- The UBER team ran through the local page service in Orca with peers AMD,
+  YUM, DUOL, and PLTR. The final folder is
+  `outputs/UBER_20261109_000823`.
+- The Manager status is `PASS`. The Verifier result is `verified: true`; all
+  50 marks are `correct`.
+- The printed order is `steps -> Research Analyst -> Financial Analyst ->
+  Investment Advisor -> Strategy Manager -> Verifier`.
+- The verified report contains three distinct `Insight:` lines. Every number
+  in each line occurs on its cited saved 10-K line.
+- The Flow now preserves the calculator-built core block, rejects duplicate
+  insights, checks an Insight against its exact saved line, and uses an exact
+  company-neutral 10-K sentence only when a model insight fails that check.
+  The Advisor fallback copies a verified Financial Analyst claim and source.
+- All 31 automated tests pass, and `git diff --check` passes.
+- `week03/Lab05_partner_check.md` and the root partner worksheet now identify
+  the final run, its two core claims, and one Insight line. Shachi's page
+  answers, marks, corrections, name, initials, date, and signature remain
+  blank for her independent review.
+- Remaining human work: the student must write the three personas and personal
+  reflection; Shachi must run this repository's page and complete its partner
+  worksheet. Team formation is already marked complete without stored names.
+- No Brightspace action was performed. The branch is not ready to merge into
+  `main` until the human-authored persona and reflection work and the matching
+  partner review are complete.
+
 ## Lab 05 preparation update — 2026-11-08
 
 - Work continues on branch `lab05-preparation`, based on the completed Lab 04
@@ -31,11 +58,13 @@
   was pushed to public branch `lab05-preparation`. It contains no `.env` or
   `.venv`. The branch is not merged into `main` because the student personas,
   live model run, and Shachi's review are still incomplete.
-- A read-only GitHub check on 2026-11-08 found no Lab 05 pull request from
-  Shachi. Her `week03/Lab05_partner_check.md` on `main` still has blank marks,
-  reviewer name, initials, date, and signature. Her separate final UBER run is
-  32/32 with Manager `PASS`, but it is not a signed partner review of this
-  repository's run.
+- A later read-only GitHub check on 2026-11-08 found that Shachi completed and
+  signed `week03/Lab05_partner_check.md` in her repository. She marked both
+  UBER claims `RIGHT`, entered her name and initials `SK`, and dated the review
+  November 8, 2026. The worksheet reviews her run
+  `runs/UBER_20261108_184111` with peers AMD, YUM, DUOL, and PLTR. It does not
+  review this repository's `lab05-preparation` run with LYFT, DASH, and ABNB,
+  and Shachi has not opened a Lab 05 pull request to this repository.
 - The student confirmed that team formation is complete. Team-member names
   and the team name are not stored in the repository. The personal reflection
   remains blank in `week03/Lab05_personal_reflection.md`.

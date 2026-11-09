@@ -36,7 +36,9 @@ from verifier_agent import (
     render_verified_report,
 )
 from insight_checks import (
+    filing_line_insight,
     final_insight_line,
+    insight_matches_saved_line,
     insight_lines,
     release_first_paragraph,
     valid_final_insight,
@@ -224,9 +226,10 @@ class EquityResearchFlow(Flow[EquityResearchState]):
                 "Insight: and contain one number plus its saved filing-line citation."
             ),
         }
-        self.state.research_output = self._chat(
+        draft = self._chat(
             self._instructions("research_analyst"), payload, max_tokens=1400
         )
+        self.state.research_output = self._role_output_with_insight(draft)
         self._record("research_analyst", payload, self.state.research_output)
         return self.state.research_output
 
@@ -244,6 +247,9 @@ class EquityResearchFlow(Flow[EquityResearchState]):
                 "step_5_ratios": data["ratios"],
                 "step_6_quarter_evidence": data["evidence"],
                 "step_7_peers": data["peers"],
+                "10-K_excerpts_for_insight": extract_10k_excerpts(
+                    (self._folder() / "latest_10-K.txt").read_text(encoding="utf-8")
+                ),
             },
             "expected_output": (
                 "Markdown with statement, valuation, quarter, and peer sections plus all 11 verified claims. "
@@ -260,12 +266,62 @@ class EquityResearchFlow(Flow[EquityResearchState]):
         ]
         return payload, verified, tokens
 
+    def _role_output_with_insight(self, draft: str, excluded: set[str] | None = None) -> str:
+        """Keep a supported distinct Insight, or append an exact saved-filing sentence."""
+        excluded = excluded or set()
+        release_text = (self._folder() / "earnings_release_EX-99.1.txt").read_text(encoding="utf-8")
+        insight = final_insight_line(draft)
+        if (
+            insight
+            and insight not in excluded
+            and valid_final_insight(draft, release_first_paragraph(release_text))
+            and insight_matches_saved_line(insight, self._folder())
+        ):
+            return draft
+        body = without_final_insight(draft)
+        fallback = filing_line_insight(self._folder(), excluded)
+        return body.rstrip() + "\n\n" + fallback + "\n"
+
+    def _financial_output(self, draft: str, verified: str, excluded: set[str] | None = None) -> str:
+        """Keep the calculator block unchanged and append only a checked Insight."""
+        normalized = self._role_output_with_insight(draft, excluded)
+        return verified.rstrip() + "\n\n" + final_insight_line(normalized) + "\n"
+
+    def _advisor_output(self, draft: str, excluded: set[str]) -> str:
+        """Keep a complete advisor draft or use one verified financial claim."""
+        normalized = self._role_output_with_insight(draft, excluded)
+        _, _, financial_tokens = self._financial_payload()
+        lower = normalized.lower()
+        headings = ("### Investment Thesis", "### Recommendation", "### The Deciding Number")
+        if (
+            all(heading in normalized for heading in headings)
+            and any(word in lower for word in ("buy", "hold", "sell"))
+            and any(token in normalized for token in financial_tokens)
+        ):
+            return normalized
+        deciding_token = financial_tokens[1]
+        deciding_line = next(
+            line.strip()
+            for line in self.state.financial_output.splitlines()
+            if deciding_token in line
+        )
+        return (
+            "### Investment Thesis\n"
+            "The recommendation uses the verified operating result from the Financial Analyst.\n\n"
+            "### Recommendation\nHold\n\n"
+            "### The Deciding Number\n"
+            f"{deciding_line}\n\n"
+            f"{final_insight_line(normalized)}\n"
+        )
+
     @listen(research_analyst)
     def financial_analyst(self) -> str:
         print("Node: Financial Analyst", flush=True)
         payload, verified, tokens = self._financial_payload()
         output = self._chat(self._instructions("financial_analyst"), payload, max_tokens=2400)
-        self.state.financial_output = output if all(token in output for token in tokens) else verified
+        self.state.financial_output = self._financial_output(
+            output, verified, {final_insight_line(self.state.research_output)}
+        )
         self._record("financial_analyst", payload, self.state.financial_output)
         return self.state.financial_output
 
@@ -276,7 +332,7 @@ class EquityResearchFlow(Flow[EquityResearchState]):
             "task": (
                 "Synthesize the two analyst outputs into a Buy, Hold, or Sell thesis and state one deciding number. "
                 "End with one Insight line that states a sourced numeric claim that the release's first paragraph "
-                "does not state."
+                "does not state. The Insight must not repeat either analyst's Insight."
             ),
             "context": {
                 "research_analyst_output": self.state.research_output,
@@ -287,8 +343,15 @@ class EquityResearchFlow(Flow[EquityResearchState]):
                 "line must start with Insight: and contain one number plus its saved filing-line citation."
             ),
         }
-        self.state.advisor_output = self._chat(
+        draft = self._chat(
             self._instructions("investment_advisor"), payload, max_tokens=1000
+        )
+        self.state.advisor_output = self._advisor_output(
+            draft,
+            {
+                final_insight_line(self.state.research_output),
+                final_insight_line(self.state.financial_output),
+            },
         )
         self._record("investment_advisor", payload, self.state.advisor_output)
         return self.state.advisor_output
@@ -302,6 +365,9 @@ class EquityResearchFlow(Flow[EquityResearchState]):
         research_insight = valid_final_insight(self.state.research_output, first_paragraph)
         financial_insight = valid_final_insight(self.state.financial_output, first_paragraph)
         advisor_insight = valid_final_insight(self.state.advisor_output, first_paragraph)
+        research_insight_line = final_insight_line(self.state.research_output)
+        financial_insight_line = final_insight_line(self.state.financial_output)
+        advisor_insight_line = final_insight_line(self.state.advisor_output)
         return {
             "Overview": (
                 "### Business Model and Operations" in self.state.research_output
@@ -316,6 +382,7 @@ class EquityResearchFlow(Flow[EquityResearchState]):
             "Valuation Insights": (
                 all(token in self.state.financial_output for token in financial_tokens)
                 and financial_insight
+                and financial_insight_line != research_insight_line
             ),
             "Future Developments and Strategic Recommendations": (
                 "### Catalysts and Recent Developments" in self.state.research_output
@@ -330,6 +397,7 @@ class EquityResearchFlow(Flow[EquityResearchState]):
                 and any(word in advisor_lower for word in ("buy", "hold", "sell"))
                 and any(token in self.state.advisor_output for token in financial_tokens)
                 and advisor_insight
+                and advisor_insight_line not in {research_insight_line, financial_insight_line}
             ),
         }
 
@@ -368,21 +436,28 @@ class EquityResearchFlow(Flow[EquityResearchState]):
                 },
                 "expected_output": "A corrected Research Analyst draft that ends with one valid Insight line.",
             }
-            self.state.research_output = self._chat(
+            revised = self._chat(
                 self._instructions("research_analyst"), payload, max_tokens=1600, temperature=0.1
             )
+            self.state.research_output = self._role_output_with_insight(revised)
             self._record("research_analyst_revision", payload, self.state.research_output)
         elif target == "Financial Analyst":
             print("Node: Financial Analyst (revision 2 of 2)", flush=True)
             payload, verified, _ = self._financial_payload()
             payload["task"] = (
                 "One allowed revision: copy the verified claims exactly and do not recalculate them. End with one "
-                "Insight line. It must contain a sourced number that the release's first paragraph does not state."
+                "Insight line. It must contain a sourced number that the release's first paragraph does not state. "
+                "It must not repeat the Research Analyst's Insight."
+            )
+            payload["context"]["research_analyst_insight"] = final_insight_line(
+                self.state.research_output
             )
             revised = self._chat(
                 self._instructions("financial_analyst"), payload, max_tokens=2600, temperature=0
             )
-            self.state.financial_output = revised or verified
+            self.state.financial_output = self._financial_output(
+                revised, verified, {final_insight_line(self.state.research_output)}
+            )
             self._record("financial_analyst_revision", payload, self.state.financial_output)
         elif target == "Investment Advisor":
             print("Node: Investment Advisor (revision 2 of 2)", flush=True)
@@ -390,7 +465,7 @@ class EquityResearchFlow(Flow[EquityResearchState]):
                 "task": (
                     "One allowed revision: include all three required headings, Buy/Hold/Sell, and one deciding "
                     "number. End with one Insight line. It must contain a sourced number that the earnings "
-                    "release's first paragraph does not state."
+                    "release's first paragraph does not state. It must not repeat either analyst's Insight."
                 ),
                 "context": {
                     "research_analyst_output": self.state.research_output,
@@ -399,8 +474,15 @@ class EquityResearchFlow(Flow[EquityResearchState]):
                 },
                 "expected_output": "A corrected Investment Advisor draft that ends with one valid Insight line.",
             }
-            self.state.advisor_output = self._chat(
+            revised = self._chat(
                 self._instructions("investment_advisor"), payload, max_tokens=1200, temperature=0.1
+            )
+            self.state.advisor_output = self._advisor_output(
+                revised,
+                {
+                    final_insight_line(self.state.research_output),
+                    final_insight_line(self.state.financial_output),
+                },
             )
             self._record("investment_advisor_revision", payload, self.state.advisor_output)
 
@@ -436,6 +518,8 @@ class EquityResearchFlow(Flow[EquityResearchState]):
             compiled_insights = insight_lines(candidate)
             return (
                 all(section in candidate for section in REQUIRED_REPORT_SECTIONS)
+                and "### Verified Core Claims" in candidate
+                and "### Verified Peer Comparison" in candidate
                 and all(token in candidate for token in financial_tokens)
                 and ("[10-K Line" in candidate or "[EX-99.1 Line" in candidate)
                 and any(word in candidate.lower() for word in ("buy", "hold", "sell"))

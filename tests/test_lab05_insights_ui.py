@@ -4,7 +4,9 @@ from pathlib import Path
 
 from agent_team_ui import PAGE, validate_payload
 from insight_checks import (
+    filing_line_insight,
     final_insight_line,
+    insight_matches_saved_line,
     insight_only_restates_release,
     release_first_paragraph,
     valid_final_insight,
@@ -26,6 +28,15 @@ class Lab05InsightTests(unittest.TestCase):
         self.assertIn("len(set(expected_insights)) == 3", source)
         self.assertIn("sorted(compiled_insights) == sorted(expected_insights)", source)
         self.assertIn('"PASS" if all(part_checks.values())', source)
+        self.assertIn("self._financial_output(", source)
+        self.assertIn("advisor_insight_line not in", source)
+        self.assertIn('and "### Verified Core Claims" in candidate', source)
+        self.assertIn("self._advisor_output(", source)
+
+    def test_financial_output_keeps_verified_block(self) -> None:
+        source = (ROOT / "crewai_flow.py").read_text(encoding="utf-8")
+        self.assertIn('return verified.rstrip() + "\\n\\n" + final_insight_line(normalized)', source)
+        self.assertNotIn("output if all(token in output for token in tokens) else verified", source)
 
     def test_new_program_code_is_company_neutral(self) -> None:
         for name in ("crewai_flow.py", "verifier_agent.py", "insight_checks.py", "agent_team_ui.py"):
@@ -47,6 +58,13 @@ class Lab05InsightTests(unittest.TestCase):
         self.assertTrue(valid_final_insight(output, paragraph))
         self.assertFalse(valid_final_insight(output + "Extra conclusion.\n", paragraph))
         self.assertEqual(without_final_insight(output), "Analysis.")
+
+    def test_fallback_insight_matches_saved_line_and_is_distinct(self) -> None:
+        first = filing_line_insight(RUN)
+        second = filing_line_insight(RUN, {first})
+        self.assertNotEqual(first, second)
+        self.assertTrue(insight_matches_saved_line(first, RUN))
+        self.assertTrue(insight_matches_saved_line(second, RUN))
 
     def test_first_paragraph_restatement_fails(self) -> None:
         paragraph = "Revenue increased 10.0% to $100 million."

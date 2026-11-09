@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import re
+from pathlib import Path
 
 
 INSIGHT_PREFIX = "Insight:"
@@ -69,3 +70,54 @@ def valid_final_insight(output: str, first_paragraph: str) -> bool:
         and number_tokens(insight)
         and not insight_only_restates_release(insight, first_paragraph)
     )
+
+
+def insight_matches_saved_line(insight: str, run_folder: Path) -> bool:
+    """Return True when every Insight number occurs on its one cited saved line."""
+    citation = LINE_CITATION_RE.search(insight)
+    if citation is None:
+        return False
+    filing, line_text = citation.groups()
+    paths = {
+        "10-K": run_folder / "latest_10-K.txt",
+        "10-Q": run_folder / "latest_10-Q.txt",
+        "EX-99.1": run_folder / "earnings_release_EX-99.1.txt",
+    }
+    path = paths[filing]
+    if not path.exists():
+        return False
+    lines = path.read_text(encoding="utf-8").splitlines()
+    line_number = int(line_text)
+    if not 1 <= line_number <= len(lines):
+        return False
+    source_numbers = set(number_tokens(lines[line_number - 1]))
+    claimed_numbers = number_tokens(insight)
+    return bool(claimed_numbers) and all(number in source_numbers for number in claimed_numbers)
+
+
+def filing_line_insight(run_folder: Path, excluded: set[str] | None = None) -> str:
+    """Choose a company-neutral, numeric 10-K sentence as a sourced fallback Insight."""
+    excluded = excluded or set()
+    lines = (run_folder / "latest_10-K.txt").read_text(encoding="utf-8").splitlines()
+    candidates: list[tuple[int, int, str]] = []
+    favored = ("approximately", "million", "countries", "cities", "employees", "%")
+    blocked = ("http://", "https://", "rule ", "section ", "item ", "table of contents")
+    for index, raw in enumerate(lines, start=1):
+        line = " ".join(raw.split())
+        lower = line.lower()
+        if not 70 <= len(line) <= 500 or not number_tokens(line):
+            continue
+        if any(value in lower for value in blocked):
+            continue
+        insight = f"Insight: {line} [10-K Line {index}]"
+        if insight in excluded:
+            continue
+        score = sum(value in lower for value in favored)
+        if index > 200:
+            score += 1
+        if line.endswith((".", "%")):
+            score += 1
+        candidates.append((score, -index, insight))
+    if not candidates:
+        raise RuntimeError("The saved 10-K did not contain a numeric sentence for an Insight fallback.")
+    return max(candidates)[2]

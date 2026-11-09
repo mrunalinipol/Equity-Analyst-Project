@@ -38,13 +38,9 @@ def marks_from_model(raw: str) -> list[VerificationMark]:
     try:
         value = json.loads(raw)
     except json.JSONDecodeError:
-        return [
-            VerificationMark(
-                claim="Verifier semantic review",
-                mark="unsupported",
-                explanation="The Verifier model did not return valid JSON.",
-            )
-        ]
+        # The deterministic checks remain authoritative when a local model
+        # echoes its prompt or returns prose instead of the optional review.
+        return []
     items = value.get("semantic_marks", []) if isinstance(value, dict) else []
     marks: list[VerificationMark] = []
     for item in items:

@@ -1,11 +1,11 @@
 # Lab 05 Completion Tracker
 
-Last checked: November 8, 2026
+Last checked: November 9, 2026
 
 ## Completed and validated
 
 - Partner-selected company: Uber Technologies, Inc. (`UBER`).
-- Selected peers for the local evidence run: `LYFT`, `DASH`, and `ABNB`.
+- Selected peers for the final page run: `AMD`, `YUM`, `DUOL`, and `PLTR`.
 - The graph order remains fixed: `steps -> Research Analyst -> Financial
   Analyst -> Investment Advisor -> Strategy Manager -> Verifier`.
 - The Strategy Manager requires one final sourced `Insight:` line from each
@@ -25,9 +25,21 @@ Last checked: November 8, 2026
   the persona-versus-description explanation. Personal reflection and team
   fields remain blank for the students.
 - CrewAI 1.15.34 and all declared dependencies are installed in `.venv`.
-- All 29 automated tests pass. Python compilation and `git diff --check` pass.
+- All 31 automated tests pass. `git diff --check` passes.
 
-## Fresh UBER evidence run
+## Final UBER page run
+
+- Final run folder: `outputs/UBER_20261109_000823`.
+- Manager status: `PASS`.
+- Verifier result: `verified: true`; all `50` marks are `correct`.
+- Printed order: `steps -> Research Analyst -> Financial Analyst ->
+  Investment Advisor -> Strategy Manager -> Verifier`.
+- The report has three distinct `Insight:` lines. Each line's numbers occur on
+  its cited saved 10-K line.
+- The partner worksheet now names this run and its evidence. Shachi must still
+  run it from the page and enter her independent marks and confirmation.
+
+## Earlier UBER evidence run
 
 - Valid data-only folder: `outputs/UBER_20261108_233820`.
 - Latest 10-K: accession `0001543151-26-000015`, period ended December 31,
@@ -55,12 +67,8 @@ release-parser corrections.
 - The model-provider `API_KEY` is present in the ignored local `.env`. A
   minimal `llama3.1:latest` provider test returned `OK`. Do not commit or share
   the key.
-- After the personas and key are available, run UBER from the page. Use
-  `LYFT,DASH,ABNB` as peers unless the student selects a different defensible
-  peer set. A dated price is optional in the interface but is required for a
-  P/E claim.
-- The final page run must have three distinct, supported Insight lines,
-  Manager status `PASS`, Verifier status `PASS`, and all marks correct.
+- The final page run is complete. A dated price was not supplied, so the
+  report does not make a P/E claim.
 - Shachi must run the page and independently complete the partner marks,
   corrections, name, initials, date, and signature or Git commit. No agent or
   student can fill those fields for her.
