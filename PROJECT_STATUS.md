@@ -26,6 +26,10 @@
 - The student-written persona worksheet remains blank. AI must not write the
   three personas.
 - No Brightspace action was performed.
+- Preparation commit `9fb4d0256c81172c77f3df9adddb4184beb47384`
+  was pushed to public branch `lab05-preparation`. It contains no `.env` or
+  `.venv`. The branch is not merged into `main` because the student personas,
+  live model run, and Shachi's review are still incomplete.
 
 Last updated: 2026-11-03
 
