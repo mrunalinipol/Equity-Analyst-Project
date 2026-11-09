@@ -310,3 +310,13 @@ Run the tests:
 - Use the same definition across peer comparisons.
 - Do not claim that partner checks or in-person work are complete unless the student confirms them.
 - Update this file before the next session ends.
+
+## Lab 05 completion update — 2026-11-09
+
+- The student's three existing persona drafts were transferred verbatim into the three analyst role files.
+- Each analyst role has the six required parts, numeric scoring criteria, and a final `Insight:` instruction. No analyst role names a company.
+- The student's personal reflection is complete, and its four template comments were removed.
+- The final-run partner package is complete in `LAB05_PARTNER_CHECK_FOR_SHACHI.md`.
+- All 32 automated tests pass after the role-file update, and `git diff --check` passes.
+- Five failed UBER diagnostic folders remain local and untracked. They must not be published.
+- Brightspace submission remains a manual student action.

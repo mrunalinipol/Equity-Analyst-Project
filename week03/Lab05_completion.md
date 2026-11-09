@@ -90,7 +90,7 @@ release-parser corrections.
   is retained as an unused template; no agent filled Shachi's fields.
 - Team formation is complete, as confirmed by the student on November 8,
   2026. The team-member names and team name are not stored in this repository.
-- The student's personal reflection remains incomplete.
+- The student's personal reflection is complete in `week03/Lab05_personal_reflection.md`.
 - Brightspace submission remains manual. No agent may submit it.
 
 ## Checkpoint 2 readiness
@@ -102,7 +102,11 @@ release-parser corrections.
   from accession `0000909832-26-000093` and saved 10-K lines 1840-1842.
 - A public commit permalink can satisfy the stated Checkpoint 2 upload field.
   The student must paste that permalink into Brightspace manually.
-- Full Lab 05 authorship is not complete until the student writes the three
-  personas and personal reflection. The partner-page answers for the final
-  run also remain blank, although the student confirmed that Shachi's signed
-  earlier UBER review satisfies the partner-check requirement.
+- The three student-drafted personas are installed in the three analyst role
+  files. Each has the six required parts, numeric scoring criteria, and a final
+  `Insight:` instruction. No role file names a company.
+- The final-run partner package is complete in
+  `LAB05_PARTNER_CHECK_FOR_SHACHI.md`, including the page checks, two core
+  claim marks, one Insight-line check, and partner confirmation.
+- The personal reflection is complete. Full Lab 05 repository work is ready;
+  Brightspace submission remains a manual student action.
