@@ -20,6 +20,10 @@ Last checked: November 8, 2026
 - The page returned HTTP 200 on local port 8765. Its normal start command is
   `.venv/bin/python agent_team_ui.py`; its default address is
   `http://127.0.0.1:8000`.
+- `week03/Lab05_in_class_notes.md` prepares the node-order defense, the
+  different-quarter Verifier answer, a filing-supported Costco gap line, and
+  the persona-versus-description explanation. Personal reflection and team
+  fields remain blank for the students.
 - CrewAI 1.15.34 and all declared dependencies are installed in `.venv`.
 - All 29 automated tests pass. Python compilation and `git diff --check` pass.
 
