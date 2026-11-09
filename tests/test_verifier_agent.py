@@ -10,6 +10,10 @@ RUN = ROOT / "outputs" / "COST_20261028_194706"
 
 
 class VerifierAgentTests(unittest.TestCase):
+    def test_flow_discards_model_marks_for_claims_absent_from_report(self) -> None:
+        source = (ROOT / "crewai_flow.py").read_text(encoding="utf-8")
+        self.assertIn("if mark.claim in report_text", source)
+
     def test_clean_costco_report_passes(self) -> None:
         result = audit_saved_run(RUN)
         core_marks = result.marks[:11]

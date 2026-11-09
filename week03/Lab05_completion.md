@@ -25,7 +25,18 @@ Last checked: November 9, 2026
   the persona-versus-description explanation. Personal reflection and team
   fields remain blank for the students.
 - CrewAI 1.15.34 and all declared dependencies are installed in `.venv`.
-- All 31 automated tests pass. `git diff --check` passes.
+- All 32 automated tests pass. Python compilation and `git diff --check` pass.
+
+## Final COST proof run
+
+- Final run folder: `outputs/COST_20261109_002527`.
+- Inputs: COST; peers WMT, TGT, and BJ; price `$992.13`.
+- Manager status: `PASS`.
+- Verifier result: `verified: true`; all `22` retained marks are `correct`.
+- Printed order: `steps -> Research Analyst -> Financial Analyst ->
+  Investment Advisor -> Strategy Manager -> Verifier`.
+- The report has three distinct `Insight:` lines, each with a correct filing
+  mark. The order matches the final UBER run.
 
 ## Final UBER page run
 
@@ -81,3 +92,17 @@ release-parser corrections.
   2026. The team-member names and team name are not stored in this repository.
 - The student's personal reflection remains incomplete.
 - Brightspace submission remains manual. No agent may submit it.
+
+## Checkpoint 2 readiness
+
+- The repository contains the agent team, UI, Verifier, fixed graph, seeded
+  EPS-error proof, clean COST proof, and final UBER proof.
+- In `lab04_evidence/COST_20261107_123023_seeded_eps/verification.json`, the
+  seeded `$21.76` GAAP diluted EPS claim is `wrong`; the correction is `$20.76`
+  from accession `0000909832-26-000093` and saved 10-K lines 1840-1842.
+- A public commit permalink can satisfy the stated Checkpoint 2 upload field.
+  The student must paste that permalink into Brightspace manually.
+- Full Lab 05 authorship is not complete until the student writes the three
+  personas and personal reflection. The partner-page answers for the final
+  run also remain blank, although the student confirmed that Shachi's signed
+  earlier UBER review satisfies the partner-check requirement.

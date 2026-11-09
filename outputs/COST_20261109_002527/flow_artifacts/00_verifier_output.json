@@ -1,0 +1,159 @@
+{
+  "marks": [
+    {
+      "claim": "Total revenue",
+      "correction": "",
+      "explanation": "The stated value, arithmetic, definition when required, and source match the saved run.",
+      "mark": "correct",
+      "source": "10-K accession 0000909832-26-000093; XBRL tag `RevenueFromContractWithCustomerExcludingAssessedTax`; period ended 2026-08-30"
+    },
+    {
+      "claim": "Revenue growth",
+      "correction": "",
+      "explanation": "The stated value, arithmetic, definition when required, and source match the saved run.",
+      "mark": "correct",
+      "source": "10-K accession 0000909832-26-000093; XBRL tag `RevenueFromContractWithCustomerExcludingAssessedTax`; period ended 2026-08-30"
+    },
+    {
+      "claim": "Operating income and operating margin",
+      "correction": "",
+      "explanation": "The stated value, arithmetic, definition when required, and source match the saved run.",
+      "mark": "correct",
+      "source": "10-K accession 0000909832-26-000093; XBRL tag `OperatingIncomeLoss`; period ended 2026-08-30; 10-K accession 0000909832-26-000093; XBRL tag `RevenueFromContractWithCustomerExcludingAssessedTax`; period ended 2026-08-30"
+    },
+    {
+      "claim": "Net income attributable to the company",
+      "correction": "",
+      "explanation": "The stated value, arithmetic, definition when required, and source match the saved run.",
+      "mark": "correct",
+      "source": "10-K accession 0000909832-26-000093; XBRL tag `NetIncomeLoss`; period ended 2026-08-30"
+    },
+    {
+      "claim": "GAAP diluted EPS",
+      "correction": "",
+      "explanation": "The stated value, arithmetic, definition when required, and source match the saved run.",
+      "mark": "correct",
+      "source": "10-K accession 0000909832-26-000093; XBRL tag `EarningsPerShareDiluted`; period ended 2026-08-30"
+    },
+    {
+      "claim": "Return on average equity",
+      "correction": "",
+      "explanation": "The stated value, arithmetic, definition when required, and source match the saved run.",
+      "mark": "correct",
+      "source": "10-K accession 0000909832-26-000093; XBRL tag `NetIncomeLoss`; period ended 2026-08-30; 10-K accession 0000909832-26-000093; XBRL tag `StockholdersEquity`; period ended 2026-08-30"
+    },
+    {
+      "claim": "Debt to equity",
+      "correction": "",
+      "explanation": "The stated value, arithmetic, definition when required, and source match the saved run.",
+      "mark": "correct",
+      "source": "10-K accession 0000909832-26-000093; XBRL tag `LongTermDebtNoncurrent`; period ended 2026-08-30; 10-K accession 0000909832-26-000093; XBRL tag `LongTermDebtCurrent`; period ended 2026-08-30; 10-K accession 0000909832-26-000093; XBRL tag `StockholdersEquity`; period ended 2026-08-30"
+    },
+    {
+      "claim": "Free cash flow",
+      "correction": "",
+      "explanation": "The stated value, arithmetic, definition when required, and source match the saved run.",
+      "mark": "correct",
+      "source": "10-K accession 0000909832-26-000093; XBRL tag `NetCashProvidedByUsedInOperatingActivities`; period ended 2026-08-30; 10-K accession 0000909832-26-000093; XBRL tag `PaymentsToAcquirePropertyPlantAndEquipment`; period ended 2026-08-30"
+    },
+    {
+      "claim": "Latest-quarter total revenue",
+      "correction": "",
+      "explanation": "The stated value, arithmetic, definition when required, and source match the saved run.",
+      "mark": "correct",
+      "source": "Exhibit 99.1 line `Total revenue | 95,723 | 86,156 | 303,154 | 275,235`"
+    },
+    {
+      "claim": "Quarter revenue growth",
+      "correction": "",
+      "explanation": "The stated value, arithmetic, definition when required, and source match the saved run.",
+      "mark": "correct",
+      "source": "Exhibit 99.1 line `Total revenue | 95,723 | 86,156 | 303,154 | 275,235`"
+    },
+    {
+      "claim": "Latest-quarter GAAP diluted EPS",
+      "correction": "",
+      "explanation": "The stated value, arithmetic, definition when required, and source match the saved run.",
+      "mark": "correct",
+      "source": "Exhibit 99.1 line `Diluted | $ | 6.75 | $ | 5.87 | $ | 20.76 | $ | 18.21`"
+    },
+    {
+      "claim": "10-K Line 865",
+      "correction": "",
+      "explanation": "The cited line exists in the saved filing text.",
+      "mark": "correct",
+      "source": "At the end of 2026, we employed 355,000 employees worldwide. Approximately 95% are employed in our membership warehouses and distribution channels. Around 5% are represented by unions. We also utilize seasonal employees."
+    },
+    {
+      "claim": "10-K Line 858",
+      "correction": "",
+      "explanation": "The cited line exists in the saved filing text.",
+      "mark": "correct",
+      "source": "Paid members, in most countries, are eligible to upgrade to an Executive membership for an additional annual fee. These members earn an Executive reward, generally 2% on qualified purchases, subject to an annual maximum value, redeemable at Costco warehouses. Executive members represented 42,300, 38,700, and 35,400 of total paid members in 2026, 2025, and 2024. The penetration of sales to Executive members represented approximately 75.2% of worldwide net sales in 2026."
+    },
+    {
+      "claim": "10-K Line 1475",
+      "correction": "",
+      "explanation": "The cited line exists in the saved filing text.",
+      "mark": "correct",
+      "source": "As previously reported, we increased annual membership fees in the U.S. and Canada, effective September 1, 2024. We account for membership fee revenue on a deferred basis, recognized ratably over the one-year membership period. The fee income increase accounted for approximately 30% and 40% of membership income growth during 2026 and 2025."
+    },
+    {
+      "claim": "Insight 1",
+      "correction": "",
+      "explanation": "Each Insight number occurs in its cited saved filing line.",
+      "mark": "correct",
+      "source": "10-K Line 865: At the end of 2026, we employed 355,000 employees worldwide. Approximately 95% are employed in our membership warehouses and distribution channels. Around 5% are represented by unions. We also utilize seasonal employees."
+    },
+    {
+      "claim": "Insight 2",
+      "correction": "",
+      "explanation": "Each Insight number occurs in its cited saved filing line.",
+      "mark": "correct",
+      "source": "10-K Line 858: Paid members, in most countries, are eligible to upgrade to an Executive membership for an additional annual fee. These members earn an Executive reward, generally 2% on qualified purchases, subject to an annual maximum value, redeemable at Costco warehouses. Executive members represented 42,300, 38,700, and 35,400 of total paid members in 2026, 2025, and 2024. The penetration of sales to Executive members represented approximately 75.2% of worldwide net sales in 2026."
+    },
+    {
+      "claim": "Insight 3",
+      "correction": "",
+      "explanation": "Each Insight number occurs in its cited saved filing line.",
+      "mark": "correct",
+      "source": "10-K Line 1475: As previously reported, we increased annual membership fees in the U.S. and Canada, effective September 1, 2024. We account for membership fee revenue on a deferred basis, recognized ratably over the one-year membership period. The fee income increase accounted for approximately 30% and 40% of membership income growth during 2026 and 2025."
+    },
+    {
+      "claim": "Costco operates on a membership warehouse model, offering low prices on a limited selection of nationally-branded and private-label products in a wide range of categories.",
+      "correction": "",
+      "explanation": "",
+      "mark": "correct",
+      "source": "10-K Line 801"
+    },
+    {
+      "claim": "At the end of 2026, we employed 355,000 employees worldwide. Approximately 95% are employed in our membership warehouses and distribution channels. Around 5% are represented by unions. We also utilize seasonal employees.",
+      "correction": "",
+      "explanation": "",
+      "mark": "correct",
+      "source": "10-K Line 865"
+    },
+    {
+      "claim": "Paid members, in most countries, are eligible to upgrade to an Executive membership for an additional annual fee. These members earn an Executive reward, generally 2% on qualified purchases, subject to an annual maximum value, redeemable at Costco warehouses.",
+      "correction": "",
+      "explanation": "",
+      "mark": "correct",
+      "source": "10-K Line 858"
+    },
+    {
+      "claim": "As previously reported, we increased annual membership fees in the U.S. and Canada, effective September 1, 2024. We account for membership fee revenue on a deferred basis, recognized ratably over the one-year membership period.",
+      "correction": "",
+      "explanation": "",
+      "mark": "correct",
+      "source": "10-K Line 1475"
+    }
+  ],
+  "model_review": "{\"semantic_marks\": [{\"claim\": \"Costco operates 939 warehouses worldwide as of August 30, 2026.\", \"mark\": \"correct\", \"explanation\": \"\", \"correction\": \"\", \"source\": \"EX-99.1 Line 45\"}, {\"claim\": \"Total revenue: $303,154 million.\", \"mark\": \"correct\", \"explanation\": \"XBRL claim matches the supplied tag, period, accession, unit, and value.\", \"correction\": \"\", \"source\": \"10-K accession 0000909832-26-000093; XBRL tag `RevenueFromContractWithCustomerExcludingAssessedTax`; period ended 2026-08-30.\"}, {\"claim\": \"Revenue growth: 10.1437%.\", \"mark\": \"correct\", \"explanation\": \"XBRL claim matches the supplied tag, period, accession, unit, and value; arithmetic calculation is correct.\", \"correction\": \"\", \"source\": \"10-K accession 0000909832-26-000093; XBRL tag `RevenueFromContractWithCustomerExcludingAssessedTax`; period ended 2026-08-30 and prior period ended 2025-08-31 in the same filing.\"}, {\"claim\": \"Operating income and operating margin: $11,685 million and 3.8545%.\", \"mark\": \"correct\", \"explanation\": \"XBRL claim matches the supplied tag, period, accession, unit, and value; arithmetic calculation is correct.\", \"correction\": \"\", \"source\": \"10-K accession 0000909832-26-000093; XBRL tag `OperatingIncomeLoss`; period ended 2026-08-30 and 10-K accession 0000909832-26-000093; XBRL tag `RevenueFromContractWithCustomerExcludingAssessedTax`; period ended 2026-08-30.\"}, {\"claim\": \"Net income attributable to the company: $9,226 million.\", \"mark\": \"correct\", \"explanation\": \"XBRL claim matches the supplied tag, period, accession, unit, and value.\", \"correction\": \"\", \"source\": \"10-K accession 0000909832-26-000093; XBRL tag `NetIncomeLoss`; period ended 2026-08-30.\"}, {\"claim\": \"GAAP diluted EPS: $20.76.\", \"mark\": \"correct\", \"explanation\": \"XBRL claim matches the supplied tag, period, accession, unit, and value.\", \"correction\": \"\", \"source\": \"10-K accession 0000909832-26-000093; XBRL tag `EarningsPerShareDiluted`; period ended 2026-08-30.\"}, {\"claim\": \"Return on average equity: 28.4021%.\", \"mark\": \"correct\", \"explanation\": \"arithmetic calculation is correct, definition matches the filing.\", \"correction\": \"\", \"source\": \"10-K accession 0000909832-26-000093; XBRL tag `NetIncomeLoss`; period ended 2026-08-30 and 10-K accession 0000909832-26-000093; XBRL tag `StockholdersEquity`; period ended 2026-08-30.\"}, {\"claim\": \"Debt to equity: 0.1721x.\", \"mark\": \"correct\", \"explanation\": \"arithmetic calculation is correct, definition matches the filing.\", \"correction\": \"\", \"source\": \"10-K accession 0000909832-26-000093; XBRL tag `LongTermDebtNoncurrent`; period ended 2026-08-30; 10-K accession 0000909832-26-000093; XBRL tag `LongTermDebtCurrent`; period ended 2026-08-30; and 10-K accession 0000909832-26-000093; XBRL tag `StockholdersEquity`; period ended 2026-08-30.\"}, {\"claim\": \"Free cash flow: $9,382 million.\", \"mark\": \"correct\", \"explanation\": \"arithmetic calculation is correct, definition matches the filing.\", \"correction\": \"\", \"source\": \"10-K accession 0000909832-26-000093; XBRL tag `NetCashProvidedByUsedInOperatingActivities`; period ended 2026-08-30 and 10-K accession 0000909832-26-000093; XBRL tag `PaymentsToAcquirePropertyPlantAndEquipment`; period ended 2026-08-30.\"}, {\"claim\": \"Latest-quarter total revenue: $95,723 million.\", \"mark\": \"correct\", \"explanation\": \"filing-line claim appears in the supplied filing text after spacing and formatting are normalized.\", \"correction\": \"\", \"source\": \"8-K accession 0000909832-26-000084, Exhibit 99.1 line `Total revenue | 95,723 | 86,156 | 303,154 | 275,235`.\"}, {\"claim\": \"Quarter revenue growth: 11.1043%.\", \"mark\": \"correct\", \"explanation\": \"arithmetic calculation is correct, definition matches the filing.\", \"correction\": \"\", \"source\": \"8-K accession 0000909832-26-000084, Exhibit 99.1 line `Total revenue | 95,723 | 86,156 | 303,154 | 275,235`.\"}, {\"claim\": \"Latest-quarter GAAP diluted EPS: $6.75.\", \"mark\": \"correct\", \"explanation\": \"filing-line claim appears in the supplied filing text after spacing and formatting are normalized.\", \"correction\": \"\", \"source\": \"8-K accession 0000909832-26-000084, Exhibit 99.1 line `Diluted | $ | 6.75 | $ | 5.87 | $ | 20.76 | $ | 18.21`.\"}, {\"claim\": \"BJ's operating margin: 3.8057%.\", \"mark\": \"correct\", \"explanation\": \"arithmetic calculation is correct, definition matches the filing.\", \"correction\": \"\", \"source\": \"10-K accession 0001531152-26-000007; period ended 2026-01-31; revenue tag `RevenueFromContractWithCustomerExcludingAssessedTax`; operating-income tag `OperatingIncomeLoss`.\"}, {\"claim\": \"TGT's operating margin: 4.8836%.\", \"mark\": \"correct\", \"explanation\": \"arithmetic calculation is correct, definition matches the filing.\", \"correction\": \"\", \"source\": \"10-K accession 0000027419-26-000016; period ended 2026-01-31; revenue tag `RevenueFromContractWithCustomerExcludingAssessedTax`; operating-income tag `OperatingIncomeLoss`.\"}, {\"claim\": \"WMT's operating margin: 4.1821%.\", \"mark\": \"correct\", \"explanation\": \"arithmetic calculation is correct, definition matches the filing.\", \"correction\": \"\", \"source\": \"10-K accession 0000104169-26-000055; period ended 2026-01-31; revenue tag `Revenues`; operating-income tag `OperatingIncomeLoss`.\"}, {\"claim\": \"Costco operates on a membership warehouse model, offering low prices on a limited selection of nationally-branded and private-label products in a wide range of categories.\", \"mark\": \"correct\", \"explanation\": \"\", \"correction\": \"\", \"source\": \"10-K Line 801\"}, {\"claim\": \"At the end of 2026, we employed 355,000 employees worldwide. Approximately 95% are employed in our membership warehouses and distribution channels. Around 5% are represented by unions. We also utilize seasonal employees.\", \"mark\": \"correct\", \"explanation\": \"\", \"correction\": \"\", \"source\": \"10-K Line 865\"}, {\"claim\": \"Paid members, in most countries, are eligible to upgrade to an Executive membership for an additional annual fee. These members earn an Executive reward, generally 2% on qualified purchases, subject to an annual maximum value, redeemable at Costco warehouses.\", \"mark\": \"correct\", \"explanation\": \"\", \"correction\": \"\", \"source\": \"10-K Line 858\"}, {\"claim\": \"As previously reported, we increased annual membership fees in the U.S. and Canada, effective September 1, 2024. We account for membership fee revenue on a deferred basis, recognized ratably over the one-year membership period.\", \"mark\": \"correct\", \"explanation\": \"\", \"correction\": \"\", \"source\": \"10-K Line 1475\"}]}",
+  "node_order": [
+    "verifier"
+  ],
+  "run_folder": "outputs/COST_20261109_002527",
+  "verification_path": "outputs/COST_20261109_002527/verification.json",
+  "verified": true,
+  "verified_report_path": "outputs/COST_20261109_002527/verified_report.md"
+}

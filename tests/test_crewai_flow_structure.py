@@ -62,7 +62,9 @@ class CrewAIFlowStructureTests(unittest.TestCase):
             self.assertTrue((roles / f"{role}.md").is_file())
 
     def test_cli_has_verify_only(self) -> None:
-        self.assertIn('"--verify-only"', FLOW_PATH.read_text(encoding="utf-8"))
+        source = FLOW_PATH.read_text(encoding="utf-8")
+        self.assertIn('"--verify-only"', source)
+        self.assertIn('artifact_folder.glob("*_output.*")', source)
 
 
 if __name__ == "__main__":

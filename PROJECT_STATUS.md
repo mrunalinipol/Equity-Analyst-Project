@@ -15,7 +15,13 @@
   insights, checks an Insight against its exact saved line, and uses an exact
   company-neutral 10-K sentence only when a model insight fails that check.
   The Advisor fallback copies a verified Financial Analyst claim and source.
-- All 31 automated tests pass, and `git diff --check` passes.
+- A current COST run is saved at `outputs/COST_20261109_002527`, using WMT,
+  TGT, BJ, and price `$992.13`. Manager status is `PASS`; the Verifier reports
+  `verified: true` with `22/22` correct retained marks and three distinct
+  Insight lines. Its six-node order matches the final UBER run.
+- All 32 automated tests pass. Python compilation and `git diff --check` pass.
+- Checkpoint 2 technical evidence is ready: the seeded `$21.76` EPS claim is
+  marked `wrong` and corrected to `$20.76` with accession and 10-K lines.
 - On November 9, 2026, the student confirmed that the Lab 05 partner-check
   requirement is complete. Shachi's signed public worksheet marks two UBER
   claims `RIGHT` and includes her name, initials, date, and signature. It

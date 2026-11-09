@@ -616,7 +616,10 @@ class EquityResearchFlow(Flow[EquityResearchState]):
         raw_model_review = self._chat(
             self._instructions("verifier"), payload, max_tokens=2400, temperature=0, json_output=True
         )
-        semantic_marks = marks_from_model(raw_model_review)
+        report_text = report_path.read_text(encoding="utf-8")
+        semantic_marks = [
+            mark for mark in marks_from_model(raw_model_review) if mark.claim in report_text
+        ]
         marks = deterministic.marks + semantic_marks
         result = VerificationResult(
             verified=bool(marks) and all(mark.mark == "correct" for mark in marks),
@@ -666,6 +669,13 @@ def run_verifier_only(run_folder: Path, model: str = "") -> dict[str, Any]:
     flow.state.run_folder = str(run_folder)
     flow.state.report_path = str(run_folder / "report.md")
     flow.state.model = model
+    artifact_folder = run_folder / "flow_artifacts"
+    prior_nodes: list[str] = []
+    for output_path in sorted(artifact_folder.glob("*_output.*")):
+        node = output_path.name.split("_", 1)[1].rsplit("_output", 1)[0]
+        if node != "verifier":
+            prior_nodes.append(node)
+    flow.state.node_order = prior_nodes
     return flow.verifier()
 
 
