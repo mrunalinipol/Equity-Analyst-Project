@@ -37,7 +37,12 @@ Last checked: November 9, 2026
 - The report has three distinct `Insight:` lines. Each line's numbers occur on
   its cited saved 10-K line.
 - The partner worksheet now names this run and its evidence. Shachi must still
-  run it from the page and enter her independent marks and confirmation.
+  run it from the page if a review of this exact final run is required.
+- On November 9, 2026, the student confirmed that the Lab 05 partner-check
+  requirement is complete. The signed evidence is Shachi's public worksheet:
+  <https://github.com/ShachiKaushik1742/Equity-Analyst-Project/blob/main/week03/Lab05_partner_check.md>.
+  It marks two UBER claims `RIGHT` and includes Shachi's name, initials, date,
+  and signature. It reviews Shachi's earlier UBER run, not this final run.
 
 ## Earlier UBER evidence run
 
@@ -69,9 +74,9 @@ release-parser corrections.
   the key.
 - The final page run is complete. A dated price was not supplied, so the
   report does not make a P/E claim.
-- Shachi must run the page and independently complete the partner marks,
-  corrections, name, initials, date, and signature or Git commit. No agent or
-  student can fill those fields for her.
+- The partner-check requirement is recorded complete by the student's
+  confirmation and Shachi's signed public worksheet. The blank local worksheet
+  is retained as an unused template; no agent filled Shachi's fields.
 - Team formation is complete, as confirmed by the student on November 8,
   2026. The team-member names and team name are not stored in this repository.
 - The student's personal reflection remains incomplete.

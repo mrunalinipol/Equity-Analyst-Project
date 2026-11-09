@@ -1,5 +1,12 @@
 # Lab 05 Partner Check — Shachi
 
+Status: The student confirmed on November 9, 2026 that the partner-check
+requirement is complete through Shachi's signed public worksheet:
+<https://github.com/ShachiKaushik1742/Equity-Analyst-Project/blob/main/week03/Lab05_partner_check.md>.
+That worksheet reviews Shachi's earlier UBER run. The fields below remain an
+unused template for the final run; no agent filled Shachi's judgment or
+signature fields.
+
 Complete this worksheet after you run the final UBER agent team from the page.
 Do not enter a mark until you open the cited SEC filing or saved filing text.
 

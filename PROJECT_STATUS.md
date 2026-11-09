@@ -16,16 +16,15 @@
   company-neutral 10-K sentence only when a model insight fails that check.
   The Advisor fallback copies a verified Financial Analyst claim and source.
 - All 31 automated tests pass, and `git diff --check` passes.
-- `week03/Lab05_partner_check.md` and the root partner worksheet now identify
-  the final run, its two core claims, and one Insight line. Shachi's page
-  answers, marks, corrections, name, initials, date, and signature remain
-  blank for her independent review.
+- On November 9, 2026, the student confirmed that the Lab 05 partner-check
+  requirement is complete. Shachi's signed public worksheet marks two UBER
+  claims `RIGHT` and includes her name, initials, date, and signature. It
+  reviews Shachi's earlier UBER run, not this final run. The local final-run
+  worksheet remains an unused template; no agent filled Shachi's fields.
 - Remaining human work: the student must write the three personas and personal
-  reflection; Shachi must run this repository's page and complete its partner
-  worksheet. Team formation is already marked complete without stored names.
+  reflection. Team formation and partner review are recorded complete.
 - No Brightspace action was performed. The branch is not ready to merge into
-  `main` until the human-authored persona and reflection work and the matching
-  partner review are complete.
+  `main` until the human-authored persona and reflection work is complete.
 
 ## Lab 05 preparation update — 2026-11-08
 
