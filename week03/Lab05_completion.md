@@ -65,4 +65,6 @@ release-parser corrections.
   student can fill those fields for her.
 - The students must record three student names and one team name and complete
   the required oral reflection.
+- The supplied student names are Shachi, Jose, and Aditi. The team name and
+  instructor confirmation are still blank.
 - Brightspace submission remains manual. No agent may submit it.

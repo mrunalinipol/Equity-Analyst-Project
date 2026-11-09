@@ -30,6 +30,14 @@
   was pushed to public branch `lab05-preparation`. It contains no `.env` or
   `.venv`. The branch is not merged into `main` because the student personas,
   live model run, and Shachi's review are still incomplete.
+- A read-only GitHub check on 2026-11-08 found no Lab 05 pull request from
+  Shachi. Her `week03/Lab05_partner_check.md` on `main` still has blank marks,
+  reviewer name, initials, date, and signature. Her separate final UBER run is
+  32/32 with Manager `PASS`, but it is not a signed partner review of this
+  repository's run.
+- The supplied team members Shachi, Jose, and Aditi are recorded. The team
+  name, instructor confirmation, and student's personal reflection remain
+  blank.
 
 Last updated: 2026-11-03
 

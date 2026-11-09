@@ -58,8 +58,8 @@ matter or how they change the conclusion.
 
 ## Team formation requiring the students
 
-- Student 1:
-- Student 2:
-- Student 3:
+- Student 1: Shachi
+- Student 2: Jose
+- Student 3: Aditi
 - Team name:
 - Instructor confirmation:
