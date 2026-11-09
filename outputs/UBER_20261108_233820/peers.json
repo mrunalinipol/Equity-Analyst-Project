@@ -1,0 +1,436 @@
+{
+  "ABNB": {
+    "company": {
+      "cik": "0001559720",
+      "name": "Airbnb, Inc.",
+      "ticker": "ABNB"
+    },
+    "facts": {
+      "capital_expenditures": {
+        "accession": "0001559720-26-000004",
+        "available": false,
+        "end": "2025-12-31",
+        "form": "10-K",
+        "reason": "'No 10-K fact ends on 2025-12-31.'"
+      },
+      "cash_from_operations": {
+        "accession": "0001559720-26-000004",
+        "end": "2025-12-31",
+        "filed": "2026-02-12",
+        "fiscal_period": "FY",
+        "fiscal_year": 2025,
+        "form": "10-K",
+        "prior_end": "2024-12-31",
+        "prior_start": "2024-01-01",
+        "prior_value": 4518000000,
+        "start": "2025-01-01",
+        "tag": "NetCashProvidedByUsedInOperatingActivities",
+        "unit": "USD",
+        "value": 4646000000
+      },
+      "diluted_eps": {
+        "accession": "0001559720-26-000004",
+        "available": false,
+        "end": "2025-12-31",
+        "form": "10-K",
+        "reason": "'None of the candidate tags has annual USD/shares facts: EarningsPerShareDiluted'"
+      },
+      "long_term_debt_current": {
+        "accession": "0001559720-26-000004",
+        "end": "2025-12-31",
+        "filed": "2026-02-12",
+        "fiscal_period": "FY",
+        "fiscal_year": 2025,
+        "form": "10-K",
+        "prior_end": "2024-12-31",
+        "prior_start": null,
+        "prior_value": 0,
+        "start": null,
+        "tag": "LongTermDebtCurrent",
+        "unit": "USD",
+        "value": 1999000000
+      },
+      "long_term_debt_noncurrent": {
+        "accession": "0001559720-26-000004",
+        "end": "2025-12-31",
+        "filed": "2026-02-12",
+        "fiscal_period": "FY",
+        "fiscal_year": 2025,
+        "form": "10-K",
+        "prior_end": "2024-12-31",
+        "prior_start": null,
+        "prior_value": 1995000000,
+        "start": null,
+        "tag": "LongTermDebtNoncurrent",
+        "unit": "USD",
+        "value": 0
+      },
+      "net_income": {
+        "accession": "0001559720-26-000004",
+        "end": "2025-12-31",
+        "filed": "2026-02-12",
+        "fiscal_period": "FY",
+        "fiscal_year": 2025,
+        "form": "10-K",
+        "prior_end": "2024-12-31",
+        "prior_start": "2024-01-01",
+        "prior_value": 2648000000,
+        "start": "2025-01-01",
+        "tag": "NetIncomeLoss",
+        "unit": "USD",
+        "value": 2511000000
+      },
+      "operating_income": {
+        "accession": "0001559720-26-000004",
+        "end": "2025-12-31",
+        "filed": "2026-02-12",
+        "fiscal_period": "FY",
+        "fiscal_year": 2025,
+        "form": "10-K",
+        "prior_end": "2024-12-31",
+        "prior_start": "2024-01-01",
+        "prior_value": 2553000000,
+        "start": "2025-01-01",
+        "tag": "OperatingIncomeLoss",
+        "unit": "USD",
+        "value": 2544000000
+      },
+      "stockholders_equity": {
+        "accession": "0001559720-26-000004",
+        "end": "2025-12-31",
+        "filed": "2026-02-12",
+        "fiscal_period": "FY",
+        "fiscal_year": 2025,
+        "form": "10-K",
+        "prior_end": "2024-12-31",
+        "prior_start": null,
+        "prior_value": 8412000000,
+        "start": null,
+        "tag": "StockholdersEquity",
+        "unit": "USD",
+        "value": 8199000000
+      },
+      "total_revenue": {
+        "accession": "0001559720-26-000004",
+        "end": "2025-12-31",
+        "filed": "2026-02-12",
+        "fiscal_period": "FY",
+        "fiscal_year": 2025,
+        "form": "10-K",
+        "prior_end": "2024-12-31",
+        "prior_start": "2024-01-01",
+        "prior_value": 11102000000,
+        "start": "2025-01-01",
+        "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "unit": "USD",
+        "value": 12241000000
+      }
+    },
+    "filing": {
+      "accepted": "2026-02-12T21:04:39.000Z",
+      "accession": "0001559720-26-000004",
+      "filing_date": "2026-02-12",
+      "form": "10-K",
+      "items": "",
+      "primary_document": "abnb-20251231.htm",
+      "report_date": "2025-12-31"
+    },
+    "operating_margin": {
+      "arithmetic": "2.544e+09 / 1.2241e+10",
+      "definition": "operating income / total revenue",
+      "value": 0.20782615799362797
+    }
+  },
+  "DASH": {
+    "company": {
+      "cik": "0001792789",
+      "name": "DoorDash, Inc.",
+      "ticker": "DASH"
+    },
+    "facts": {
+      "capital_expenditures": {
+        "accession": "0001792789-26-000013",
+        "end": "2025-12-31",
+        "filed": "2026-02-18",
+        "fiscal_period": "FY",
+        "fiscal_year": 2025,
+        "form": "10-K",
+        "prior_end": "2024-12-31",
+        "prior_start": "2024-01-01",
+        "prior_value": 104000000,
+        "start": "2025-01-01",
+        "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+        "unit": "USD",
+        "value": 257000000
+      },
+      "cash_from_operations": {
+        "accession": "0001792789-26-000013",
+        "end": "2025-12-31",
+        "filed": "2026-02-18",
+        "fiscal_period": "FY",
+        "fiscal_year": 2025,
+        "form": "10-K",
+        "prior_end": "2024-12-31",
+        "prior_start": "2024-01-01",
+        "prior_value": 2132000000,
+        "start": "2025-01-01",
+        "tag": "NetCashProvidedByUsedInOperatingActivities",
+        "unit": "USD",
+        "value": 2431000000
+      },
+      "diluted_eps": {
+        "accession": "0001792789-26-000013",
+        "end": "2025-12-31",
+        "filed": "2026-02-18",
+        "fiscal_period": "FY",
+        "fiscal_year": 2025,
+        "form": "10-K",
+        "prior_end": "2024-12-31",
+        "prior_start": "2024-01-01",
+        "prior_value": 0.29,
+        "start": "2025-01-01",
+        "tag": "EarningsPerShareDiluted",
+        "unit": "USD/shares",
+        "value": 2.13
+      },
+      "long_term_debt_current": {
+        "accession": "0001792789-26-000013",
+        "available": false,
+        "end": "2025-12-31",
+        "form": "10-K",
+        "reason": "'None of the candidate tags has annual USD facts: LongTermDebtCurrent, CurrentPortionOfLongTermDebt, LongTermDebtAndFinanceLeaseObligationsCurrent, LongTermDebtAndCapitalLeaseObligationsCurrent'"
+      },
+      "long_term_debt_noncurrent": {
+        "accession": "0001792789-26-000013",
+        "available": false,
+        "end": "2025-12-31",
+        "form": "10-K",
+        "reason": "'None of the candidate tags has annual USD facts: LongTermDebtNoncurrent, LongTermDebtAndFinanceLeaseObligationsNoncurrent, LongTermDebtAndCapitalLeaseObligationsNoncurrent'"
+      },
+      "net_income": {
+        "accession": "0001792789-26-000013",
+        "end": "2025-12-31",
+        "filed": "2026-02-18",
+        "fiscal_period": "FY",
+        "fiscal_year": 2025,
+        "form": "10-K",
+        "prior_end": "2024-12-31",
+        "prior_start": "2024-01-01",
+        "prior_value": 123000000,
+        "start": "2025-01-01",
+        "tag": "NetIncomeLoss",
+        "unit": "USD",
+        "value": 935000000
+      },
+      "operating_income": {
+        "accession": "0001792789-26-000013",
+        "end": "2025-12-31",
+        "filed": "2026-02-18",
+        "fiscal_period": "FY",
+        "fiscal_year": 2025,
+        "form": "10-K",
+        "prior_end": "2024-12-31",
+        "prior_start": "2024-01-01",
+        "prior_value": -38000000,
+        "start": "2025-01-01",
+        "tag": "OperatingIncomeLoss",
+        "unit": "USD",
+        "value": 723000000
+      },
+      "stockholders_equity": {
+        "accession": "0001792789-26-000013",
+        "end": "2025-12-31",
+        "filed": "2026-02-18",
+        "fiscal_period": "FY",
+        "fiscal_year": 2025,
+        "form": "10-K",
+        "prior_end": "2024-12-31",
+        "prior_start": null,
+        "prior_value": 7803000000,
+        "start": null,
+        "tag": "StockholdersEquity",
+        "unit": "USD",
+        "value": 10033000000
+      },
+      "total_revenue": {
+        "accession": "0001792789-26-000013",
+        "end": "2025-12-31",
+        "filed": "2026-02-18",
+        "fiscal_period": "FY",
+        "fiscal_year": 2025,
+        "form": "10-K",
+        "prior_end": "2024-12-31",
+        "prior_start": "2024-01-01",
+        "prior_value": 10722000000,
+        "start": "2025-01-01",
+        "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "unit": "USD",
+        "value": 13717000000
+      }
+    },
+    "filing": {
+      "accepted": "2026-02-18T21:10:27.000Z",
+      "accession": "0001792789-26-000013",
+      "filing_date": "2026-02-18",
+      "form": "10-K",
+      "items": "",
+      "primary_document": "dash-20251231.htm",
+      "report_date": "2025-12-31"
+    },
+    "operating_margin": {
+      "arithmetic": "7.23e+08 / 1.3717e+10",
+      "definition": "operating income / total revenue",
+      "value": 0.05270831814536706
+    }
+  },
+  "LYFT": {
+    "company": {
+      "cik": "0001759509",
+      "name": "Lyft, Inc.",
+      "ticker": "LYFT"
+    },
+    "facts": {
+      "capital_expenditures": {
+        "accession": "0001628280-26-006960",
+        "available": false,
+        "end": "2025-12-31",
+        "form": "10-K",
+        "reason": "'None of the candidate tags has annual USD facts: PaymentsToAcquirePropertyPlantAndEquipment'"
+      },
+      "cash_from_operations": {
+        "accession": "0001628280-26-006960",
+        "end": "2025-12-31",
+        "filed": "2026-02-11",
+        "fiscal_period": "FY",
+        "fiscal_year": 2025,
+        "form": "10-K",
+        "prior_end": "2024-12-31",
+        "prior_start": "2024-01-01",
+        "prior_value": 849737000,
+        "start": "2025-01-01",
+        "tag": "NetCashProvidedByUsedInOperatingActivities",
+        "unit": "USD",
+        "value": 1168438000
+      },
+      "diluted_eps": {
+        "accession": "0001628280-26-006960",
+        "end": "2025-12-31",
+        "filed": "2026-02-11",
+        "fiscal_period": "FY",
+        "fiscal_year": 2025,
+        "form": "10-K",
+        "prior_end": "2024-12-31",
+        "prior_start": "2024-01-01",
+        "prior_value": 0.06,
+        "start": "2025-01-01",
+        "tag": "EarningsPerShareDiluted",
+        "unit": "USD/shares",
+        "value": 6.81
+      },
+      "long_term_debt_current": {
+        "accession": "0001628280-26-006960",
+        "end": "2025-12-31",
+        "filed": "2026-02-11",
+        "fiscal_period": "FY",
+        "fiscal_year": 2025,
+        "form": "10-K",
+        "prior_end": "2024-12-31",
+        "prior_start": null,
+        "prior_value": 38904000,
+        "start": null,
+        "tag": "LongTermDebtCurrent",
+        "unit": "USD",
+        "value": 50607000
+      },
+      "long_term_debt_noncurrent": {
+        "accession": "0001628280-26-006960",
+        "end": "2025-12-31",
+        "filed": "2026-02-11",
+        "fiscal_period": "FY",
+        "fiscal_year": 2025,
+        "form": "10-K",
+        "prior_end": "2024-12-31",
+        "prior_start": null,
+        "prior_value": 565968000,
+        "start": null,
+        "tag": "LongTermDebtNoncurrent",
+        "unit": "USD",
+        "value": 1002404000
+      },
+      "net_income": {
+        "accession": "0001628280-26-006960",
+        "end": "2025-12-31",
+        "filed": "2026-02-11",
+        "fiscal_period": "FY",
+        "fiscal_year": 2025,
+        "form": "10-K",
+        "prior_end": "2024-12-31",
+        "prior_start": "2024-01-01",
+        "prior_value": 22784000,
+        "start": "2025-01-01",
+        "tag": "NetIncomeLoss",
+        "unit": "USD",
+        "value": 2844008000
+      },
+      "operating_income": {
+        "accession": "0001628280-26-006960",
+        "end": "2025-12-31",
+        "filed": "2026-02-11",
+        "fiscal_period": "FY",
+        "fiscal_year": 2025,
+        "form": "10-K",
+        "prior_end": "2024-12-31",
+        "prior_start": "2024-01-01",
+        "prior_value": -118912000,
+        "start": "2025-01-01",
+        "tag": "OperatingIncomeLoss",
+        "unit": "USD",
+        "value": -188374000
+      },
+      "stockholders_equity": {
+        "accession": "0001628280-26-006960",
+        "end": "2025-12-31",
+        "filed": "2026-02-11",
+        "fiscal_period": "FY",
+        "fiscal_year": 2025,
+        "form": "10-K",
+        "prior_end": "2024-12-31",
+        "prior_start": null,
+        "prior_value": 767016000,
+        "start": null,
+        "tag": "StockholdersEquity",
+        "unit": "USD",
+        "value": 3273523000
+      },
+      "total_revenue": {
+        "accession": "0001628280-26-006960",
+        "end": "2025-12-31",
+        "filed": "2026-02-11",
+        "fiscal_period": "FY",
+        "fiscal_year": 2025,
+        "form": "10-K",
+        "prior_end": "2024-12-31",
+        "prior_start": "2024-01-01",
+        "prior_value": 5786016000,
+        "start": "2025-01-01",
+        "tag": "Revenues",
+        "unit": "USD",
+        "value": 6316261000
+      }
+    },
+    "filing": {
+      "accepted": "2026-02-10T22:49:49.000Z",
+      "accession": "0001628280-26-006960",
+      "filing_date": "2026-02-11",
+      "form": "10-K",
+      "items": "",
+      "primary_document": "lyft-20251231.htm",
+      "report_date": "2025-12-31"
+    },
+    "operating_margin": {
+      "arithmetic": "-1.88374e+08 / 6.31626e+09",
+      "definition": "operating income / total revenue",
+      "value": -0.02982365674882656
+    }
+  }
+}

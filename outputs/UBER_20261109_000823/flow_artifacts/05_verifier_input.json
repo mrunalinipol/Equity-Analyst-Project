@@ -1,0 +1,792 @@
+{
+  "context": {
+    "compiled_report": "# Filings Read: 10-K (accession: 0001543151-26-000015), 10-Q (accession: 0001543151-26-000041), 8-K (accession: 0001543151-26-000039)\nRun Time: 2026-11-09T00:08:23.403769-05:00\nManager Status: PASS\n\n## 1. Overview\n\n### Business Model and Operations\nUber's business model is based on a technology platform that connects consumers with providers of ride services, merchants, and delivery service providers for meal preparation, grocery, and other delivery services. The company operates in three segments: Mobility, Delivery, and Freight. Uber's platform uses a massive network, leading technology, operational excellence, and product expertise to power movement from point A to point B.\n\n[10-K Line 2231]\n\nUber's business model is designed to provide convenience and flexibility to consumers, allowing them to access various services through a single platform. The company's platform is available in over 70 countries around the world, with operations in more than 15,000 cities.\n\n[10-K Line 2234]\n\nUber's technology platform is built on top of its massive network, which consists of hundreds of millions of drivers, consumers, merchants, shippers, and carriers. The company's leading technology includes marketplace, routing, and payments technologies that make it extremely efficient to launch new businesses and operationalize existing ones.\n\n[10-K Line 2251]\n\nUber's business model is also designed to provide a seamless experience for its users, with features such as real-time tracking, estimated arrival times, and in-app messaging. The company's platform is available on both iOS and Android devices, making it accessible to a wide range of consumers.\n\n[10-K Line 2233]\n\n### Competitive Position and Moat\nUber faces significant competition in each of its three segments: Mobility, Delivery, and Freight. The company competes with other ridesharing companies such as Lyft, Bolt, Didi, and Ola, as well as traditional transportation services like taxis and public transportation.\n\n[10-K Line 2265]\n\nIn the delivery segment, Uber competes with companies like DoorDash, Instacart, Gopuff, Rappi, Delivery Hero, Just Eat Takeaway, and Amazon. The company also faces competition from restaurants and other merchants that offer their own delivery services.\n\n[10-K Line 2270]\n\nUber's competitive advantage lies in its massive network, leading technology, operational excellence, and product expertise. The company's platform is designed to provide a seamless experience for its users, with features such as real-time tracking, estimated arrival times, and in-app messaging.\n\n[10-K Line 2251]\n\n### Catalysts and Recent Developments\nUber has recently announced several catalysts that are expected to drive growth in the coming quarters. The company's Gross Bookings grew 20% year-over-year on a constant currency basis, driven by record audience and consumer engagement.\n\n[EX-99.1 Line 8]\n\nUber's Non-GAAP Operating Income margins reached a record 3.9% of Gross Bookings, and Non-GAAP EPS grew 35%. The company's outlook for Q4 2026 includes Gross Bookings of $63.25 billion to $65.25 billion, representing growth of 18% to 22% year-over-year on a constant-currency basis.\n\n[EX-99.1 Line 38]\n\nUber is also investing in autonomous vehicles, with approximately 700 fully driverless vehicles expected on Uber by year-end and over 2,000 in 2027.\n\n[EX-99.1 Line 13]\n\n### Insight:\nUber's platform has attracted 46 million Uber One members as of December 31, 2025 [10-K Line 2259].\n\n## 2. Market Positioning and Growth Outlook\n\n### Business Model and Operations\nUber's business model is based on a technology platform that connects consumers with providers of ride services, merchants, and delivery service providers for meal preparation, grocery, and other delivery services. The company operates in three segments: Mobility, Delivery, and Freight. Uber's platform uses a massive network, leading technology, operational excellence, and product expertise to power movement from point A to point B.\n\n[10-K Line 2231]\n\nUber's business model is designed to provide convenience and flexibility to consumers, allowing them to access various services through a single platform. The company's platform is available in over 70 countries around the world, with operations in more than 15,000 cities.\n\n[10-K Line 2234]\n\nUber's technology platform is built on top of its massive network, which consists of hundreds of millions of drivers, consumers, merchants, shippers, and carriers. The company's leading technology includes marketplace, routing, and payments technologies that make it extremely efficient to launch new businesses and operationalize existing ones.\n\n[10-K Line 2251]\n\nUber's business model is also designed to provide a seamless experience for its users, with features such as real-time tracking, estimated arrival times, and in-app messaging. The company's platform is available on both iOS and Android devices, making it accessible to a wide range of consumers.\n\n[10-K Line 2233]\n\n### Competitive Position and Moat\nUber faces significant competition in each of its three segments: Mobility, Delivery, and Freight. The company competes with other ridesharing companies such as Lyft, Bolt, Didi, and Ola, as well as traditional transportation services like taxis and public transportation.\n\n[10-K Line 2265]\n\nIn the delivery segment, Uber competes with companies like DoorDash, Instacart, Gopuff, Rappi, Delivery Hero, Just Eat Takeaway, and Amazon. The company also faces competition from restaurants and other merchants that offer their own delivery services.\n\n[10-K Line 2270]\n\nUber's competitive advantage lies in its massive network, leading technology, operational excellence, and product expertise. The company's platform is designed to provide a seamless experience for its users, with features such as real-time tracking, estimated arrival times, and in-app messaging.\n\n[10-K Line 2251]\n\n### Catalysts and Recent Developments\nUber has recently announced several catalysts that are expected to drive growth in the coming quarters. The company's Gross Bookings grew 20% year-over-year on a constant currency basis, driven by record audience and consumer engagement.\n\n[EX-99.1 Line 8]\n\nUber's Non-GAAP Operating Income margins reached a record 3.9% of Gross Bookings, and Non-GAAP EPS grew 35%. The company's outlook for Q4 2026 includes Gross Bookings of $63.25 billion to $65.25 billion, representing growth of 18% to 22% year-over-year on a constant-currency basis.\n\n[EX-99.1 Line 38]\n\nUber is also investing in autonomous vehicles, with approximately 700 fully driverless vehicles expected on Uber by year-end and over 2,000 in 2027.\n\n[EX-99.1 Line 13]\n\n### Insight:\nUber's platform has attracted 46 million Uber One members as of December 31, 2025 [10-K Line 2259].\n\n## 3. Valuation Insights\n\n### Verified Core Claims \u2014 Copy Without Recalculation\n\n1. **Total revenue:** $52,017 million. Source: 10-K accession 0001543151-26-000015; XBRL tag `Revenues`; period ended 2025-12-31.\n2. **Revenue growth:** 18.2796%. Arithmetic: `5.2017e+10 / 4.3978e+10 - 1`. Source: 10-K accession 0001543151-26-000015; XBRL tag `Revenues`; period ended 2025-12-31 and prior period ended 2024-12-31 in the same filing.\n3. **Operating income and operating margin:** $5,565 million and 10.6984%. Arithmetic: `5.565e+09 / 5.2017e+10`. Definition: operating income / total revenue. Source: 10-K accession 0001543151-26-000015; XBRL tag `OperatingIncomeLoss`; period ended 2025-12-31 and 10-K accession 0001543151-26-000015; XBRL tag `Revenues`; period ended 2025-12-31.\n4. **Net income attributable to the company:** $10,053 million. Source: 10-K accession 0001543151-26-000015; XBRL tag `NetIncomeLoss`; period ended 2025-12-31.\n5. **GAAP diluted EPS:** $4.73. Source: 10-K accession 0001543151-26-000015; XBRL tag `EarningsPerShareDiluted`; period ended 2025-12-31.\n6. **Return on average equity:** 41.3712%. Arithmetic: `1.0053e+10 / ((2.7041e+10 + 2.1558e+10) / 2)`. Definition: net income / average current-year and prior-year stockholders' equity. Sources: 10-K accession 0001543151-26-000015; XBRL tag `NetIncomeLoss`; period ended 2025-12-31 and 10-K accession 0001543151-26-000015; XBRL tag `StockholdersEquity`; period ended 2025-12-31.\n7. **Debt to equity:** 0.3891x. Arithmetic: `(1.0521e+10 + 0) / 2.7041e+10`. Definition: long-term debt, including its current portion, / stockholders' equity. Sources: 10-K accession 0001543151-26-000015; XBRL tag `LongTermDebtNoncurrent`; period ended 2025-12-31; 10-K accession 0001543151-26-000015; XBRL tag `LongTermDebtCurrent`; period ended 2025-12-31; and 10-K accession 0001543151-26-000015; XBRL tag `StockholdersEquity`; period ended 2025-12-31.\n8. **Free cash flow:** $9,763 million. Arithmetic: `1.0099e+10 - 3.36e+08`. Definition: cash from operations - additions to property and equipment. Sources: 10-K accession 0001543151-26-000015; XBRL tag `NetCashProvidedByUsedInOperatingActivities`; period ended 2025-12-31 and 10-K accession 0001543151-26-000015; XBRL tag `PaymentsToAcquirePropertyPlantAndEquipment`; period ended 2025-12-31.\n9. **Latest-quarter total revenue:** $14,766 million. Source: 8-K accession 0001543151-26-000039, Exhibit 99.1 line `Revenue | $ | 13,467 | $ | 14,766 | 10 | % | 10 | %`.\n10. **Quarter revenue growth:** 9.6458%. Arithmetic: `14766 / 13467 - 1`. Source: 8-K accession 0001543151-26-000039, Exhibit 99.1 line `Revenue | $ | 13,467 | $ | 14,766 | 10 | % | 10 | %`.\n11. **Latest-quarter GAAP diluted EPS:** $0.25. Source: 8-K accession 0001543151-26-000039, Exhibit 99.1 line `GAAP Diluted EPS (2) | $ | 3.11 | $ | 0.25 | $ | 4.57 | $ | 1.54`.\n\n### Verified Peer Comparison \u2014 Total-Revenue Definition\n- **AMD:** operating margin 10.6643%. Arithmetic: `3.694e+09 / 3.4639e+10`. Definition: operating income / total revenue. Source: 10-K accession 0000002488-26-000018; period ended 2025-12-27; revenue tag `RevenueFromContractWithCustomerExcludingAssessedTax`; operating-income tag `OperatingIncomeLoss`.\n- **DUOL:** operating margin 13.0659%. Arithmetic: `1.3557e+08 / 1.03759e+09`. Definition: operating income / total revenue. Source: 10-K accession 0001628280-26-012494; period ended 2025-12-31; revenue tag `RevenueFromContractWithCustomerExcludingAssessedTax`; operating-income tag `OperatingIncomeLoss`.\n- **PLTR:** operating margin 31.5950%. Arithmetic: `1.41402e+09 / 4.47545e+09`. Definition: operating income / total revenue. Source: 10-K accession 0001321655-26-000011; period ended 2025-12-31; revenue tag `RevenueFromContractWithCustomerExcludingAssessedTax`; operating-income tag `OperatingIncomeLoss`.\n- **YUM:** operating margin 31.3367%. Arithmetic: `2.574e+09 / 8.214e+09`. Definition: operating income / total revenue. Source: 10-K accession 0001041061-26-000084; period ended 2025-12-31; revenue tag `Revenues`; operating-income tag `OperatingIncomeLoss`.\n\nInsight: Our massive, efficient, and intelligent network consists of hundreds of millions of Drivers, consumers, Merchants, Shippers and Carriers, as well as underlying data, technology, and shared infrastructure. Our network becomes smarter with every trip. In more than 15,000 cities around the world (as of December 31, 2025), our network powers movement at the touch of a button for millions, and we hope eventually billions, of people. [10-K Line 2249]\n\n\n## 4. Future Developments and Strategic Recommendations\n\n### Business Model and Operations\nUber's business model is based on a technology platform that connects consumers with providers of ride services, merchants, and delivery service providers for meal preparation, grocery, and other delivery services. The company operates in three segments: Mobility, Delivery, and Freight. Uber's platform uses a massive network, leading technology, operational excellence, and product expertise to power movement from point A to point B.\n\n[10-K Line 2231]\n\nUber's business model is designed to provide convenience and flexibility to consumers, allowing them to access various services through a single platform. The company's platform is available in over 70 countries around the world, with operations in more than 15,000 cities.\n\n[10-K Line 2234]\n\nUber's technology platform is built on top of its massive network, which consists of hundreds of millions of drivers, consumers, merchants, shippers, and carriers. The company's leading technology includes marketplace, routing, and payments technologies that make it extremely efficient to launch new businesses and operationalize existing ones.\n\n[10-K Line 2251]\n\nUber's business model is also designed to provide a seamless experience for its users, with features such as real-time tracking, estimated arrival times, and in-app messaging. The company's platform is available on both iOS and Android devices, making it accessible to a wide range of consumers.\n\n[10-K Line 2233]\n\n### Competitive Position and Moat\nUber faces significant competition in each of its three segments: Mobility, Delivery, and Freight. The company competes with other ridesharing companies such as Lyft, Bolt, Didi, and Ola, as well as traditional transportation services like taxis and public transportation.\n\n[10-K Line 2265]\n\nIn the delivery segment, Uber competes with companies like DoorDash, Instacart, Gopuff, Rappi, Delivery Hero, Just Eat Takeaway, and Amazon. The company also faces competition from restaurants and other merchants that offer their own delivery services.\n\n[10-K Line 2270]\n\nUber's competitive advantage lies in its massive network, leading technology, operational excellence, and product expertise. The company's platform is designed to provide a seamless experience for its users, with features such as real-time tracking, estimated arrival times, and in-app messaging.\n\n[10-K Line 2251]\n\n### Catalysts and Recent Developments\nUber has recently announced several catalysts that are expected to drive growth in the coming quarters. The company's Gross Bookings grew 20% year-over-year on a constant currency basis, driven by record audience and consumer engagement.\n\n[EX-99.1 Line 8]\n\nUber's Non-GAAP Operating Income margins reached a record 3.9% of Gross Bookings, and Non-GAAP EPS grew 35%. The company's outlook for Q4 2026 includes Gross Bookings of $63.25 billion to $65.25 billion, representing growth of 18% to 22% year-over-year on a constant-currency basis.\n\n[EX-99.1 Line 38]\n\nUber is also investing in autonomous vehicles, with approximately 700 fully driverless vehicles expected on Uber by year-end and over 2,000 in 2027.\n\n[EX-99.1 Line 13]\n\n### Insight:\nUber's platform has attracted 46 million Uber One members as of December 31, 2025 [10-K Line 2259].\n\nInsight: We are a global company and as of December 31, 2025, we and our subsidiaries had approximately 34,000 employees globally and operations in over 70 countries and more than 15,000 cities around the world. Our human capital strategies are developed and managed by our Chief People Officer, who reports to the CEO, and are overseen by the Compensation Committee and the Board of Directors. [10-K Line 2299]\n\n\n## 5. Investment Recommendation\n\n### Investment Thesis\nThe recommendation uses the verified operating result from the Financial Analyst.\n\n### Recommendation\nHold\n\n### The Deciding Number\n3. **Operating income and operating margin:** $5,565 million and 10.6984%. Arithmetic: `5.565e+09 / 5.2017e+10`. Definition: operating income / total revenue. Source: 10-K accession 0001543151-26-000015; XBRL tag `OperatingIncomeLoss`; period ended 2025-12-31 and 10-K accession 0001543151-26-000015; XBRL tag `Revenues`; period ended 2025-12-31.\n\nInsight: Global: We renewed our agreement with the ITF (International Transport Workers\u2019 Federation), a democratic, affiliate-led federation of over 700 transport workers\u2019 unions from 150 countries, representing 16.5 million workers. The agreement invites collaboration on topics such as trade union representation, freedom of association and bargaining, working conditions, health and safety, social protections, and dispute resolution. [10-K Line 2315]\n",
+    "saved_facts": {
+      "calculated_ratios": {
+        "debt_to_equity": {
+          "arithmetic": "(1.0521e+10 + 0) / 2.7041e+10",
+          "definition": "(long-term debt noncurrent + current portion) / stockholders' equity",
+          "value": 0.3890758477866943
+        },
+        "free_cash_flow": {
+          "arithmetic": "1.0099e+10 - 3.36e+08",
+          "definition": "cash from operations - additions to property and equipment",
+          "value": 9763000000.0
+        },
+        "operating_margin": {
+          "arithmetic": "5.565e+09 / 5.2017e+10",
+          "definition": "operating income / total revenue",
+          "value": 0.10698425514735567
+        },
+        "return_on_average_equity": {
+          "arithmetic": "1.0053e+10 / ((2.7041e+10 + 2.1558e+10) / 2)",
+          "value": 0.41371221630074695
+        },
+        "revenue_growth": {
+          "arithmetic": "5.2017e+10 / 4.3978e+10 - 1",
+          "value": 0.1827959434262585
+        }
+      },
+      "facts": {
+        "capital_expenditures": {
+          "accession": "0001543151-26-000015",
+          "end": "2025-12-31",
+          "filed": "2026-02-13",
+          "fiscal_period": "FY",
+          "fiscal_year": 2025,
+          "form": "10-K",
+          "prior_end": "2024-12-31",
+          "prior_start": "2024-01-01",
+          "prior_value": 242000000,
+          "start": "2025-01-01",
+          "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+          "unit": "USD",
+          "value": 336000000
+        },
+        "cash_from_operations": {
+          "accession": "0001543151-26-000015",
+          "end": "2025-12-31",
+          "filed": "2026-02-13",
+          "fiscal_period": "FY",
+          "fiscal_year": 2025,
+          "form": "10-K",
+          "prior_end": "2024-12-31",
+          "prior_start": "2024-01-01",
+          "prior_value": 7137000000,
+          "start": "2025-01-01",
+          "tag": "NetCashProvidedByUsedInOperatingActivities",
+          "unit": "USD",
+          "value": 10099000000
+        },
+        "diluted_eps": {
+          "accession": "0001543151-26-000015",
+          "end": "2025-12-31",
+          "filed": "2026-02-13",
+          "fiscal_period": "FY",
+          "fiscal_year": 2025,
+          "form": "10-K",
+          "prior_end": "2024-12-31",
+          "prior_start": "2024-01-01",
+          "prior_value": 4.56,
+          "start": "2025-01-01",
+          "tag": "EarningsPerShareDiluted",
+          "unit": "USD/shares",
+          "value": 4.73
+        },
+        "long_term_debt_current": {
+          "accession": "0001543151-26-000015",
+          "end": "2025-12-31",
+          "filed": "2026-02-13",
+          "fiscal_period": "FY",
+          "fiscal_year": 2025,
+          "form": "10-K",
+          "prior_end": "2024-12-31",
+          "prior_start": null,
+          "prior_value": 1150000000,
+          "start": null,
+          "tag": "LongTermDebtCurrent",
+          "unit": "USD",
+          "value": 0
+        },
+        "long_term_debt_noncurrent": {
+          "accession": "0001543151-26-000015",
+          "end": "2025-12-31",
+          "filed": "2026-02-13",
+          "fiscal_period": "FY",
+          "fiscal_year": 2025,
+          "form": "10-K",
+          "prior_end": "2024-12-31",
+          "prior_start": null,
+          "prior_value": 8347000000,
+          "start": null,
+          "tag": "LongTermDebtNoncurrent",
+          "unit": "USD",
+          "value": 10521000000
+        },
+        "net_income": {
+          "accession": "0001543151-26-000015",
+          "end": "2025-12-31",
+          "filed": "2026-02-13",
+          "fiscal_period": "FY",
+          "fiscal_year": 2025,
+          "form": "10-K",
+          "prior_end": "2024-12-31",
+          "prior_start": "2024-01-01",
+          "prior_value": 9856000000,
+          "start": "2025-01-01",
+          "tag": "NetIncomeLoss",
+          "unit": "USD",
+          "value": 10053000000
+        },
+        "operating_income": {
+          "accession": "0001543151-26-000015",
+          "end": "2025-12-31",
+          "filed": "2026-02-13",
+          "fiscal_period": "FY",
+          "fiscal_year": 2025,
+          "form": "10-K",
+          "prior_end": "2024-12-31",
+          "prior_start": "2024-01-01",
+          "prior_value": 2799000000,
+          "start": "2025-01-01",
+          "tag": "OperatingIncomeLoss",
+          "unit": "USD",
+          "value": 5565000000
+        },
+        "stockholders_equity": {
+          "accession": "0001543151-26-000015",
+          "end": "2025-12-31",
+          "filed": "2026-02-13",
+          "fiscal_period": "FY",
+          "fiscal_year": 2025,
+          "form": "10-K",
+          "prior_end": "2024-12-31",
+          "prior_start": null,
+          "prior_value": 21558000000,
+          "start": null,
+          "tag": "StockholdersEquity",
+          "unit": "USD",
+          "value": 27041000000
+        },
+        "total_revenue": {
+          "accession": "0001543151-26-000015",
+          "end": "2025-12-31",
+          "filed": "2026-02-13",
+          "fiscal_period": "FY",
+          "fiscal_year": 2025,
+          "form": "10-K",
+          "prior_end": "2024-12-31",
+          "prior_start": "2024-01-01",
+          "prior_value": 43978000000,
+          "start": "2025-01-01",
+          "tag": "Revenues",
+          "unit": "USD",
+          "value": 52017000000
+        }
+      },
+      "peer_facts": {
+        "AMD": {
+          "company": {
+            "cik": "0000002488",
+            "name": "ADVANCED MICRO DEVICES INC",
+            "ticker": "AMD"
+          },
+          "facts": {
+            "capital_expenditures": {
+              "accession": "0000002488-26-000018",
+              "end": "2025-12-27",
+              "filed": "2026-02-04",
+              "fiscal_period": "FY",
+              "fiscal_year": 2025,
+              "form": "10-K",
+              "prior_end": "2024-12-28",
+              "prior_start": "2023-12-31",
+              "prior_value": 636000000,
+              "start": "2024-12-29",
+              "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+              "unit": "USD",
+              "value": 974000000
+            },
+            "cash_from_operations": {
+              "accession": "0000002488-26-000018",
+              "end": "2025-12-27",
+              "filed": "2026-02-04",
+              "fiscal_period": "FY",
+              "fiscal_year": 2025,
+              "form": "10-K",
+              "prior_end": "2024-12-28",
+              "prior_start": "2023-12-31",
+              "prior_value": 3041000000,
+              "start": "2024-12-29",
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "unit": "USD",
+              "value": 7709000000
+            },
+            "diluted_eps": {
+              "accession": "0000002488-26-000018",
+              "end": "2025-12-27",
+              "filed": "2026-02-04",
+              "fiscal_period": "FY",
+              "fiscal_year": 2025,
+              "form": "10-K",
+              "prior_end": "2024-12-28",
+              "prior_start": "2023-12-31",
+              "prior_value": 1,
+              "start": "2024-12-29",
+              "tag": "EarningsPerShareDiluted",
+              "unit": "USD/shares",
+              "value": 2.65
+            },
+            "long_term_debt_current": {
+              "accession": "0000002488-26-000018",
+              "end": "2025-12-27",
+              "filed": "2026-02-04",
+              "fiscal_period": "FY",
+              "fiscal_year": 2025,
+              "form": "10-K",
+              "prior_end": "2024-12-28",
+              "prior_start": null,
+              "prior_value": 0,
+              "start": null,
+              "tag": "LongTermDebtCurrent",
+              "unit": "USD",
+              "value": 874000000
+            },
+            "long_term_debt_noncurrent": {
+              "accession": "0000002488-26-000018",
+              "end": "2025-12-27",
+              "filed": "2026-02-04",
+              "fiscal_period": "FY",
+              "fiscal_year": 2025,
+              "form": "10-K",
+              "prior_end": "2024-12-28",
+              "prior_start": null,
+              "prior_value": 1721000000,
+              "start": null,
+              "tag": "LongTermDebtNoncurrent",
+              "unit": "USD",
+              "value": 2348000000
+            },
+            "net_income": {
+              "accession": "0000002488-26-000018",
+              "end": "2025-12-27",
+              "filed": "2026-02-04",
+              "fiscal_period": "FY",
+              "fiscal_year": 2025,
+              "form": "10-K",
+              "prior_end": "2024-12-28",
+              "prior_start": "2023-12-31",
+              "prior_value": 1641000000,
+              "start": "2024-12-29",
+              "tag": "NetIncomeLoss",
+              "unit": "USD",
+              "value": 4335000000
+            },
+            "operating_income": {
+              "accession": "0000002488-26-000018",
+              "end": "2025-12-27",
+              "filed": "2026-02-04",
+              "fiscal_period": "FY",
+              "fiscal_year": 2025,
+              "form": "10-K",
+              "prior_end": "2024-12-28",
+              "prior_start": "2023-12-31",
+              "prior_value": 1900000000,
+              "start": "2024-12-29",
+              "tag": "OperatingIncomeLoss",
+              "unit": "USD",
+              "value": 3694000000
+            },
+            "stockholders_equity": {
+              "accession": "0000002488-26-000018",
+              "end": "2025-12-27",
+              "filed": "2026-02-04",
+              "fiscal_period": "FY",
+              "fiscal_year": 2025,
+              "form": "10-K",
+              "prior_end": "2024-12-28",
+              "prior_start": null,
+              "prior_value": 57568000000,
+              "start": null,
+              "tag": "StockholdersEquity",
+              "unit": "USD",
+              "value": 62999000000
+            },
+            "total_revenue": {
+              "accession": "0000002488-26-000018",
+              "end": "2025-12-27",
+              "filed": "2026-02-04",
+              "fiscal_period": "FY",
+              "fiscal_year": 2025,
+              "form": "10-K",
+              "prior_end": "2024-12-28",
+              "prior_start": "2023-12-31",
+              "prior_value": 25785000000,
+              "start": "2024-12-29",
+              "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "unit": "USD",
+              "value": 34639000000
+            }
+          },
+          "filing": {
+            "accepted": "2026-02-03T23:14:52.000Z",
+            "accession": "0000002488-26-000018",
+            "filing_date": "2026-02-04",
+            "form": "10-K",
+            "items": "",
+            "primary_document": "amd-20251227.htm",
+            "report_date": "2025-12-27"
+          },
+          "operating_margin": {
+            "arithmetic": "3.694e+09 / 3.4639e+10",
+            "definition": "operating income / total revenue",
+            "value": 0.10664280146655504
+          }
+        },
+        "DUOL": {
+          "company": {
+            "cik": "0001562088",
+            "name": "Duolingo, Inc.",
+            "ticker": "DUOL"
+          },
+          "facts": {
+            "capital_expenditures": {
+              "accession": "0001628280-26-012494",
+              "end": "2025-12-31",
+              "filed": "2026-02-27",
+              "fiscal_period": "FY",
+              "fiscal_year": 2025,
+              "form": "10-K",
+              "prior_end": "2024-12-31",
+              "prior_start": "2024-01-01",
+              "prior_value": 12116000,
+              "start": "2025-01-01",
+              "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+              "unit": "USD",
+              "value": 18096000
+            },
+            "cash_from_operations": {
+              "accession": "0001628280-26-012494",
+              "end": "2025-12-31",
+              "filed": "2026-02-27",
+              "fiscal_period": "FY",
+              "fiscal_year": 2025,
+              "form": "10-K",
+              "prior_end": "2024-12-31",
+              "prior_start": "2024-01-01",
+              "prior_value": 285513000,
+              "start": "2025-01-01",
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "unit": "USD",
+              "value": 387823000
+            },
+            "diluted_eps": {
+              "accession": "0001628280-26-012494",
+              "end": "2025-12-31",
+              "filed": "2026-02-27",
+              "fiscal_period": "FY",
+              "fiscal_year": 2025,
+              "form": "10-K",
+              "prior_end": "2024-12-31",
+              "prior_start": "2024-01-01",
+              "prior_value": 1.88,
+              "start": "2025-01-01",
+              "tag": "EarningsPerShareDiluted",
+              "unit": "USD/shares",
+              "value": 8.57
+            },
+            "long_term_debt_current": {
+              "accession": "0001628280-26-012494",
+              "available": false,
+              "end": "2025-12-31",
+              "form": "10-K",
+              "reason": "'None of the candidate tags has annual USD facts: LongTermDebtCurrent, CurrentPortionOfLongTermDebt, LongTermDebtAndFinanceLeaseObligationsCurrent, LongTermDebtAndCapitalLeaseObligationsCurrent'"
+            },
+            "long_term_debt_noncurrent": {
+              "accession": "0001628280-26-012494",
+              "available": false,
+              "end": "2025-12-31",
+              "form": "10-K",
+              "reason": "'None of the candidate tags has annual USD facts: LongTermDebtNoncurrent, LongTermDebtAndFinanceLeaseObligationsNoncurrent, LongTermDebtAndCapitalLeaseObligationsNoncurrent'"
+            },
+            "net_income": {
+              "accession": "0001628280-26-012494",
+              "end": "2025-12-31",
+              "filed": "2026-02-27",
+              "fiscal_period": "FY",
+              "fiscal_year": 2025,
+              "form": "10-K",
+              "prior_end": "2024-12-31",
+              "prior_start": "2024-01-01",
+              "prior_value": 88574000,
+              "start": "2025-01-01",
+              "tag": "NetIncomeLoss",
+              "unit": "USD",
+              "value": 414065000
+            },
+            "operating_income": {
+              "accession": "0001628280-26-012494",
+              "end": "2025-12-31",
+              "filed": "2026-02-27",
+              "fiscal_period": "FY",
+              "fiscal_year": 2025,
+              "form": "10-K",
+              "prior_end": "2024-12-31",
+              "prior_start": "2024-01-01",
+              "prior_value": 62595000,
+              "start": "2025-01-01",
+              "tag": "OperatingIncomeLoss",
+              "unit": "USD",
+              "value": 135570000
+            },
+            "stockholders_equity": {
+              "accession": "0001628280-26-012494",
+              "end": "2025-12-31",
+              "filed": "2026-02-27",
+              "fiscal_period": "FY",
+              "fiscal_year": 2025,
+              "form": "10-K",
+              "prior_end": "2024-12-31",
+              "prior_start": null,
+              "prior_value": 824550000,
+              "start": null,
+              "tag": "StockholdersEquity",
+              "unit": "USD",
+              "value": 1347006000
+            },
+            "total_revenue": {
+              "accession": "0001628280-26-012494",
+              "end": "2025-12-31",
+              "filed": "2026-02-27",
+              "fiscal_period": "FY",
+              "fiscal_year": 2025,
+              "form": "10-K",
+              "prior_end": "2024-12-31",
+              "prior_start": "2024-01-01",
+              "prior_value": 748024000,
+              "start": "2025-01-01",
+              "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "unit": "USD",
+              "value": 1037589000
+            }
+          },
+          "filing": {
+            "accepted": "2026-02-26T23:35:35.000Z",
+            "accession": "0001628280-26-012494",
+            "filing_date": "2026-02-27",
+            "form": "10-K",
+            "items": "",
+            "primary_document": "duol-20251231.htm",
+            "report_date": "2025-12-31"
+          },
+          "operating_margin": {
+            "arithmetic": "1.3557e+08 / 1.03759e+09",
+            "definition": "operating income / total revenue",
+            "value": 0.13065867120796384
+          }
+        },
+        "PLTR": {
+          "company": {
+            "cik": "0001321655",
+            "name": "Palantir Technologies Inc.",
+            "ticker": "PLTR"
+          },
+          "facts": {
+            "capital_expenditures": {
+              "accession": "0001321655-26-000011",
+              "end": "2025-12-31",
+              "filed": "2026-02-17",
+              "fiscal_period": "FY",
+              "fiscal_year": 2025,
+              "form": "10-K",
+              "prior_end": "2024-12-31",
+              "prior_start": "2024-01-01",
+              "prior_value": 12634000,
+              "start": "2025-01-01",
+              "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+              "unit": "USD",
+              "value": 33882000
+            },
+            "cash_from_operations": {
+              "accession": "0001321655-26-000011",
+              "end": "2025-12-31",
+              "filed": "2026-02-17",
+              "fiscal_period": "FY",
+              "fiscal_year": 2025,
+              "form": "10-K",
+              "prior_end": "2024-12-31",
+              "prior_start": "2024-01-01",
+              "prior_value": 1153865000,
+              "start": "2025-01-01",
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "unit": "USD",
+              "value": 2134473000
+            },
+            "diluted_eps": {
+              "accession": "0001321655-26-000011",
+              "end": "2025-12-31",
+              "filed": "2026-02-17",
+              "fiscal_period": "FY",
+              "fiscal_year": 2025,
+              "form": "10-K",
+              "prior_end": "2024-12-31",
+              "prior_start": "2024-01-01",
+              "prior_value": 0.19,
+              "start": "2025-01-01",
+              "tag": "EarningsPerShareDiluted",
+              "unit": "USD/shares",
+              "value": 0.63
+            },
+            "long_term_debt_current": {
+              "accession": "0001321655-26-000011",
+              "available": false,
+              "end": "2025-12-31",
+              "form": "10-K",
+              "reason": "'None of the candidate tags has annual USD facts: LongTermDebtCurrent, CurrentPortionOfLongTermDebt, LongTermDebtAndFinanceLeaseObligationsCurrent, LongTermDebtAndCapitalLeaseObligationsCurrent'"
+            },
+            "long_term_debt_noncurrent": {
+              "accession": "0001321655-26-000011",
+              "available": false,
+              "end": "2025-12-31",
+              "form": "10-K",
+              "reason": "'No 10-K fact ends on 2025-12-31.'"
+            },
+            "net_income": {
+              "accession": "0001321655-26-000011",
+              "end": "2025-12-31",
+              "filed": "2026-02-17",
+              "fiscal_period": "FY",
+              "fiscal_year": 2025,
+              "form": "10-K",
+              "prior_end": "2024-12-31",
+              "prior_start": "2024-01-01",
+              "prior_value": 462190000,
+              "start": "2025-01-01",
+              "tag": "NetIncomeLoss",
+              "unit": "USD",
+              "value": 1625033000
+            },
+            "operating_income": {
+              "accession": "0001321655-26-000011",
+              "end": "2025-12-31",
+              "filed": "2026-02-17",
+              "fiscal_period": "FY",
+              "fiscal_year": 2025,
+              "form": "10-K",
+              "prior_end": "2024-12-31",
+              "prior_start": "2024-01-01",
+              "prior_value": 310403000,
+              "start": "2025-01-01",
+              "tag": "OperatingIncomeLoss",
+              "unit": "USD",
+              "value": 1414015000
+            },
+            "stockholders_equity": {
+              "accession": "0001321655-26-000011",
+              "end": "2025-12-31",
+              "filed": "2026-02-17",
+              "fiscal_period": "FY",
+              "fiscal_year": 2025,
+              "form": "10-K",
+              "prior_end": "2024-12-31",
+              "prior_start": null,
+              "prior_value": 5003275000,
+              "start": null,
+              "tag": "StockholdersEquity",
+              "unit": "USD",
+              "value": 7387268000
+            },
+            "total_revenue": {
+              "accession": "0001321655-26-000011",
+              "end": "2025-12-31",
+              "filed": "2026-02-17",
+              "fiscal_period": "FY",
+              "fiscal_year": 2025,
+              "form": "10-K",
+              "prior_end": "2024-12-31",
+              "prior_start": "2024-01-01",
+              "prior_value": 2865507000,
+              "start": "2025-01-01",
+              "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "unit": "USD",
+              "value": 4475446000
+            }
+          },
+          "filing": {
+            "accepted": "2026-02-17T11:14:19.000Z",
+            "accession": "0001321655-26-000011",
+            "filing_date": "2026-02-17",
+            "form": "10-K",
+            "items": "",
+            "primary_document": "pltr-20251231.htm",
+            "report_date": "2025-12-31"
+          },
+          "operating_margin": {
+            "arithmetic": "1.41402e+09 / 4.47545e+09",
+            "definition": "operating income / total revenue",
+            "value": 0.3159495165398041
+          }
+        },
+        "YUM": {
+          "company": {
+            "cik": "0001041061",
+            "name": "YUM BRANDS INC",
+            "ticker": "YUM"
+          },
+          "facts": {
+            "capital_expenditures": {
+              "accession": "0001041061-26-000084",
+              "end": "2025-12-31",
+              "filed": "2026-02-20",
+              "fiscal_period": "FY",
+              "fiscal_year": 2025,
+              "form": "10-K",
+              "prior_end": "2024-12-31",
+              "prior_start": "2024-01-01",
+              "prior_value": 257000000,
+              "start": "2025-01-01",
+              "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+              "unit": "USD",
+              "value": 371000000
+            },
+            "cash_from_operations": {
+              "accession": "0001041061-26-000084",
+              "end": "2025-12-31",
+              "filed": "2026-02-20",
+              "fiscal_period": "FY",
+              "fiscal_year": 2025,
+              "form": "10-K",
+              "prior_end": "2024-12-31",
+              "prior_start": "2024-01-01",
+              "prior_value": 1689000000,
+              "start": "2025-01-01",
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "unit": "USD",
+              "value": 2010000000
+            },
+            "diluted_eps": {
+              "accession": "0001041061-26-000084",
+              "end": "2025-12-31",
+              "filed": "2026-02-20",
+              "fiscal_period": "FY",
+              "fiscal_year": 2025,
+              "form": "10-K",
+              "prior_end": "2024-12-31",
+              "prior_start": "2024-01-01",
+              "prior_value": 5.22,
+              "start": "2025-01-01",
+              "tag": "EarningsPerShareDiluted",
+              "unit": "USD/shares",
+              "value": 5.55
+            },
+            "long_term_debt_current": {
+              "accession": "0001041061-26-000084",
+              "end": "2025-12-31",
+              "filed": "2026-02-20",
+              "fiscal_period": "FY",
+              "fiscal_year": 2025,
+              "form": "10-K",
+              "prior_end": "2024-12-31",
+              "prior_start": null,
+              "prior_value": 29000000,
+              "start": null,
+              "tag": "LongTermDebtAndCapitalLeaseObligationsCurrent",
+              "unit": "USD",
+              "value": 39000000
+            },
+            "long_term_debt_noncurrent": {
+              "accession": "0001041061-26-000084",
+              "available": false,
+              "end": "2025-12-31",
+              "form": "10-K",
+              "reason": "'No 10-K fact ends on 2025-12-31.'"
+            },
+            "net_income": {
+              "accession": "0001041061-26-000084",
+              "end": "2025-12-31",
+              "filed": "2026-02-20",
+              "fiscal_period": "FY",
+              "fiscal_year": 2025,
+              "form": "10-K",
+              "prior_end": "2024-12-31",
+              "prior_start": "2024-01-01",
+              "prior_value": 1486000000,
+              "start": "2025-01-01",
+              "tag": "NetIncomeLoss",
+              "unit": "USD",
+              "value": 1559000000
+            },
+            "operating_income": {
+              "accession": "0001041061-26-000084",
+              "end": "2025-12-31",
+              "filed": "2026-02-20",
+              "fiscal_period": "FY",
+              "fiscal_year": 2025,
+              "form": "10-K",
+              "prior_end": "2024-12-31",
+              "prior_start": "2024-01-01",
+              "prior_value": 2403000000,
+              "start": "2025-01-01",
+              "tag": "OperatingIncomeLoss",
+              "unit": "USD",
+              "value": 2574000000
+            },
+            "stockholders_equity": {
+              "accession": "0001041061-26-000084",
+              "end": "2025-12-31",
+              "filed": "2026-02-20",
+              "fiscal_period": "FY",
+              "fiscal_year": 2025,
+              "form": "10-K",
+              "prior_end": "2024-12-31",
+              "prior_start": null,
+              "prior_value": -7648000000,
+              "start": null,
+              "tag": "StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest",
+              "unit": "USD",
+              "value": -7325000000
+            },
+            "total_revenue": {
+              "accession": "0001041061-26-000084",
+              "end": "2025-12-31",
+              "filed": "2026-02-20",
+              "fiscal_period": "FY",
+              "fiscal_year": 2025,
+              "form": "10-K",
+              "prior_end": "2024-12-31",
+              "prior_start": "2024-01-01",
+              "prior_value": 7549000000,
+              "start": "2025-01-01",
+              "tag": "Revenues",
+              "unit": "USD",
+              "value": 8214000000
+            }
+          },
+          "filing": {
+            "accepted": "2026-02-20T21:54:25.000Z",
+            "accession": "0001041061-26-000084",
+            "filing_date": "2026-02-20",
+            "form": "10-K",
+            "items": "",
+            "primary_document": "yum-20251231.htm",
+            "report_date": "2025-12-31"
+          },
+          "operating_margin": {
+            "arithmetic": "2.574e+09 / 8.214e+09",
+            "definition": "operating income / total revenue",
+            "value": 0.3133674214755296
+          }
+        }
+      },
+      "quarter_evidence": {
+        "prior_year_quarter_total_revenue": 13467.0,
+        "quarter_diluted_eps": 0.25,
+        "quarter_diluted_eps_line": "GAAP Diluted EPS (2) | $ | 3.11 | $ | 0.25 | $ | 4.57 | $ | 1.54",
+        "quarter_revenue_growth": 0.09645800846513697,
+        "quarter_revenue_growth_arithmetic": "14766 / 13467 - 1",
+        "quarter_total_revenue": 14766.0,
+        "quarter_total_revenue_line": "Revenue | $ | 13,467 | $ | 14,766 | 10 | % | 10 | %"
+      }
+    },
+    "saved_filing_texts": {
+      "earnings_release_EX-99.1.txt": "Line 7: Uber Announces Results for Third Quarter 2026\nLine 8: Gross Bookings grew 20% year-over-year on a constant currency basis\nLine 9: GAAP Income from operations of $1.4 billion; Non-GAAP Operating Income of $2.3 billion, up 38% year-over-year\nLine 12: \u2013 Uber Technologies, Inc. (NYSE: UBER) today announced financial results for the quarter ended September 30, 2026.\nLine 13: \u201cUber delivered its fifth consecutive quarter of 20%+ Gross Bookings growth, driven by record audience and consumer engagement,\u201d said Dara Khosrowshahi, CEO. \u201cWe\u2019re investing from a position of strength to expand Mobility supply, build on Delivery\u2019s momentum, and deepen engagement across our platform. Our focus on autonomous is now on commercial execution, with approximately 700 fully driverless vehicles expected on Uber by year-end and over 2,000 in 2027.\u201d\nLine 14: \u201cUber continues to translate strong growth into expanding profitability, with Non-GAAP Operating Income margins reaching a record 3.9% of Gross Bookings and Non-GAAP EPS growing 35%,\" said Balaji Krishnamurthy, CFO. \u201cOur Q4 outlook reinforces our confidence in the durability of our financial model as we enter 2027. We remain disciplined in capital allocation, maintaining a high bar for investments in our core businesses and autonomy to drive Uber\u2019s next phase of growth.\u201d\nLine 37: For Q4 2026, we anticipate:\nLine 38: \u2022\nLine 39: Gross Bookings of $63.25 billion to $65.25 billion, representing growth of 18% to 22% YoY on a constant-currency basis.",
+      "latest_10-K.txt": "Line 2230: PART I\nLine 2231: ITEM 1. BUSINESS\nLine 2232: Overview\nLine 2233: Uber Technologies, Inc. (\u201cUber,\u201d the \u201cCompany,\u201d \u201cwe,\u201d \u201cour,\u201d or \u201cus\u201d) is a technology platform that uses a massive network, leading technology, operational excellence and product expertise to power movement from point A to point B. We develop and operate proprietary technology applications supporting a variety of offerings on our platform (\u201cplatform(s)\u201d or \u201cPlatform(s)\u201d). We connect consumers (\u201cRider(s)\u201d) with independent providers of ride services (\u201cMobility Driver(s)\u201d) for ridesharing services, and connect Riders and other consumers (\u201cEater(s)\u201d) with restaurants, grocers and other stores (collectively, \u201cMerchants\u201d) with delivery service providers (\u201cCouriers\u201d) for meal preparation, grocery and other delivery services. Riders and Eaters are collectively referred to as \u201cend-user(s)\u201d or \u201cconsumer(s).\u201d Mobility Drivers and Couriers are collectively referred to as \u201cDriver(s).\u201d We also connect consumers with public transportation networks. We use this same network, technology, operational excellence and product expertise to connect shippers (\u201cShipper(s)\u201d) with carriers (\u201cCarrier(s)\u201d) in the freight industry by providing Carriers with the ability to book a shipment, transportation management and other logistics services. Uber is also developing technologies designed to provide new solutions to solve everyday problems.\nLine 2234: Our technology is available in over 70 countries around the world, principally in the United States (\u201cU.S.\u201d) and Canada, Latin America (\u201cLatAm\u201d), Europe (excluding Russia), the Middle East, Africa, and Asia Pacific (\u201cAPAC\u201d, excluding China and Southeast Asia).\nLine 2235: Our Segments\nLine 2248: Massive Network\nLine 2249: Our massive, efficient, and intelligent network consists of hundreds of millions of Drivers, consumers, Merchants, Shippers and Carriers, as well as underlying data, technology, and shared infrastructure. Our network becomes smarter with every trip. In more than 15,000 cities around the world (as of December 31, 2025), our network powers movement at the touch of a button for millions, and we hope eventually billions, of people.\nLine 2250: Leading Technology\nLine 2251: We have built proprietary marketplace, routing, and payments technologies. Marketplace technologies are the core of our deep technology advantage and include demand prediction, matching and dispatching, and pricing technologies. Our technologies make it extremely efficient to launch new businesses and operationalize existing ones.\nLine 2252: Operational Excellence\nLine 2258: Membership\nLine 2259: With our platform, we are making it even easier for our consumers to unlock convenience\u2014Uber One is our single cross-platform membership program that brings together the best of Uber. Uber One members have access to discounts, cash back, special pricing, priority service, and exclusive perks across our rides, delivery and grocery and retail offerings. Uber One is available in over 30 countries. Our Uber One membership program is designed to make utilizing our suite of products a seamless and rewarding experience for our consumers. As of December 31, 2025, Uber One member base reached 46 million.\nLine 2260: Advertising\nLine 2264: 5\nLine 2265: \u2022\nLine 2266: Mobility\nLine 2269: Delivery\nLine 2270: . Our Delivery offering competes with numerous companies in the meal, grocery and other delivery space in various regions for Drivers, consumers, and merchants, including DoorDash, Instacart, Gopuff, Rappi, Delivery Hero, Just Eat Takeaway, and Amazon. Our Delivery offering also competes with restaurants and other merchants, including those that offer their own delivery and/or take-away, meal kit delivery services, grocery delivery services, and traditional grocers.\nLine 2271: \u2022\nLine 2298: Employees\nLine 2299: We are a global company and as of December 31, 2025, we and our subsidiaries had approximately 34,000 employees globally and operations in over 70 countries and more than 15,000 cities around the world. Our human capital strategies are developed and managed by our Chief People Officer, who reports to the CEO, and are overseen by the Compensation Committee and the Board of Directors.\nLine 2300: Our success depends in large part on our ability to attract and retain high-quality management, operations, engineering, and other personnel who are in high demand, are often subject to competing employment offers, and are attractive recruiting targets for our competitors.\nLine 2314: \u25e6\nLine 2315: Global: We renewed our agreement with the ITF (International Transport Workers\u2019 Federation), a democratic, affiliate-led federation of over 700 transport workers\u2019 unions from 150 countries, representing 16.5 million workers. The agreement invites collaboration on topics such as trade union representation, freedom of association and bargaining, working conditions, health and safety, social protections, and dispute resolution.\nLine 2316: \u25e6",
+      "latest_10-Q.txt": ""
+    }
+  },
+  "expected_output": {
+    "format": "JSON",
+    "schema": {
+      "semantic_marks": [
+        {
+          "claim": "text",
+          "correction": "text or empty",
+          "explanation": "text",
+          "mark": "correct | wrong | unsupported",
+          "source": "real filing line or XBRL tag and period"
+        }
+      ]
+    }
+  },
+  "task": "Check whether each cited line states the reported number for the stated period and definition. Skip the Investment Advisor thesis. Return JSON with semantic_marks."
+}

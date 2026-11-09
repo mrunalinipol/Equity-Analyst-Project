@@ -1,5 +1,79 @@
 # Project Status and Session Handoff
 
+## Lab 05 final technical run — 2026-11-09
+
+- The UBER team ran through the local page service in Orca with peers AMD,
+  YUM, DUOL, and PLTR. The final folder is
+  `outputs/UBER_20261109_000823`.
+- The Manager status is `PASS`. The Verifier result is `verified: true`; all
+  50 marks are `correct`.
+- The printed order is `steps -> Research Analyst -> Financial Analyst ->
+  Investment Advisor -> Strategy Manager -> Verifier`.
+- The verified report contains three distinct `Insight:` lines. Every number
+  in each line occurs on its cited saved 10-K line.
+- The Flow now preserves the calculator-built core block, rejects duplicate
+  insights, checks an Insight against its exact saved line, and uses an exact
+  company-neutral 10-K sentence only when a model insight fails that check.
+  The Advisor fallback copies a verified Financial Analyst claim and source.
+- A current COST run is saved at `outputs/COST_20261109_002527`, using WMT,
+  TGT, BJ, and price `$992.13`. Manager status is `PASS`; the Verifier reports
+  `verified: true` with `22/22` correct retained marks and three distinct
+  Insight lines. Its six-node order matches the final UBER run.
+- All 32 automated tests pass. Python compilation and `git diff --check` pass.
+- Checkpoint 2 technical evidence is ready: the seeded `$21.76` EPS claim is
+  marked `wrong` and corrected to `$20.76` with accession and 10-K lines.
+- On November 9, 2026, the student confirmed that the Lab 05 partner-check
+  requirement is complete. Shachi's signed public worksheet marks two UBER
+  claims `RIGHT` and includes her name, initials, date, and signature. It
+  reviews Shachi's earlier UBER run, not this final run. The local final-run
+  worksheet remains an unused template; no agent filled Shachi's fields.
+- Remaining human work: the student must write the three personas and personal
+  reflection. Team formation and partner review are recorded complete.
+- No Brightspace action was performed. The branch is not ready to merge into
+  `main` until the human-authored persona and reflection work is complete.
+
+## Lab 05 preparation update — 2026-11-08
+
+- Work continues on branch `lab05-preparation`, based on the completed Lab 04
+  `origin/main` merge commit `8148730`.
+- The Lab 05 Insight checks, fixed Flow, Verifier integration, and local page
+  are present. The Manager rejects repeated Insight lines and records `PASS`
+  or `FAIL_UNRESOLVED`.
+- CrewAI 1.15.34 and the declared packages are installed in the ignored local
+  `.venv`.
+- A fresh UBER data run completed all seven filing-first steps in
+  `outputs/UBER_20261108_233820`, with peers LYFT, DASH, and ABNB.
+- The UBER release parser was corrected for the plain `Revenue` label,
+  prior-year-first table columns, `GAAP Diluted EPS`, and a numeric label
+  footnote. The saved Q3 2026 values are revenue of `$14,766 million` and GAAP
+  diluted EPS of `$0.25`.
+- All 29 tests pass. Compilation and `git diff --check` pass. The page returned
+  HTTP 200 and displayed its required controls.
+- The ignored `.env` contains the SEC User-Agent and model endpoint settings,
+  and now contains the student's locally entered `API_KEY`. A minimal provider
+  test returned `OK` from `llama3.1:latest`. The key was not printed, copied,
+  staged, or published.
+- `week03/Lab05_completion.md` records the exact completed and remaining work.
+  `week03/Lab05_partner_check.md` contains two prefilled claims and sources;
+  all partner judgment and signature fields remain blank for Shachi.
+- The student-written persona worksheet remains blank. AI must not write the
+  three personas.
+- No Brightspace action was performed.
+- Preparation commit `9fb4d0256c81172c77f3df9adddb4184beb47384`
+  was pushed to public branch `lab05-preparation`. It contains no `.env` or
+  `.venv`. The branch is not merged into `main` because the student personas,
+  live model run, and Shachi's review are still incomplete.
+- A later read-only GitHub check on 2026-11-08 found that Shachi completed and
+  signed `week03/Lab05_partner_check.md` in her repository. She marked both
+  UBER claims `RIGHT`, entered her name and initials `SK`, and dated the review
+  November 8, 2026. The worksheet reviews her run
+  `runs/UBER_20261108_184111` with peers AMD, YUM, DUOL, and PLTR. It does not
+  review this repository's `lab05-preparation` run with LYFT, DASH, and ABNB,
+  and Shachi has not opened a Lab 05 pull request to this repository.
+- The student confirmed that team formation is complete. Team-member names
+  and the team name are not stored in the repository. The personal reflection
+  remains blank in `week03/Lab05_personal_reflection.md`.
+
 Last updated: 2026-11-03
 
 Read this file at the start of the next session. It records the verified project state. Do not put API keys or other secret values in this file.

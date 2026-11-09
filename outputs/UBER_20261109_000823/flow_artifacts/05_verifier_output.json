@@ -1,0 +1,367 @@
+{
+  "marks": [
+    {
+      "claim": "Total revenue",
+      "correction": "",
+      "explanation": "The stated value, arithmetic, definition when required, and source match the saved run.",
+      "mark": "correct",
+      "source": "10-K accession 0001543151-26-000015; XBRL tag `Revenues`; period ended 2025-12-31"
+    },
+    {
+      "claim": "Revenue growth",
+      "correction": "",
+      "explanation": "The stated value, arithmetic, definition when required, and source match the saved run.",
+      "mark": "correct",
+      "source": "10-K accession 0001543151-26-000015; XBRL tag `Revenues`; period ended 2025-12-31"
+    },
+    {
+      "claim": "Operating income and operating margin",
+      "correction": "",
+      "explanation": "The stated value, arithmetic, definition when required, and source match the saved run.",
+      "mark": "correct",
+      "source": "10-K accession 0001543151-26-000015; XBRL tag `OperatingIncomeLoss`; period ended 2025-12-31; 10-K accession 0001543151-26-000015; XBRL tag `Revenues`; period ended 2025-12-31"
+    },
+    {
+      "claim": "Net income attributable to the company",
+      "correction": "",
+      "explanation": "The stated value, arithmetic, definition when required, and source match the saved run.",
+      "mark": "correct",
+      "source": "10-K accession 0001543151-26-000015; XBRL tag `NetIncomeLoss`; period ended 2025-12-31"
+    },
+    {
+      "claim": "GAAP diluted EPS",
+      "correction": "",
+      "explanation": "The stated value, arithmetic, definition when required, and source match the saved run.",
+      "mark": "correct",
+      "source": "10-K accession 0001543151-26-000015; XBRL tag `EarningsPerShareDiluted`; period ended 2025-12-31"
+    },
+    {
+      "claim": "Return on average equity",
+      "correction": "",
+      "explanation": "The stated value, arithmetic, definition when required, and source match the saved run.",
+      "mark": "correct",
+      "source": "10-K accession 0001543151-26-000015; XBRL tag `NetIncomeLoss`; period ended 2025-12-31; 10-K accession 0001543151-26-000015; XBRL tag `StockholdersEquity`; period ended 2025-12-31"
+    },
+    {
+      "claim": "Debt to equity",
+      "correction": "",
+      "explanation": "The stated value, arithmetic, definition when required, and source match the saved run.",
+      "mark": "correct",
+      "source": "10-K accession 0001543151-26-000015; XBRL tag `LongTermDebtNoncurrent`; period ended 2025-12-31; 10-K accession 0001543151-26-000015; XBRL tag `LongTermDebtCurrent`; period ended 2025-12-31; 10-K accession 0001543151-26-000015; XBRL tag `StockholdersEquity`; period ended 2025-12-31"
+    },
+    {
+      "claim": "Free cash flow",
+      "correction": "",
+      "explanation": "The stated value, arithmetic, definition when required, and source match the saved run.",
+      "mark": "correct",
+      "source": "10-K accession 0001543151-26-000015; XBRL tag `NetCashProvidedByUsedInOperatingActivities`; period ended 2025-12-31; 10-K accession 0001543151-26-000015; XBRL tag `PaymentsToAcquirePropertyPlantAndEquipment`; period ended 2025-12-31"
+    },
+    {
+      "claim": "Latest-quarter total revenue",
+      "correction": "",
+      "explanation": "The stated value, arithmetic, definition when required, and source match the saved run.",
+      "mark": "correct",
+      "source": "Exhibit 99.1 line `Revenue | $ | 13,467 | $ | 14,766 | 10 | % | 10 | %`"
+    },
+    {
+      "claim": "Quarter revenue growth",
+      "correction": "",
+      "explanation": "The stated value, arithmetic, definition when required, and source match the saved run.",
+      "mark": "correct",
+      "source": "Exhibit 99.1 line `Revenue | $ | 13,467 | $ | 14,766 | 10 | % | 10 | %`"
+    },
+    {
+      "claim": "Latest-quarter GAAP diluted EPS",
+      "correction": "",
+      "explanation": "The stated value, arithmetic, definition when required, and source match the saved run.",
+      "mark": "correct",
+      "source": "Exhibit 99.1 line `GAAP Diluted EPS (2) | $ | 3.11 | $ | 0.25 | $ | 4.57 | $ | 1.54`"
+    },
+    {
+      "claim": "10-K Line 2231",
+      "correction": "",
+      "explanation": "The cited line exists in the saved filing text.",
+      "mark": "correct",
+      "source": "ITEM 1. BUSINESS"
+    },
+    {
+      "claim": "10-K Line 2234",
+      "correction": "",
+      "explanation": "The cited line exists in the saved filing text.",
+      "mark": "correct",
+      "source": "Our technology is available in over 70 countries around the world, principally in the United States (\u201cU.S.\u201d) and Canada, Latin America (\u201cLatAm\u201d), Europe (excluding Russia), the Middle East, Africa, and Asia Pacific (\u201cAPAC\u201d, excluding China and Southeast Asia)."
+    },
+    {
+      "claim": "10-K Line 2251",
+      "correction": "",
+      "explanation": "The cited line exists in the saved filing text.",
+      "mark": "correct",
+      "source": "We have built proprietary marketplace, routing, and payments technologies. Marketplace technologies are the core of our deep technology advantage and include demand prediction, matching and dispatching, and pricing technologies. Our technologies make it extremely efficient to launch new businesses and operationalize existing ones."
+    },
+    {
+      "claim": "10-K Line 2233",
+      "correction": "",
+      "explanation": "The cited line exists in the saved filing text.",
+      "mark": "correct",
+      "source": "Uber Technologies, Inc. (\u201cUber,\u201d the \u201cCompany,\u201d \u201cwe,\u201d \u201cour,\u201d or \u201cus\u201d) is a technology platform that uses a massive network, leading technology, operational excellence and product expertise to power movement from point A to point B. We develop and operate proprietary technology applications supporting a variety of offerings on our platform (\u201cplatform(s)\u201d or \u201cPlatform(s)\u201d). We connect consumers (\u201cRider(s)\u201d) with independent providers of ride services (\u201cMobility Driver(s)\u201d) for ridesharing services, and connect Riders and other consumers (\u201cEater(s)\u201d) with restaurants, grocers and other stores (collectively, \u201cMerchants\u201d) with delivery service providers (\u201cCouriers\u201d) for meal preparation, grocery and other delivery services. Riders and Eaters are collectively referred to as \u201cend-user(s)\u201d or \u201cconsumer(s).\u201d Mobility Drivers and Couriers are collectively referred to as \u201cDriver(s).\u201d We also connect consumers with public transportation networks. We use this same network, technology, operational excellence and product expertise to connect shippers (\u201cShipper(s)\u201d) with carriers (\u201cCarrier(s)\u201d) in the freight industry by providing Carriers with the ability to book a shipment, transportation management and other logistics services. Uber is also developing technologies designed to provide new solutions to solve everyday problems."
+    },
+    {
+      "claim": "10-K Line 2265",
+      "correction": "",
+      "explanation": "The cited line exists in the saved filing text.",
+      "mark": "correct",
+      "source": "\u2022"
+    },
+    {
+      "claim": "10-K Line 2270",
+      "correction": "",
+      "explanation": "The cited line exists in the saved filing text.",
+      "mark": "correct",
+      "source": ". Our Delivery offering competes with numerous companies in the meal, grocery and other delivery space in various regions for Drivers, consumers, and merchants, including DoorDash, Instacart, Gopuff, Rappi, Delivery Hero, Just Eat Takeaway, and Amazon. Our Delivery offering also competes with restaurants and other merchants, including those that offer their own delivery and/or take-away, meal kit delivery services, grocery delivery services, and traditional grocers."
+    },
+    {
+      "claim": "10-K Line 2251",
+      "correction": "",
+      "explanation": "The cited line exists in the saved filing text.",
+      "mark": "correct",
+      "source": "We have built proprietary marketplace, routing, and payments technologies. Marketplace technologies are the core of our deep technology advantage and include demand prediction, matching and dispatching, and pricing technologies. Our technologies make it extremely efficient to launch new businesses and operationalize existing ones."
+    },
+    {
+      "claim": "EX-99.1 Line 8",
+      "correction": "",
+      "explanation": "The cited line exists in the saved filing text.",
+      "mark": "correct",
+      "source": "Gross Bookings grew 20% year-over-year on a constant currency basis"
+    },
+    {
+      "claim": "EX-99.1 Line 38",
+      "correction": "",
+      "explanation": "The cited line exists in the saved filing text.",
+      "mark": "correct",
+      "source": "\u2022"
+    },
+    {
+      "claim": "EX-99.1 Line 13",
+      "correction": "",
+      "explanation": "The cited line exists in the saved filing text.",
+      "mark": "correct",
+      "source": "\u201cUber delivered its fifth consecutive quarter of 20%+ Gross Bookings growth, driven by record audience and consumer engagement,\u201d said Dara Khosrowshahi, CEO. \u201cWe\u2019re investing from a position of strength to expand Mobility supply, build on Delivery\u2019s momentum, and deepen engagement across our platform. Our focus on autonomous is now on commercial execution, with approximately 700 fully driverless vehicles expected on Uber by year-end and over 2,000 in 2027.\u201d"
+    },
+    {
+      "claim": "10-K Line 2259",
+      "correction": "",
+      "explanation": "The cited line exists in the saved filing text.",
+      "mark": "correct",
+      "source": "With our platform, we are making it even easier for our consumers to unlock convenience\u2014Uber One is our single cross-platform membership program that brings together the best of Uber. Uber One members have access to discounts, cash back, special pricing, priority service, and exclusive perks across our rides, delivery and grocery and retail offerings. Uber One is available in over 30 countries. Our Uber One membership program is designed to make utilizing our suite of products a seamless and rewarding experience for our consumers. As of December 31, 2025, Uber One member base reached 46 million."
+    },
+    {
+      "claim": "10-K Line 2231",
+      "correction": "",
+      "explanation": "The cited line exists in the saved filing text.",
+      "mark": "correct",
+      "source": "ITEM 1. BUSINESS"
+    },
+    {
+      "claim": "10-K Line 2234",
+      "correction": "",
+      "explanation": "The cited line exists in the saved filing text.",
+      "mark": "correct",
+      "source": "Our technology is available in over 70 countries around the world, principally in the United States (\u201cU.S.\u201d) and Canada, Latin America (\u201cLatAm\u201d), Europe (excluding Russia), the Middle East, Africa, and Asia Pacific (\u201cAPAC\u201d, excluding China and Southeast Asia)."
+    },
+    {
+      "claim": "10-K Line 2251",
+      "correction": "",
+      "explanation": "The cited line exists in the saved filing text.",
+      "mark": "correct",
+      "source": "We have built proprietary marketplace, routing, and payments technologies. Marketplace technologies are the core of our deep technology advantage and include demand prediction, matching and dispatching, and pricing technologies. Our technologies make it extremely efficient to launch new businesses and operationalize existing ones."
+    },
+    {
+      "claim": "10-K Line 2233",
+      "correction": "",
+      "explanation": "The cited line exists in the saved filing text.",
+      "mark": "correct",
+      "source": "Uber Technologies, Inc. (\u201cUber,\u201d the \u201cCompany,\u201d \u201cwe,\u201d \u201cour,\u201d or \u201cus\u201d) is a technology platform that uses a massive network, leading technology, operational excellence and product expertise to power movement from point A to point B. We develop and operate proprietary technology applications supporting a variety of offerings on our platform (\u201cplatform(s)\u201d or \u201cPlatform(s)\u201d). We connect consumers (\u201cRider(s)\u201d) with independent providers of ride services (\u201cMobility Driver(s)\u201d) for ridesharing services, and connect Riders and other consumers (\u201cEater(s)\u201d) with restaurants, grocers and other stores (collectively, \u201cMerchants\u201d) with delivery service providers (\u201cCouriers\u201d) for meal preparation, grocery and other delivery services. Riders and Eaters are collectively referred to as \u201cend-user(s)\u201d or \u201cconsumer(s).\u201d Mobility Drivers and Couriers are collectively referred to as \u201cDriver(s).\u201d We also connect consumers with public transportation networks. We use this same network, technology, operational excellence and product expertise to connect shippers (\u201cShipper(s)\u201d) with carriers (\u201cCarrier(s)\u201d) in the freight industry by providing Carriers with the ability to book a shipment, transportation management and other logistics services. Uber is also developing technologies designed to provide new solutions to solve everyday problems."
+    },
+    {
+      "claim": "10-K Line 2265",
+      "correction": "",
+      "explanation": "The cited line exists in the saved filing text.",
+      "mark": "correct",
+      "source": "\u2022"
+    },
+    {
+      "claim": "10-K Line 2270",
+      "correction": "",
+      "explanation": "The cited line exists in the saved filing text.",
+      "mark": "correct",
+      "source": ". Our Delivery offering competes with numerous companies in the meal, grocery and other delivery space in various regions for Drivers, consumers, and merchants, including DoorDash, Instacart, Gopuff, Rappi, Delivery Hero, Just Eat Takeaway, and Amazon. Our Delivery offering also competes with restaurants and other merchants, including those that offer their own delivery and/or take-away, meal kit delivery services, grocery delivery services, and traditional grocers."
+    },
+    {
+      "claim": "10-K Line 2251",
+      "correction": "",
+      "explanation": "The cited line exists in the saved filing text.",
+      "mark": "correct",
+      "source": "We have built proprietary marketplace, routing, and payments technologies. Marketplace technologies are the core of our deep technology advantage and include demand prediction, matching and dispatching, and pricing technologies. Our technologies make it extremely efficient to launch new businesses and operationalize existing ones."
+    },
+    {
+      "claim": "EX-99.1 Line 8",
+      "correction": "",
+      "explanation": "The cited line exists in the saved filing text.",
+      "mark": "correct",
+      "source": "Gross Bookings grew 20% year-over-year on a constant currency basis"
+    },
+    {
+      "claim": "EX-99.1 Line 38",
+      "correction": "",
+      "explanation": "The cited line exists in the saved filing text.",
+      "mark": "correct",
+      "source": "\u2022"
+    },
+    {
+      "claim": "EX-99.1 Line 13",
+      "correction": "",
+      "explanation": "The cited line exists in the saved filing text.",
+      "mark": "correct",
+      "source": "\u201cUber delivered its fifth consecutive quarter of 20%+ Gross Bookings growth, driven by record audience and consumer engagement,\u201d said Dara Khosrowshahi, CEO. \u201cWe\u2019re investing from a position of strength to expand Mobility supply, build on Delivery\u2019s momentum, and deepen engagement across our platform. Our focus on autonomous is now on commercial execution, with approximately 700 fully driverless vehicles expected on Uber by year-end and over 2,000 in 2027.\u201d"
+    },
+    {
+      "claim": "10-K Line 2259",
+      "correction": "",
+      "explanation": "The cited line exists in the saved filing text.",
+      "mark": "correct",
+      "source": "With our platform, we are making it even easier for our consumers to unlock convenience\u2014Uber One is our single cross-platform membership program that brings together the best of Uber. Uber One members have access to discounts, cash back, special pricing, priority service, and exclusive perks across our rides, delivery and grocery and retail offerings. Uber One is available in over 30 countries. Our Uber One membership program is designed to make utilizing our suite of products a seamless and rewarding experience for our consumers. As of December 31, 2025, Uber One member base reached 46 million."
+    },
+    {
+      "claim": "10-K Line 2249",
+      "correction": "",
+      "explanation": "The cited line exists in the saved filing text.",
+      "mark": "correct",
+      "source": "Our massive, efficient, and intelligent network consists of hundreds of millions of Drivers, consumers, Merchants, Shippers and Carriers, as well as underlying data, technology, and shared infrastructure. Our network becomes smarter with every trip. In more than 15,000 cities around the world (as of December 31, 2025), our network powers movement at the touch of a button for millions, and we hope eventually billions, of people."
+    },
+    {
+      "claim": "10-K Line 2231",
+      "correction": "",
+      "explanation": "The cited line exists in the saved filing text.",
+      "mark": "correct",
+      "source": "ITEM 1. BUSINESS"
+    },
+    {
+      "claim": "10-K Line 2234",
+      "correction": "",
+      "explanation": "The cited line exists in the saved filing text.",
+      "mark": "correct",
+      "source": "Our technology is available in over 70 countries around the world, principally in the United States (\u201cU.S.\u201d) and Canada, Latin America (\u201cLatAm\u201d), Europe (excluding Russia), the Middle East, Africa, and Asia Pacific (\u201cAPAC\u201d, excluding China and Southeast Asia)."
+    },
+    {
+      "claim": "10-K Line 2251",
+      "correction": "",
+      "explanation": "The cited line exists in the saved filing text.",
+      "mark": "correct",
+      "source": "We have built proprietary marketplace, routing, and payments technologies. Marketplace technologies are the core of our deep technology advantage and include demand prediction, matching and dispatching, and pricing technologies. Our technologies make it extremely efficient to launch new businesses and operationalize existing ones."
+    },
+    {
+      "claim": "10-K Line 2233",
+      "correction": "",
+      "explanation": "The cited line exists in the saved filing text.",
+      "mark": "correct",
+      "source": "Uber Technologies, Inc. (\u201cUber,\u201d the \u201cCompany,\u201d \u201cwe,\u201d \u201cour,\u201d or \u201cus\u201d) is a technology platform that uses a massive network, leading technology, operational excellence and product expertise to power movement from point A to point B. We develop and operate proprietary technology applications supporting a variety of offerings on our platform (\u201cplatform(s)\u201d or \u201cPlatform(s)\u201d). We connect consumers (\u201cRider(s)\u201d) with independent providers of ride services (\u201cMobility Driver(s)\u201d) for ridesharing services, and connect Riders and other consumers (\u201cEater(s)\u201d) with restaurants, grocers and other stores (collectively, \u201cMerchants\u201d) with delivery service providers (\u201cCouriers\u201d) for meal preparation, grocery and other delivery services. Riders and Eaters are collectively referred to as \u201cend-user(s)\u201d or \u201cconsumer(s).\u201d Mobility Drivers and Couriers are collectively referred to as \u201cDriver(s).\u201d We also connect consumers with public transportation networks. We use this same network, technology, operational excellence and product expertise to connect shippers (\u201cShipper(s)\u201d) with carriers (\u201cCarrier(s)\u201d) in the freight industry by providing Carriers with the ability to book a shipment, transportation management and other logistics services. Uber is also developing technologies designed to provide new solutions to solve everyday problems."
+    },
+    {
+      "claim": "10-K Line 2265",
+      "correction": "",
+      "explanation": "The cited line exists in the saved filing text.",
+      "mark": "correct",
+      "source": "\u2022"
+    },
+    {
+      "claim": "10-K Line 2270",
+      "correction": "",
+      "explanation": "The cited line exists in the saved filing text.",
+      "mark": "correct",
+      "source": ". Our Delivery offering competes with numerous companies in the meal, grocery and other delivery space in various regions for Drivers, consumers, and merchants, including DoorDash, Instacart, Gopuff, Rappi, Delivery Hero, Just Eat Takeaway, and Amazon. Our Delivery offering also competes with restaurants and other merchants, including those that offer their own delivery and/or take-away, meal kit delivery services, grocery delivery services, and traditional grocers."
+    },
+    {
+      "claim": "10-K Line 2251",
+      "correction": "",
+      "explanation": "The cited line exists in the saved filing text.",
+      "mark": "correct",
+      "source": "We have built proprietary marketplace, routing, and payments technologies. Marketplace technologies are the core of our deep technology advantage and include demand prediction, matching and dispatching, and pricing technologies. Our technologies make it extremely efficient to launch new businesses and operationalize existing ones."
+    },
+    {
+      "claim": "EX-99.1 Line 8",
+      "correction": "",
+      "explanation": "The cited line exists in the saved filing text.",
+      "mark": "correct",
+      "source": "Gross Bookings grew 20% year-over-year on a constant currency basis"
+    },
+    {
+      "claim": "EX-99.1 Line 38",
+      "correction": "",
+      "explanation": "The cited line exists in the saved filing text.",
+      "mark": "correct",
+      "source": "\u2022"
+    },
+    {
+      "claim": "EX-99.1 Line 13",
+      "correction": "",
+      "explanation": "The cited line exists in the saved filing text.",
+      "mark": "correct",
+      "source": "\u201cUber delivered its fifth consecutive quarter of 20%+ Gross Bookings growth, driven by record audience and consumer engagement,\u201d said Dara Khosrowshahi, CEO. \u201cWe\u2019re investing from a position of strength to expand Mobility supply, build on Delivery\u2019s momentum, and deepen engagement across our platform. Our focus on autonomous is now on commercial execution, with approximately 700 fully driverless vehicles expected on Uber by year-end and over 2,000 in 2027.\u201d"
+    },
+    {
+      "claim": "10-K Line 2259",
+      "correction": "",
+      "explanation": "The cited line exists in the saved filing text.",
+      "mark": "correct",
+      "source": "With our platform, we are making it even easier for our consumers to unlock convenience\u2014Uber One is our single cross-platform membership program that brings together the best of Uber. Uber One members have access to discounts, cash back, special pricing, priority service, and exclusive perks across our rides, delivery and grocery and retail offerings. Uber One is available in over 30 countries. Our Uber One membership program is designed to make utilizing our suite of products a seamless and rewarding experience for our consumers. As of December 31, 2025, Uber One member base reached 46 million."
+    },
+    {
+      "claim": "10-K Line 2299",
+      "correction": "",
+      "explanation": "The cited line exists in the saved filing text.",
+      "mark": "correct",
+      "source": "We are a global company and as of December 31, 2025, we and our subsidiaries had approximately 34,000 employees globally and operations in over 70 countries and more than 15,000 cities around the world. Our human capital strategies are developed and managed by our Chief People Officer, who reports to the CEO, and are overseen by the Compensation Committee and the Board of Directors."
+    },
+    {
+      "claim": "10-K Line 2315",
+      "correction": "",
+      "explanation": "The cited line exists in the saved filing text.",
+      "mark": "correct",
+      "source": "Global: We renewed our agreement with the ITF (International Transport Workers\u2019 Federation), a democratic, affiliate-led federation of over 700 transport workers\u2019 unions from 150 countries, representing 16.5 million workers. The agreement invites collaboration on topics such as trade union representation, freedom of association and bargaining, working conditions, health and safety, social protections, and dispute resolution."
+    },
+    {
+      "claim": "Insight 1",
+      "correction": "",
+      "explanation": "Each Insight number occurs in its cited saved filing line.",
+      "mark": "correct",
+      "source": "10-K Line 2249: Our massive, efficient, and intelligent network consists of hundreds of millions of Drivers, consumers, Merchants, Shippers and Carriers, as well as underlying data, technology, and shared infrastructure. Our network becomes smarter with every trip. In more than 15,000 cities around the world (as of December 31, 2025), our network powers movement at the touch of a button for millions, and we hope eventually billions, of people."
+    },
+    {
+      "claim": "Insight 2",
+      "correction": "",
+      "explanation": "Each Insight number occurs in its cited saved filing line.",
+      "mark": "correct",
+      "source": "10-K Line 2299: We are a global company and as of December 31, 2025, we and our subsidiaries had approximately 34,000 employees globally and operations in over 70 countries and more than 15,000 cities around the world. Our human capital strategies are developed and managed by our Chief People Officer, who reports to the CEO, and are overseen by the Compensation Committee and the Board of Directors."
+    },
+    {
+      "claim": "Insight 3",
+      "correction": "",
+      "explanation": "Each Insight number occurs in its cited saved filing line.",
+      "mark": "correct",
+      "source": "10-K Line 2315: Global: We renewed our agreement with the ITF (International Transport Workers\u2019 Federation), a democratic, affiliate-led federation of over 700 transport workers\u2019 unions from 150 countries, representing 16.5 million workers. The agreement invites collaboration on topics such as trade union representation, freedom of association and bargaining, working conditions, health and safety, social protections, and dispute resolution."
+    }
+  ],
+  "model_review": "{ \"format\": \"JSON\",\n\"schema\": {\n    \"semantic_marks\": [\n        {\"claim\": \"Total revenue: $52,017 million.\", \n         \"mark\": \"correct\", \n         \"explanation\": \"XBRL claim matches the supplied tag, period, accession, unit, and value.\",\n         \"correction\": \"\", \n         \"source\": \"10-K accession 0001543151-26-000015; XBRL tag `Revenues`; period ended 2025-12-31.\"},\n        \n        {\"claim\": \"Revenue growth: 18.2796%.\", \n         \"mark\": \"correct\", \n         \"explanation\": \"XBRL claim matches the supplied tag, period, accession, unit, and value.\",\n         \"correction\": \"\", \n         \"source\": \"10-K accession 0001543151-26-000015; XBRL tag `Revenues`; period ended 2025-12-31 and prior period ended 2024-12-31 in the same filing.\"},\n        \n        {\"claim\": \"Operating income: $5,565 million.\", \n         \"mark\": \"correct\", \n         \"explanation\": \"XBRL claim matches the supplied tag, period, accession, unit, and value.\",\n         \"correction\": \"\", \n         \"source\": \"10-K accession 0001543151-26-000015; XBRL tag `OperatingIncomeLoss`; period ended 2025-12-31.\"},\n        \n        {\"claim\": \"Operating margin: 10.6984%.\", \n         \"mark\": \"correct\", \n         \"explanation\": \"XBRL claim matches the supplied tag, period, accession, unit, and value.\",\n         \"correction\": \"\", \n         \"source\": \"10-K accession 0001543151-26-000015; XBRL tag `OperatingIncomeLoss`; period ended 2025-12-31 and 10-K accession 0001543151-26-000015; XBRL tag `Revenues`; period ended 2025-12-31.\"},\n        \n        {\"claim\": \"Net income: $10,053 million.\", \n         \"mark\": \"correct\", \n         \"explanation\": \"XBRL claim matches the supplied tag, period, accession, unit, and value.\",\n         \"correction\": \"\", \n         \"source\": \"10-K accession 0001543151-26-000015; XBRL tag `NetIncomeLoss`; period ended 2025-12-31.\"},\n        \n        {\"claim\": \"GAAP diluted EPS: $4.73.\", \n         \"mark\": \"correct\", \n         \"explanation\": \"XBRL claim matches the supplied tag, period, accession, unit, and value.\",\n         \"correction\": \"\", \n         \"source\": \"10-K accession 0001543151-26-000015; XBRL tag `EarningsPerShareDiluted`; period ended 2025-12-31.\"},\n        \n        {\"claim\": \"Return on average equity: 41.3712%.\", \n         \"mark\": \"correct\", \n         \"explanation\": \"XBRL claim matches the supplied tag, period, accession, unit, and value.\",\n         \"correction\": \"\", \n         \"source\": \"10-K accession 0001543151-26-000015; XBRL tag `NetIncomeLoss`; period ended 2025-12-31 and 10-K accession 0001543151-26-000015; XBRL tag `StockholdersEquity`; period ended 2025-12-31.\"},\n        \n        {\"claim\": \"Debt to equity: 0.3891x.\", \n         \"mark\": \"correct\", \n         \"explanation\": \"XBRL claim matches the supplied tag, period, accession, unit, and value.\",\n         \"correction\": \"\", \n         \"source\": \"10-K accession 0001543151-26-000015; XBRL tag `LongTermDebtNoncurrent`; period ended 2025-12-31; 10-K accession 0001543151-26-000015; XBRL tag `LongTermDebtCurrent`; period ended 2025-12-31; and 10-K accession 0001543151-26-000015; XBRL tag `StockholdersEquity`; period ended 2025-12-31.\"},\n        \n        {\"claim\": \"Free cash flow: $9,763 million.\", \n         \"mark\": \"correct\", \n         \"explanation\": \"XBRL claim matches the supplied tag, period, accession, unit, and value.\",\n         \"correction\": \"\", \n         \"source\": \"10-K accession 0001543151-26-000015; XBRL tag `NetCashProvidedByUsedInOperatingActivities`; period ended 2025-12-31 and 10-K accession 0001543151-26-000015; XBRL tag `PaymentsToAcquirePropertyPlantAndEquipment`; period ended 2025-12-31.\"},\n        \n        {\"claim\": \"Latest-quarter total revenue: $14,766 million.\", \n         \"mark\": \"correct\", \n         \"explanation\": \"Filing-line claim appears in the supplied filing text after spacing and formatting are normalized.\",\n         \"correction\": \"\", \n         \"source\": \"8-K accession 0001543151-26-000039, Exhibit 99.1 line `Revenue | $ | 13,467 | $ | 14,766 | 10 | % | 10 | %`.\"},\n        \n        {\"claim\": \"Quarter revenue growth: 9.6458%.\", \n         \"mark\": \"correct\", \n         \"explanation\": \"Filing-line claim appears in the supplied filing text after spacing and formatting are normalized.\",\n         \"correction\": \"\", \n         \"source\": \"8-K accession 0001543151-26-000039, Exhibit 99.1 line `Revenue | $ | 13,467 | $ | 14,766 | 10 | % | 10 | %`.\"},\n        \n        {\"claim\": \"Latest-quarter GAAP diluted EPS: $0.25.\", \n         \"mark\": \"correct\", \n         \"explanation\": \"Filing-line claim appears in the supplied filing text after spacing and formatting are normalized.\",\n         \"correction\": \"\", \n         \"source\": \"8-K accession 0001543151-26-000039, Exhibit 99.1 line `GAAP Diluted EPS (2) | $ | 3.11 | $ | 0.25 | $ | 4.57 | $ | 1.54`.\"},\n        \n        {\"claim\": \"AMD operating margin: 10.6643%.\", \n         \"mark\": \"correct\", \n         \"explanation\": \"XBRL claim matches the supplied tag, period, accession, unit, and value.\",\n         \"correction\": \"\", \n         \"source\": \"10-K accession 0000002488-26-000018; period ended 2025-12-27; revenue tag `RevenueFromContractWithCustomerExcludingAssessedTax`; operating-income tag `OperatingIncomeLoss`.\"},\n        \n        {\"claim\": \"DUOL operating margin: 13.0659%.\", \n         \"mark\": \"correct\", \n         \"explanation\": \"XBRL claim matches the supplied tag, period, accession, unit, and value.\",\n         \"correction\": \"\", \n         \"source\": \"10-K accession 0001628280-26-012494; period ended 2025-12-31; revenue tag `RevenueFromContractWithCustomerExcludingAssessedTax`; operating-income tag `OperatingIncomeLoss`.\"},\n        \n        {\"claim\": \"PLTR operating margin: 31.5950%.\", \n         \"mark\": \"correct\", \n         \"explanation\": \"XBRL claim matches the supplied tag, period, accession, unit, and value.\",\n         \"correction\": \"\", \n         \"source\": \"10-K accession 0001321655-26-000011; period ended 2025-12-31; revenue tag `RevenueFromContractWithCustomerExcludingAssessedTax`; operating-income tag `OperatingIncomeLoss`.\"},\n        \n        {\"claim\": \"YUM operating margin: 31.3367%.\", \n         \"mark\": \"correct\", \n         \"explanation\": \"XBRL claim matches the supplied tag, period, accession, unit, and value.\",\n         \"correction\": \"\", \n         \"source\": \"10-K accession 0001041061-26-000084; period ended 2025-12-31; revenue tag `Revenues`; operating-income tag `OperatingIncomeLoss`.\"},\n        \n        {\"claim\": \"Uber's platform has attracted 46 million Uber One members as of December 31, 2025.\", \n         \"mark\": \"correct\", \n         \"explanation\": \"Filing-line claim appears in the supplied filing text after spacing and formatting are normalized.\",\n         \"correction\": \"\", \n         \"source\": \"[10-K Line 2259]\"},\n        \n        {\"claim\": \"Uber's platform has attracted 46 million Uber One members as of December 31, 2025.\", \n         \"mark\": \"correct\", \n         \"explanation\": \"Filing-line claim appears in the supplied filing text after spacing and formatting are normalized.\",\n         \"correction\": \"\", \n         \"source\": \"[10-K Line 2259]\"},\n        \n        {\"claim\": \"We are a global company and as of December 31, 2025, we and our subsidiaries had approximately 34,000 employees globally and operations in over 70 countries and more than 15,000 cities around the world.\", \n         \"mark\": \"correct\", \n         \"explanation\": \"Filing-line claim appears in the supplied filing text after spacing and formatting are normalized.\",\n         \"correction\": \"\", \n         \"source\": \"[10-K Line 2299]\"},\n        \n        {\"claim\": \"Global: We renewed our agreement with the ITF (International Transport Workers\u2019 Federation), a democratic, affiliate-led federation of over 700 transport workers\u2019 unions from 150 countries, representing 16.5 million workers.\", \n         \"mark\": \"correct\", \n         \"explanation\": \"Filing-line claim appears in the supplied filing text after spacing and formatting are normalized.\",\n         \"correction\": \"\", \n         \"source\": \"[10-K Line 2315]\"},\n        \n        {\"claim\": \"Our massive, efficient, and intelligent network consists of hundreds of millions of Drivers, consumers, Merchants, Shippers and Carriers, as well as underlying data, technology, and shared infrastructure.\", \n         \"mark\": \"correct\", \n         \"explanation\": \"Filing-line claim appears in the supplied filing text after spacing and formatting are normalized.\",\n         \"correction\": \"\", \n         \"source\": \"[10-K Line 2249]\"},\n        \n        {\"claim\": \"Our massive, efficient, and intelligent network consists of hundreds of millions of Drivers, consumers, Merchants, Shippers and Carriers, as well as underlying data, technology, and shared infrastructure.\", \n         \"mark\": \"correct\", \n         \"explanation\": \"Filing-line claim appears in the supplied filing text after spacing and formatting are normalized.\",\n         \"correction\": \"\", \n         \"source\": \"[10-K Line 2249]\"},\n        \n        {\"claim\": \"We have built proprietary marketplace, routing, and payments technologies.\", \n         \"mark\": \"correct\", \n         \"explanation",
+  "node_order": [
+    "steps",
+    "research_analyst",
+    "financial_analyst",
+    "investment_advisor",
+    "strategy_manager",
+    "verifier"
+  ],
+  "run_folder": "outputs/UBER_20261109_000823",
+  "verification_path": "outputs/UBER_20261109_000823/verification.json",
+  "verified": true,
+  "verified_report_path": "outputs/UBER_20261109_000823/verified_report.md"
+}
