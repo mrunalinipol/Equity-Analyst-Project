@@ -1,5 +1,32 @@
 # Project Status and Session Handoff
 
+## Lab 05 preparation update — 2026-11-08
+
+- Work continues on branch `lab05-preparation`, based on the completed Lab 04
+  `origin/main` merge commit `8148730`.
+- The Lab 05 Insight checks, fixed Flow, Verifier integration, and local page
+  are present. The Manager rejects repeated Insight lines and records `PASS`
+  or `FAIL_UNRESOLVED`.
+- CrewAI 1.15.34 and the declared packages are installed in the ignored local
+  `.venv`.
+- A fresh UBER data run completed all seven filing-first steps in
+  `outputs/UBER_20261108_233820`, with peers LYFT, DASH, and ABNB.
+- The UBER release parser was corrected for the plain `Revenue` label,
+  prior-year-first table columns, `GAAP Diluted EPS`, and a numeric label
+  footnote. The saved Q3 2026 values are revenue of `$14,766 million` and GAAP
+  diluted EPS of `$0.25`.
+- All 29 tests pass. Compilation and `git diff --check` pass. The page returned
+  HTTP 200 and displayed its required controls.
+- The ignored `.env` contains the SEC User-Agent and model endpoint settings,
+  but no `API_KEY`. A live model Flow remains blocked until the student adds
+  that key locally.
+- `week03/Lab05_completion.md` records the exact completed and remaining work.
+  `week03/Lab05_partner_check.md` contains two prefilled claims and sources;
+  all partner judgment and signature fields remain blank for Shachi.
+- The student-written persona worksheet remains blank. AI must not write the
+  three personas.
+- No Brightspace action was performed.
+
 Last updated: 2026-11-03
 
 Read this file at the start of the next session. It records the verified project state. Do not put API keys or other secret values in this file.

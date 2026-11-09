@@ -2,7 +2,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from verifier_agent import audit_saved_run
+from verifier_agent import audit_saved_run, render_verified_report
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -55,6 +55,13 @@ class VerifierAgentTests(unittest.TestCase):
             result = audit_saved_run(RUN, path)
         self.assertTrue(result.verified)
         self.assertFalse(any(mark.claim == "10-K Line 999999" for mark in result.marks))
+
+    def test_verified_report_keeps_first_line_and_places_table_second(self) -> None:
+        report = (RUN / "report.md").read_text(encoding="utf-8")
+        rendered = render_verified_report(report, audit_saved_run(RUN))
+        lines = rendered.splitlines()
+        self.assertEqual(report.splitlines()[0], lines[0])
+        self.assertEqual("| Claim | Mark | Explanation | Correction | Source |", lines[1])
 
 
 if __name__ == "__main__":

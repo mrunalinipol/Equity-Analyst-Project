@@ -48,7 +48,21 @@ class CrewAIFlowStructureTests(unittest.TestCase):
 
     def test_verifier_excludes_advisor_thesis(self) -> None:
         source = FLOW_PATH.read_text(encoding="utf-8")
-        self.assertIn('"excluded": "Investment Advisor thesis"', source)
+        self.assertIn('"Skip the Investment Advisor thesis.', source)
+
+    def test_all_role_instructions_are_separate_files(self) -> None:
+        roles = FLOW_PATH.parent / "roles"
+        for role in (
+            "research_analyst",
+            "financial_analyst",
+            "investment_advisor",
+            "strategy_manager",
+            "verifier",
+        ):
+            self.assertTrue((roles / f"{role}.md").is_file())
+
+    def test_cli_has_verify_only(self) -> None:
+        self.assertIn('"--verify-only"', FLOW_PATH.read_text(encoding="utf-8"))
 
 
 if __name__ == "__main__":

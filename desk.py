@@ -540,6 +540,45 @@ def numeric_cells(row: str) -> list[float]:
     return [float(value.replace(",", "")) for value in values]
 
 
+def without_row_label_footnote(row: str) -> str:
+    """Remove a numeric footnote from the label cell, but keep data cells."""
+    label, separator, cells = row.partition("|")
+    if not separator:
+        return row
+    clean_label = re.sub(r"\s*\(\d+\)\s*$", "", label).rstrip()
+    return f"{clean_label} |{cells}"
+
+
+def current_period_value_index(html: str, target_row: str) -> int:
+    """Return the value-column index for the newest year in a release table."""
+    if BeautifulSoup is None:
+        return 0
+    soup = BeautifulSoup(html, "html.parser")
+    for row in soup.find_all("tr"):
+        values = [
+            re.sub(r"\s+", " ", cell.get_text(" ", strip=True))
+            for cell in row.find_all(["th", "td"])
+        ]
+        values = [value for value in values if value]
+        if " | ".join(values) != target_row:
+            continue
+        header_years: list[int] = []
+        table = row.find_parent("table")
+        if table is None:
+            return 0
+        for preceding in table.find_all("tr"):
+            if preceding is row:
+                break
+            years = [int(year) for year in re.findall(r"\b20\d{2}\b", preceding.get_text(" ", strip=True))]
+            if len(years) >= 2:
+                header_years = years
+        ordered_years = list(dict.fromkeys(header_years))
+        if len(ordered_years) >= 2:
+            return ordered_years.index(max(ordered_years))
+        return 0
+    return 0
+
+
 def release_evidence(html: str) -> dict[str, Any]:
     rows = table_rows(html)
     # Preserve the filer's label. Some issuers use "total revenue," while
@@ -547,10 +586,15 @@ def release_evidence(html: str) -> dict[str, Any]:
     total_revenue = next(
         (row for row in rows if re.search(r"\btotal (?:revenues?|net sales)\b", row, re.I)),
         "",
-    )
-    diluted_candidates = [row for row in rows if re.match(r"^Diluted\b", row, re.I)]
+    ) or next((row for row in rows if re.match(r"^Revenue\s*\|", row, re.I)), "")
+    diluted_candidates = [row for row in rows if re.match(r"^(?:GAAP )?Diluted\b", row, re.I)]
     currency_candidates = [row for row in diluted_candidates if "$" in row]
-    diluted_eps = max(currency_candidates or diluted_candidates, key=len, default="")
+    explicit_eps_candidates = [
+        row
+        for row in currency_candidates or diluted_candidates
+        if re.match(r"^(?:GAAP )?Diluted (?:EPS|earnings per share)\b", row, re.I)
+    ]
+    diluted_eps = max(explicit_eps_candidates or currency_candidates or diluted_candidates, key=len, default="")
     if not total_revenue or not diluted_eps:
         raise RuntimeError("The release table did not expose both total revenue and diluted EPS rows.")
     revenue_for_numbers = re.sub(
@@ -559,11 +603,14 @@ def release_evidence(html: str) -> dict[str, Any]:
         total_revenue,
         count=1,
     )
-    revenue_values = numeric_cells(revenue_for_numbers)
-    eps_values = numeric_cells(diluted_eps)
+    revenue_values = numeric_cells(without_row_label_footnote(revenue_for_numbers))
+    eps_values = numeric_cells(without_row_label_footnote(diluted_eps))
     if len(revenue_values) < 2 or not eps_values:
         raise RuntimeError("The release rows did not contain the expected numeric values.")
-    current_revenue, prior_revenue = revenue_values[:2]
+    revenue_index = current_period_value_index(html, total_revenue)
+    eps_index = current_period_value_index(html, diluted_eps)
+    current_revenue = revenue_values[revenue_index]
+    prior_revenue = revenue_values[1 - revenue_index]
     return {
         "quarter_total_revenue_line": total_revenue,
         "quarter_total_revenue": current_revenue,
@@ -571,7 +618,7 @@ def release_evidence(html: str) -> dict[str, Any]:
         "quarter_revenue_growth": safe_divide(current_revenue, prior_revenue, "quarter revenue growth") - 1,
         "quarter_revenue_growth_arithmetic": f"{current_revenue:g} / {prior_revenue:g} - 1",
         "quarter_diluted_eps_line": diluted_eps,
-        "quarter_diluted_eps": eps_values[0],
+        "quarter_diluted_eps": eps_values[eps_index],
     }
 
 

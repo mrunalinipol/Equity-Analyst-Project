@@ -94,6 +94,21 @@ class CalculationTests(unittest.TestCase):
         self.assertEqual(evidence["quarter_total_revenue"], 94_036)
         self.assertEqual(evidence["quarter_diluted_eps"], 1.57)
 
+    def test_release_evidence_accepts_revenue_and_prior_year_first(self) -> None:
+        html = """
+        <table>
+          <tr><th>Three Months Ended September 30</th></tr>
+          <tr><th>Metric</th><th>2025</th><th>2026</th><th>% Change</th></tr>
+          <tr><td>Revenue</td><td>$</td><td>13,467</td><td>$</td><td>14,766</td><td>10%</td></tr>
+          <tr><td>GAAP Diluted EPS <sup>(2)</sup></td><td>$</td><td>3.11</td><td>$</td><td>0.25</td><td>(92)%</td></tr>
+        </table>
+        """
+        evidence = release_evidence(html)
+        self.assertEqual(evidence["quarter_total_revenue"], 14_766)
+        self.assertEqual(evidence["prior_year_quarter_total_revenue"], 13_467)
+        self.assertAlmostEqual(evidence["quarter_revenue_growth"], 14_766 / 13_467 - 1)
+        self.assertEqual(evidence["quarter_diluted_eps"], 0.25)
+
     def test_verified_costco_block_keeps_known_answers(self) -> None:
         folder = Path(__file__).resolve().parents[1] / "outputs" / "COST_20261028_194706"
         facts = json.loads((folder / "facts.json").read_text(encoding="utf-8"))
