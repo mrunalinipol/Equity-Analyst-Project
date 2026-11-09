@@ -52,8 +52,9 @@ release-parser corrections.
 - The student must write the three six-part personas in their own words. The
   course prohibits AI-written personas. `LAB05_PERSONA_WORKSHEET.md` remains
   blank for this reason.
-- Add the model-provider `API_KEY` to the ignored local `.env` file. Do not
-  commit or share the key.
+- The model-provider `API_KEY` is present in the ignored local `.env`. A
+  minimal `llama3.1:latest` provider test returned `OK`. Do not commit or share
+  the key.
 - After the personas and key are available, run UBER from the page. Use
   `LYFT,DASH,ABNB` as peers unless the student selects a different defensible
   peer set. A dated price is optional in the interface but is required for a

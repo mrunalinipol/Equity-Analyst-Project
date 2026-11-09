@@ -18,8 +18,9 @@
 - All 29 tests pass. Compilation and `git diff --check` pass. The page returned
   HTTP 200 and displayed its required controls.
 - The ignored `.env` contains the SEC User-Agent and model endpoint settings,
-  but no `API_KEY`. A live model Flow remains blocked until the student adds
-  that key locally.
+  and now contains the student's locally entered `API_KEY`. A minimal provider
+  test returned `OK` from `llama3.1:latest`. The key was not printed, copied,
+  staged, or published.
 - `week03/Lab05_completion.md` records the exact completed and remaining work.
   `week03/Lab05_partner_check.md` contains two prefilled claims and sources;
   all partner judgment and signature fields remain blank for Shachi.
