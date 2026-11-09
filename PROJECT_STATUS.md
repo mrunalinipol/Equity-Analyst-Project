@@ -36,9 +36,9 @@
   reviewer name, initials, date, and signature. Her separate final UBER run is
   32/32 with Manager `PASS`, but it is not a signed partner review of this
   repository's run.
-- The supplied team members Shachi, Jose, and Aditi are recorded. The team
-  name, instructor confirmation, and student's personal reflection remain
-  blank.
+- The student confirmed that team formation is complete. Team-member names
+  and the team name are not stored in the repository. The personal reflection
+  remains blank in `week03/Lab05_personal_reflection.md`.
 
 Last updated: 2026-11-03
 

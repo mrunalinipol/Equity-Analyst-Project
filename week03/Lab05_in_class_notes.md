@@ -58,8 +58,5 @@ matter or how they change the conclusion.
 
 ## Team formation requiring the students
 
-- Student 1: Shachi
-- Student 2: Jose
-- Student 3: Aditi
-- Team name:
-- Instructor confirmation:
+- Status: Complete — confirmed by the student on November 8, 2026.
+- The team-member names and team name are not stored in this repository.

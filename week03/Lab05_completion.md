@@ -64,8 +64,7 @@ release-parser corrections.
 - Shachi must run the page and independently complete the partner marks,
   corrections, name, initials, date, and signature or Git commit. No agent or
   student can fill those fields for her.
-- The students must record three student names and one team name and complete
-  the required oral reflection.
-- The supplied student names are Shachi, Jose, and Aditi. The team name and
-  instructor confirmation are still blank.
+- Team formation is complete, as confirmed by the student on November 8,
+  2026. The team-member names and team name are not stored in this repository.
+- The student's personal reflection remains incomplete.
 - Brightspace submission remains manual. No agent may submit it.
