@@ -373,4 +373,5 @@ Run the tests:
 - Nasdaq's official historical-data page also reports $66.60 for 2026-11-03. The comparison is marked correct in `WEEK4_PREWORK.md`.
 - LSEG product entitlement remains unavailable, but the assignment's permitted external-file fallback is configured and verified.
 - All 38 repository tests passed. Python compilation, both dependency checks, and `git diff --check` passed.
+- Saved the work in local commit `fb4d442` on `week04-prework`; the branch was not pushed.
 - No coursework was pushed, uploaded, published, or submitted.
