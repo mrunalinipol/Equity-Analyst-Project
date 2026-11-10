@@ -335,3 +335,13 @@ Run the tests:
 - The actual `.env` now has blank `LSEG_APP_KEY` and `LSEG_CLOSES_FILE` entries plus `LSEG_PYTHON=.venv-lseg/bin/python`. `.env` remains ignored.
 - Still required from the student: write the two chapter lines; write the factor list and window; open and check both EDGAR examples; add an LSEG key or export path; run the reader; and compare one result with an exchange official close.
 - No coursework was submitted, uploaded, sent, published, pushed, or turned in.
+
+## 2026-11-10 Week 4 pre-work audit
+
+- The student filled both required reading lines in `week04/reading_notes.md`.
+- The student recorded both EDGAR manual checks in `week04/edgar_examples.md`: Vylor as the spinoff example and Sagard Private Income Fund Inc. as the non-spinoff Form 10 example.
+- Removed the extra trailing blank line from `week04/reading_notes.md`; `git diff --check` passed before the local commit.
+- The minimal skill remains at `.agents/skills/week4-prework/SKILL.md`. The installed Codex CLI has no direct `skills list` command, so final discovery requires starting a new agent session and confirming that the skill appears.
+- No configured `LSEG_APP_KEY` or `LSEG_CLOSES_FILE` was found. The only matching file outside the repository, `ClosePosition_10_2_2026.csv`, is a realized-gains export and is not an official daily-closes file. It was not configured.
+- Student-only work still required: write `week04/factors.yaml`, configure an LSEG App Key or a valid external closes export, run the closes reader, and record the official-close comparison in `WEEK4_PREWORK.md`.
+- No coursework was submitted, uploaded, sent, published, pushed, or turned in.

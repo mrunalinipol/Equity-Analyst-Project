@@ -24,7 +24,7 @@ Open both SEC filings and confirm the classification before Session 6.
 
 ## Manual check record
 
-- Student opened the Vylor filing: [ ]
-- Student found the parent, ratio, distribution date, and `Capitalization` section: [ ]
-- Student opened the Sagard filing: [ ]
-- Student found the `Explanatory Note` and confirmed that it is not a spinoff: [ ]
+- Student opened the Vylor filing: Yes
+- Student found the parent, ratio, distribution date, and `Capitalization` section: Yes
+- Student opened the Sagard filing: Yes
+- Student found the `Explanatory Note` and confirmed that it is not a spinoff: Yes
