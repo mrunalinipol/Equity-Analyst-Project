@@ -85,17 +85,21 @@ class Lab05InsightTests(unittest.TestCase):
 
 class AgentTeamUITests(unittest.TestCase):
     def test_valid_payload(self) -> None:
-        self.assertEqual(validate_payload({"ticker": "cost", "peers": "wmt, tgt", "price": "992.13"}),
-                         ("COST", "WMT,TGT", 992.13))
+        self.assertEqual(
+            validate_payload(
+                {"ticker": "cost", "peers": "wmt, tgt", "filed": "2026-11-09T16:05:00"}
+            ),
+            ("COST", "WMT,TGT", "2026-11-09T16:05:00"),
+        )
 
     def test_invalid_payload(self) -> None:
         with self.assertRaises(ValueError):
-            validate_payload({"ticker": "COST; rm", "peers": "", "price": ""})
+            validate_payload({"ticker": "COST; rm", "peers": "", "filed": ""})
         with self.assertRaises(ValueError):
-            validate_payload({"ticker": "COST", "peers": "", "price": "-1"})
+            validate_payload({"ticker": "COST", "peers": "", "filed": "2026/11/09 16:05"})
 
     def test_page_has_inputs_stream_and_report(self) -> None:
-        for token in ("Ticker", "Peers (optional)", "Price (optional)", "Fixed node order", "Verified report"):
+        for token in ("Ticker", "Peers (optional)", "Filed time (optional)", "Fixed node order", "Verified report"):
             self.assertIn(token, PAGE)
 
 

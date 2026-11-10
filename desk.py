@@ -14,6 +14,8 @@ from pathlib import Path
 from typing import Any, Iterable
 from urllib.parse import urljoin
 
+from closes_reader import NOT_AVAILABLE, last_close_before
+
 try:
     import requests
 except ImportError:  # Calculation-only tests do not need network packages.
@@ -838,7 +840,9 @@ def verified_financial_claims(
             [
                 "",
                 f"**P/E:** {ratio['value']:.4f}x. Arithmetic: `{ratio['arithmetic']}`. "
-                f"The price is the user-supplied dated close. EPS source: {fact_source('diluted_eps')}.",
+                f"Price source: {ratio.get('price_source', 'saved official close')} on "
+                f"{ratio.get('price_date', 'the saved price date')}. "
+                f"EPS source: {fact_source('diluted_eps')}.",
             ]
         )
 
@@ -874,7 +878,15 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("ticker", help="SEC ticker symbol, for example a listed company's ticker")
     parser.add_argument("--peers", default="", help="Comma-separated peer tickers")
-    parser.add_argument("--price", type=float, help="Share price used only for P/E")
+    parser.add_argument(
+        "--filed",
+        help="Override the earnings filing time in YYYY-MM-DDTHH:MM:SS Eastern format",
+    )
+    parser.add_argument(
+        "--price",
+        type=float,
+        help="Deprecated compatibility option; the official close from closes_reader.py replaces it",
+    )
     parser.add_argument("--step", type=int, choices=range(1, 8), help="Run and print only one numbered step")
     parser.add_argument("--output-root", default="outputs", help="Parent folder for saved run artifacts")
     parser.add_argument("--no-roles", action="store_true", help="Skip running the four model roles after step 7")
@@ -900,6 +912,9 @@ def run() -> Path | None:
         label: accepted_from_index(client, filing, company.cik)
         for label, filing in filings.items()
     }
+    filed_at = args.filed or accepted["earnings_8-K"]
+    market_close = last_close_before(ticker, filed_at, env_path)
+    market_price = None if market_close == NOT_AVAILABLE else float(market_close["close"])
     if target in (None, 2):
         print("Step 2 — Select filings")
         print_filing("latest 10-K", filings["10-K"], accepted["10-K"], company.cik)
@@ -917,12 +932,16 @@ def run() -> Path | None:
         "arguments": {
             "ticker": ticker,
             "peers": [peer.strip().upper() for peer in args.peers.split(",") if peer.strip()],
-            "price": args.price,
+            "filed": args.filed,
+            "deprecated_price_ignored": args.price,
             "step": args.step,
         },
         "filings": {label: asdict(filing) for label, filing in filings.items()},
         "accepted_from_index": accepted,
+        "filing_time_eastern": filed_at,
+        "market_close": market_close,
     }
+    write_json(run_folder / "market_close.json", market_close)
 
     release_html = ""
     if target in (None, 3, 6):
@@ -956,9 +975,24 @@ def run() -> Path | None:
         return run_folder
 
     if target in (None, 5):
-        ratios = calculate_ratios(facts, args.price)
+        ratios = calculate_ratios(facts, market_price)
+        if market_close != NOT_AVAILABLE and "price_to_earnings" in ratios:
+            ratios["price_to_earnings"].update(
+                {
+                    "price_date": market_close["date"],
+                    "price_source": market_close["source"],
+                    "filed_at_eastern": market_close["filed_at_eastern"],
+                }
+            )
         write_json(run_folder / "ratios.json", ratios)
         print("Step 5 — Calculate ratios in code")
+        if market_close == NOT_AVAILABLE:
+            print("  Official close: not available; the run continues without P/E.")
+        else:
+            print(
+                f"  Official close: ${market_price:g} on {market_close['date']} | "
+                f"{market_close['source']}"
+            )
         print_ratios(ratios)
     if target == 5:
         write_json(run_folder / "run_metadata.json", metadata)

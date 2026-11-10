@@ -32,7 +32,7 @@ PAGE = r"""<!doctype html>
     h1 { margin:0 0 8px; font-size:clamp(2rem,5vw,3.4rem); letter-spacing:-.04em; }
     header p { margin:0; color:var(--muted); font-size:1.05rem; }
     .card { background:rgba(255,255,255,.94); border:1px solid var(--line); border-radius:18px; box-shadow:0 18px 50px rgba(27,55,96,.09); padding:22px; margin-top:18px; }
-    form { display:grid; grid-template-columns:1fr 2fr 1fr auto; gap:12px; align-items:end; }
+    form { display:grid; grid-template-columns:1fr 2fr 1.5fr auto; gap:12px; align-items:end; }
     label { display:grid; gap:7px; font-weight:700; font-size:.88rem; }
     input { width:100%; border:1px solid #b9c7d8; border-radius:10px; padding:12px; font:inherit; background:#fff; }
     input:focus { outline:3px solid #cfe0ff; border-color:var(--blue); }
@@ -62,7 +62,7 @@ PAGE = r"""<!doctype html>
     <form id="run-form">
       <label>Ticker <input id="ticker" placeholder="Ticker" required maxlength="10" autocomplete="off"></label>
       <label>Peers (optional) <input id="peers" placeholder="PEER1,PEER2,PEER3" autocomplete="off"></label>
-      <label>Price (optional) <input id="price" placeholder="123.45" inputmode="decimal"></label>
+      <label>Filed time (optional) <input id="filed" placeholder="YYYY-MM-DDTHH:MM:SS"></label>
       <button id="run" type="submit">Run team</button>
     </form>
   </section>
@@ -86,7 +86,7 @@ const report=document.querySelector('#report'), state=document.querySelector('#s
 function appendLog(text){ if(log.textContent==='No run started.') log.textContent=''; log.textContent+=text+'\n'; log.scrollTop=log.scrollHeight; }
 form.addEventListener('submit',async(event)=>{
   event.preventDefault(); run.disabled=true; nodes.textContent=''; log.textContent=''; report.textContent='Waiting for the Verifier…'; path.textContent=''; state.textContent='Running';
-  const payload={ticker:document.querySelector('#ticker').value,peers:document.querySelector('#peers').value,price:document.querySelector('#price').value};
+  const payload={ticker:document.querySelector('#ticker').value,peers:document.querySelector('#peers').value,filed:document.querySelector('#filed').value};
   try {
     const response=await fetch('/api/run',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
     if(!response.ok) throw new Error(await response.text());
@@ -111,18 +111,17 @@ form.addEventListener('submit',async(event)=>{
 """
 
 
-def validate_payload(value: dict[str, Any]) -> tuple[str, str, float | None]:
+def validate_payload(value: dict[str, Any]) -> tuple[str, str, str]:
     ticker = str(value.get("ticker", "")).strip().upper()
     if not TICKER_RE.fullmatch(ticker):
         raise ValueError("Enter a valid U.S. ticker symbol.")
     peers_list = [part.strip().upper() for part in str(value.get("peers", "")).split(",") if part.strip()]
     if any(not TICKER_RE.fullmatch(peer) for peer in peers_list):
         raise ValueError("Enter peers as comma-separated ticker symbols.")
-    raw_price = str(value.get("price", "")).strip()
-    price = float(raw_price) if raw_price else None
-    if price is not None and price <= 0:
-        raise ValueError("Price must be greater than zero.")
-    return ticker, ",".join(peers_list), price
+    filed = str(value.get("filed", "")).strip()
+    if filed and not re.fullmatch(r"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}", filed):
+        raise ValueError("Filed time must use YYYY-MM-DDTHH:MM:SS in Eastern time.")
+    return ticker, ",".join(peers_list), filed
 
 
 class AgentTeamHandler(BaseHTTPRequestHandler):
@@ -155,7 +154,7 @@ class AgentTeamHandler(BaseHTTPRequestHandler):
             if length > 20_000:
                 raise ValueError("Request is too large.")
             value = json.loads(self.rfile.read(length).decode("utf-8"))
-            ticker, peers, price = validate_payload(value)
+            ticker, peers, filed = validate_payload(value)
         except (ValueError, TypeError, json.JSONDecodeError) as exc:
             self.send_error(400, str(exc))
             return
@@ -163,8 +162,8 @@ class AgentTeamHandler(BaseHTTPRequestHandler):
         command = [sys.executable, str(ROOT / "crewai_flow.py"), ticker]
         if peers:
             command.extend(["--peers", peers])
-        if price is not None:
-            command.extend(["--price", str(price)])
+        if filed:
+            command.extend(["--filed", filed])
 
         self.send_response(200)
         self.send_header("Content-Type", "application/x-ndjson; charset=utf-8")

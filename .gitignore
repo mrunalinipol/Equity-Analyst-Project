@@ -8,6 +8,7 @@
 __pycache__/
 *.py[cod]
 .venv/
+.venv-lseg/
 tmp/
 
 # Diagnostic runs that are not part of Checkpoint 1

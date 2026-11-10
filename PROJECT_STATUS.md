@@ -271,7 +271,7 @@ python -m venv .venv
 Run Costco:
 
 ```bash
-.venv/bin/python desk.py COST --peers WMT,TGT,BJ --price 904.70
+.venv/bin/python desk.py COST --peers WMT,TGT,BJ
 ```
 
 Run Walmart:
@@ -320,3 +320,18 @@ Run the tests:
 - All 32 automated tests pass after the role-file update, and `git diff --check` passes.
 - Five failed UBER diagnostic folders remain local and untracked. They must not be published.
 - Brightspace submission remains a manual student action.
+
+## Week 4 pre-work — 2026-11-10
+
+- Work is on local branch `week04-prework`, based on public `origin/main` at the completed Lab 05 merge.
+- Added `closes_reader.py` with `official_daily_closes()` and `last_close_before()`.
+- The reader supports LSEG Workspace with `LSEG_APP_KEY` and a CSV fallback with `LSEG_CLOSES_FILE`.
+- LSEG is isolated in `.venv-lseg` because `lseg-data==2.1.1` requires `httpx<0.28` while CrewAI 1.15.34 requires `httpx==0.28.1`. The agent-team `.venv` remains compatible with CrewAI.
+- `desk.py`, `crewai_flow.py`, and the page now use the SEC Accepted time or `--filed YYYY-MM-DDTHH:MM:SS`. The official close replaces the user-entered price. The run continues without P/E when a close is not available.
+- Added one confirmed spinoff filer, Vylor Inc., and one non-spinoff Form 10 filer, Sagard Private Income Fund Inc., in `week04/edgar_examples.md`.
+- Added the minimal repository skill at `.agents/skills/week4-prework/SKILL.md`.
+- Added blank student-only files for the two reading lines and the declared factors. AI did not write those answers or factor choices.
+- Added 5 reader tests. All 37 tests pass. Python compilation and `git diff --check` pass.
+- The actual `.env` now has blank `LSEG_APP_KEY` and `LSEG_CLOSES_FILE` entries plus `LSEG_PYTHON=.venv-lseg/bin/python`. `.env` remains ignored.
+- Still required from the student: write the two chapter lines; write the factor list and window; open and check both EDGAR examples; add an LSEG key or export path; run the reader; and compare one result with an exchange official close.
+- No coursework was submitted, uploaded, sent, published, pushed, or turned in.

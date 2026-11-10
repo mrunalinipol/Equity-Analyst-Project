@@ -61,6 +61,7 @@ class EquityResearchState(BaseModel):
     ticker: str = ""
     peers: str = ""
     price: float | None = None
+    filed: str = ""
     output_root: str = "outputs"
     run_folder: str = ""
     model: str = ""
@@ -158,8 +159,8 @@ class EquityResearchFlow(Flow[EquityResearchState]):
             ]
             if self.state.peers:
                 command.extend(["--peers", self.state.peers])
-            if self.state.price is not None:
-                command.extend(["--price", str(self.state.price)])
+            if self.state.filed:
+                command.extend(["--filed", self.state.filed])
             completed = subprocess.run(
                 command,
                 check=True,
@@ -199,7 +200,7 @@ class EquityResearchFlow(Flow[EquityResearchState]):
             {
                 "ticker": self.state.ticker,
                 "peers": self.state.peers,
-                "price": self.state.price,
+                "filed": self.state.filed,
             },
             {"status": output, "run_folder": self.state.run_folder},
         )
@@ -649,6 +650,7 @@ def run_flow(
     price: float | None = None,
     output_root: str = "outputs",
     model: str = "",
+    filed: str = "",
 ) -> dict[str, Any]:
     flow = EquityResearchFlow()
     result = flow.kickoff(
@@ -656,6 +658,7 @@ def run_flow(
             "ticker": ticker,
             "peers": peers,
             "price": price,
+            "filed": filed,
             "output_root": output_root,
             "model": model,
         }
@@ -684,6 +687,7 @@ def main() -> int:
     parser.add_argument("ticker", nargs="?", help="Ticker for a full agent-team run")
     parser.add_argument("--peers", default="", help="Comma-separated peer tickers")
     parser.add_argument("--price", type=float, help="Dated share price for P/E")
+    parser.add_argument("--filed", default="", help="Earnings filing time override, in Eastern time")
     parser.add_argument("--output-root", default="outputs")
     parser.add_argument("--model", default="")
     parser.add_argument("--verify-only", type=Path, metavar="RUN_FOLDER")
@@ -693,7 +697,7 @@ def main() -> int:
     else:
         if not args.ticker:
             parser.error("ticker is required unless --verify-only is used")
-        output = run_flow(args.ticker, args.peers, args.price, args.output_root, args.model)
+        output = run_flow(args.ticker, args.peers, args.price, args.output_root, args.model, args.filed)
     print(json.dumps(output, indent=2))
     return 0 if output.get("verified", True) else 1
 
