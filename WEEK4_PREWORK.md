@@ -74,3 +74,4 @@ The course says that AI must not write these items.
 - OpenAI's current skill documentation states that a skill is a folder with a `SKILL.md` file. Its name and description are the discovery metadata.
 - OpenAI's plugin documentation states that installed plugin hooks are not trusted automatically. Codex skips an untrusted hook until the user reviews and trusts its current definition.
 - Official pages: <https://developers.openai.com/plugins/concepts/skills> and <https://developers.openai.com/plugins/build/plugins>.
+- Fresh-session discovery check: passed on 2026-11-10. A new Codex session started from the repository listed `week4-prework` as the available project-specific skill and displayed its description.

@@ -375,3 +375,10 @@ Run the tests:
 - All 38 repository tests passed. Python compilation, both dependency checks, and `git diff --check` passed.
 - Saved the work in local commit `fb4d442` on `week04-prework`; the branch was not pushed.
 - No coursework was pushed, uploaded, published, or submitted.
+
+## 2026-11-10 — Repository skill discovery confirmed
+
+- Started a fresh Codex session from the repository root in Orca.
+- The session listed `week4-prework` as the available project-specific skill and displayed its description.
+- The discovery check passed. No files were changed by the fresh session.
+- The Week 4 pre-session checklist is complete. Nothing was pushed or submitted.
