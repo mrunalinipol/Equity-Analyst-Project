@@ -345,3 +345,21 @@ Run the tests:
 - No configured `LSEG_APP_KEY` or `LSEG_CLOSES_FILE` was found. The only matching file outside the repository, `ClosePosition_10_2_2026.csv`, is a realized-gains export and is not an official daily-closes file. It was not configured.
 - Student-only work still required: write `week04/factors.yaml`, configure an LSEG App Key or a valid external closes export, run the closes reader, and record the official-close comparison in `WEEK4_PREWORK.md`.
 - No coursework was submitted, uploaded, sent, published, pushed, or turned in.
+## 2026-11-10 — Week 4 pre-work recheck
+
+- Rechecked the Week 4 pre-work in Orca.
+- `python -m unittest discover -s tests -v`: 37 tests passed.
+- Python compilation passed for the closes reader, desk, flow, UI, and verifier modules.
+- Both `.venv` and `.venv-lseg` pass `pip check`; `lseg.data` is installed in `.venv-lseg`.
+- `git diff --check` passed.
+- The close reader returned `not available` as designed because both `LSEG_APP_KEY` and `LSEG_CLOSES_FILE` are blank.
+- The reading-note lines and four EDGAR manual checks are filled. The student must confirm that these entries are their own work.
+- Remaining before Session 6: the student selects the screen window and factor weights for `week04/factors.yaml`; the student configures an LSEG key or export; then the student runs and records one official-close comparison.
+
+## 2026-11-10 — Student factor choices recorded
+
+- The student selected a 60-day screen window.
+- The student ranked the factors from most to least important: absolute market value, relative size to parent, early price weakness, analyst coverage, and insider open-market purchases.
+- The ranking was converted mechanically to weights of 30, 25, 20, 15, and 10, which total 100.
+- `week04/factors.yaml` records each factor's direction and its Greenblatt Chapter 3 source.
+- Remaining before Session 6: configure an LSEG App Key or valid external closes export, run the reader, and record one official-close comparison.
