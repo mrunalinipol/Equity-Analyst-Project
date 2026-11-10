@@ -29,7 +29,7 @@ LSEG_PYTHON=.venv-lseg/bin/python
 LSEG_CLOSES_FILE=
 ```
 
-If LSEG access is pending, leave `LSEG_APP_KEY` blank and set `LSEG_CLOSES_FILE` to an export file outside this repository. The CSV columns are `ticker,date,close`.
+If LSEG access is pending, leave `LSEG_APP_KEY` blank and set `LSEG_CLOSES_FILE` to an export file outside this repository. The reader accepts `ticker,date,close` and a single-ticker Nasdaq export with `Date,Close/Last`.
 
 Print the last close before a filing time:
 
@@ -56,17 +56,18 @@ The course says that AI must not write these items.
 1. Read the assigned chapters and write the two one-line responses in `week04/reading_notes.md`.
 2. Write the factor list and screen window in `week04/factors.yaml`. For each factor, state its direction and chapter.
 3. Open both filings in `week04/edgar_examples.md` and mark the four manual checks.
-4. Add an LSEG App Key to `.env`, or configure an export outside the repository.
-5. Run the close reader. Check one result against the exchange's official close for the same date. Record that check below.
+4. ~~Add an LSEG App Key to `.env`, or configure an export outside the repository.~~ Completed with an official Nasdaq export outside the repository because the signed-in LSEG account has no Workspace product entitlement.
+5. ~~Run the close reader. Check one result against the exchange's official close for the same date. Record that check below.~~ Completed below.
 
 ## Close check — student record
 
-- Ticker:
-- Close date:
-- Reader close:
-- Exchange official close:
-- Exchange page:
-- Mark: Correct / Wrong
+- Ticker: UBER
+- Filing accepted: 2026-11-04 06:55:39 Eastern (SEC accession 0001543151-26-000039)
+- Close date: 2026-11-03
+- Reader close: $66.60
+- Exchange official close: $66.60
+- Exchange page: <https://www.nasdaq.com/market-activity/stocks/uber/historical>
+- Mark: Correct
 
 ## Skills and hooks check
 

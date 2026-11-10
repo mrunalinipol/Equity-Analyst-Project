@@ -52,6 +52,22 @@ class ClosesReaderTests(unittest.TestCase):
             NOT_AVAILABLE,
         )
 
+    def test_nasdaq_single_ticker_export(self) -> None:
+        nasdaq_export = self.root / "nasdaq.csv"
+        nasdaq_export.write_text(
+            "Date,Close/Last,Volume,Open,High,Low\n"
+            "11/03/2026,$66.60,213131460,$68.743,$68.96,$63.985\n",
+            encoding="utf-8",
+        )
+        self.env.write_text(f"LSEG_CLOSES_FILE={nasdaq_export}\n", encoding="utf-8")
+
+        result = last_close_before("TEST", "2026-11-04T06:55:39", self.env)
+
+        self.assertIsInstance(result, dict)
+        assert isinstance(result, dict)
+        self.assertEqual(result["date"], "2026-11-03")
+        self.assertEqual(result["close"], 66.60)
+
     def test_sec_compact_time(self) -> None:
         self.assertEqual(parse_filing_time("20261109170501").hour, 17)
 

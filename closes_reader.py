@@ -68,12 +68,21 @@ def _file_rows(path: Path, ticker: str, start: date, end: date) -> list[dict[str
             if row_ticker and row_ticker not in {ticker.upper(), *_ric_candidates(ticker)}:
                 continue
             day_text = str(row.get("date") or row.get("datetime") or "").strip()[:10]
-            close_text = str(row.get("close") or row.get("price close") or row.get("trdprc_1") or "").strip()
+            close_text = str(
+                row.get("close")
+                or row.get("close/last")
+                or row.get("price close")
+                or row.get("trdprc_1")
+                or ""
+            ).strip()
             if not day_text or not close_text:
                 continue
             try:
-                day = date.fromisoformat(day_text)
-                close = float(close_text.replace(",", ""))
+                try:
+                    day = date.fromisoformat(day_text)
+                except ValueError:
+                    day = datetime.strptime(day_text, "%m/%d/%Y").date()
+                close = float(close_text.replace(",", "").replace("$", ""))
             except ValueError:
                 continue
             if start <= day <= end:

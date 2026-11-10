@@ -363,3 +363,14 @@ Run the tests:
 - The ranking was converted mechanically to weights of 30, 25, 20, 15, and 10, which total 100.
 - `week04/factors.yaml` records each factor's direction and its Greenblatt Chapter 3 source.
 - Remaining before Session 6: configure an LSEG App Key or valid external closes export, run the reader, and record one official-close comparison.
+
+## 2026-11-10 — Week 4 closes fallback completed
+
+- The signed-in LSEG account reports no owned products, and LSEG Workspace is not installed. An App Key cannot be created from this account state.
+- Downloaded the official Nasdaq UBER historical-data CSV to `/Users/mrunalinipol/Downloads/HistoricalData_1794320079169.csv`, outside the repository, and configured the ignored `.env` file to use it.
+- Added generic support for Nasdaq `Date,Close/Last` single-ticker exports, U.S. date format, and dollar-prefixed close values. Added one regression test.
+- UBER's 2026-11-04 earnings 8-K was accepted at 06:55:39 Eastern, before the market opened. The reader returned the prior trading close: 2026-11-03 at $66.60.
+- Nasdaq's official historical-data page also reports $66.60 for 2026-11-03. The comparison is marked correct in `WEEK4_PREWORK.md`.
+- LSEG product entitlement remains unavailable, but the assignment's permitted external-file fallback is configured and verified.
+- All 38 repository tests passed. Python compilation, both dependency checks, and `git diff --check` passed.
+- No coursework was pushed, uploaded, published, or submitted.
