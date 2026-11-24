@@ -1,5 +1,21 @@
 # Project Status and Session Handoff
 
+## Week 4 branch publication — 2026-11-24
+
+- The reviewed Week 4 implementation and final evidence were committed as
+  `f469b671903097d0da697ee2fd700d1aaf4fbf8e` and pushed to the public branch
+  `origin/week04-prework`.
+- The pushed commit has 39 files and includes the seeker, worksheet, numeric
+  guard, joined desk, local skills and plugin, final seeker run, final UBER
+  practice artifacts, tests, validation notes, and Checkpoint 3 draft.
+- All 45 tests passed before the commit. Compilation and `git diff --check`
+  passed. The secret scan found only the documented placeholder key strings.
+- Older untracked UBER attempts and seven intermediate seeker runs remain
+  local and were not staged or pushed. They are diagnostic or user-owned
+  artifacts, not the final evidence.
+- The branch is published for review. It is not merged into `main`, and no
+  Brightspace submission was made.
+
 ## Week 4 through Checkpoint 3 preparation — 2026-11-22
 
 - The Week 4 audit found that the closes reader, student reading lines, factor
