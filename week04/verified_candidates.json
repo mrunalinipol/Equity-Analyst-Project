@@ -1,0 +1,19 @@
+[
+  {
+    "cik": "2128626",
+    "company": "Vylor Inc.",
+    "form": "8-K",
+    "filed": "2026-09-24",
+    "path": "edgar/data/2128626/0001193125-26-402928.txt",
+    "distribution_complete": true,
+    "saved_text": "INFORMATION STATEMENT. Corteva, Inc. will distribute all issued shares of Vylor Inc. to holders. Stockholders are entitled to receive one share of Vylor common stock for each share of Corteva common stock. Record date: September 24, 2026. Distribution date: October 1, 2026. The ticker symbol is VYLR."
+  },
+  {
+    "cik": "2133018",
+    "company": "Sagard Private Income Fund Inc.",
+    "form": "10-12G",
+    "filed": "2026-10-28",
+    "path": "edgar/data/2133018/0001193125-26-436342.txt",
+    "saved_text": "Explanatory Note. This non-exchange-traded, perpetual-life business development company files voluntarily to elect BDC status."
+  }
+]

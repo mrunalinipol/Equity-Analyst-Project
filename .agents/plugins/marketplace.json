@@ -1,0 +1,17 @@
+{
+  "name": "fin67110-local",
+  "plugins": [
+    {
+      "name": "investor-desk",
+      "source": {
+        "source": "local",
+        "path": "../../plugins/investor-desk"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

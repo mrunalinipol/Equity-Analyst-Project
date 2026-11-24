@@ -27,9 +27,11 @@ Add one data source to `.env`:
 LSEG_APP_KEY=your-app-key
 LSEG_PYTHON=.venv-lseg/bin/python
 LSEG_CLOSES_FILE=
+LSEG_CLOSES_TICKER=
 ```
 
 If LSEG access is pending, leave `LSEG_APP_KEY` blank and set `LSEG_CLOSES_FILE` to an export file outside this repository. The reader accepts `ticker,date,close` and a single-ticker Nasdaq export with `Date,Close/Last`.
+For a single-ticker export without a ticker column, also set `LSEG_CLOSES_TICKER` to that export's ticker. The seeker refuses to use a tickerless export for another name.
 
 Print the last close before a filing time:
 

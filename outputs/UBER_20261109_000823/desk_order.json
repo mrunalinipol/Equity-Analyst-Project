@@ -1,0 +1,15 @@
+{
+  "order": [
+    "agent team",
+    "worksheet",
+    "worksheet hook",
+    "assemble",
+    "final hook"
+  ],
+  "seconds": {
+    "worksheet": 0.03366754199942079,
+    "worksheet hook": 0.02283491700018203,
+    "assemble": 0.0010948749995804974,
+    "final hook": 0.019517417000315618
+  }
+}

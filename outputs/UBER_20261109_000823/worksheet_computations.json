@@ -1,0 +1,24 @@
+{
+  "value": {
+    "earnings": 10053000000.0,
+    "depreciation": 747000000.0,
+    "capex": 336000000.0,
+    "depreciation_fact": {
+      "value": 747000000.0,
+      "form": "10-K",
+      "accession": "saved filing",
+      "tag": "saved line 3824",
+      "start": "not stated",
+      "end": "not stated"
+    },
+    "owner_cash_flow": 10464000000.0,
+    "low_value": null,
+    "mid_value": null,
+    "reason": "student valuation rates are blank"
+  },
+  "liquidity": {
+    "median_daily_dollar_volume": null,
+    "purchase_size": "",
+    "result": "not computed"
+  }
+}

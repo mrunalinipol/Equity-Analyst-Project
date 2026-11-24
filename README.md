@@ -2,6 +2,10 @@
 
 This repository contains the filing-first data desk and CrewAI Flow for FIN 67110.
 
+We own: the installable investor-desk plugin, with the seeker, worksheet, and numeric guard in one local package.
+
+The joins: the seeker is a pipeline step; the worksheet reads the Financial Analyst's saved run as files and never recomputes the team's claims; the numeric guard checks the worksheet and final report.
+
 ## Setup
 
 Create an isolated Python environment and install the declared packages:
@@ -143,3 +147,69 @@ AI assistance: OpenAI Codex helped build and test the filing reader. Human audit
 marks remain the student's responsibility.
 
 Any remaining errors are my own.
+
+## Week 4 and Checkpoint 3
+
+Run the seeker from a start date:
+
+```bash
+.venv/bin/python week04/seeker.py --start 2025-11-22
+```
+
+Run its deterministic tests:
+
+```bash
+.venv/bin/python -m unittest tests.test_week04 -v
+```
+
+Run the worksheet on a saved team run:
+
+```bash
+.venv/bin/python week04/worksheet.py RUN_FOLDER --registry SEEKER_RUN/registry.json
+```
+
+Test the numeric guard:
+
+```bash
+.venv/bin/python week04/numeric_guard.py RUN_FOLDER/worksheet.md --run RUN_FOLDER
+```
+
+Run the joined desk on a ticker:
+
+```bash
+.venv/bin/python investor_desk.py TICKER --peers PEER1,PEER2,PEER3
+```
+
+Run it from the latest screen:
+
+```bash
+.venv/bin/python investor_desk.py screen
+```
+
+Replay a saved joined run without a fetch:
+
+```bash
+.venv/bin/python investor_desk.py --replay RUN_FOLDER
+```
+
+Print the live-record hit-rate table:
+
+```bash
+.venv/bin/python week04/hit_rate.py runs/live
+```
+
+The page in `agent_team_ui.py` runs `investor_desk.py` and shows `final_report.md`.
+
+Before the first final worksheet, a student must replace every `STUDENT TODO` in `week04/worksheet_config.yaml` and `week04/investor_persona.md`. AI must not write those inputs. The student must also review and trust `plugins/investor-desk/hooks/hooks.json` before Codex can run that local plugin hook. Installing or enabling a plugin does not automatically trust its hook.
+
+Every screen and worksheet ends with `screens, not recommendations`.
+
+## Optional team workflow
+
+The course's [GitHub teamwork page](https://cinderzhang.github.io/FIN67110-Fall2026/reference/working-together.html) is optional. This repository uses its terms as follows:
+
+- An issue records words only, such as a filing mismatch or a reproducible error.
+- A pull request carries the actual Week 4 change for Aditi and Shachi to review line by line.
+- A merge happens only after the team agrees and all tests still pass.
+
+The current Week 4 work remains on its feature branch. A draft pull-request description is in `week04/PULL_REQUEST_DRAFT.md`. Do not put an API key, a licensed export, or licensed book text in an issue or pull request. For a qualifying live report, commit and push the report before discussion because the commit time is part of the record.

@@ -94,6 +94,18 @@ FACT_SPECS: dict[str, dict[str, Any]] = {
     },
 }
 
+OPTIONAL_FACT_SPECS: dict[str, dict[str, Any]] = {
+    "depreciation_and_amortization": {
+        "tags": [
+            "DepreciationDepletionAndAmortization",
+            "DepreciationDepletionAndAmortizationPropertyPlantAndEquipment",
+            "Depreciation",
+        ],
+        "unit": "USD",
+        "duration": True,
+    }
+}
+
 
 @dataclass(frozen=True)
 class Company:
@@ -966,6 +978,14 @@ def run() -> Path | None:
     if target in (None, 4, 5, 7):
         company_facts_json = client.json(f"{SEC_DATA}/api/xbrl/companyfacts/CIK{company.cik}.json")
         facts = extract_facts(company_facts_json, filings["10-K"])
+        for optional_name, optional_spec in OPTIONAL_FACT_SPECS.items():
+            FACT_SPECS[optional_name] = optional_spec
+            try:
+                facts.update(extract_facts(company_facts_json, filings["10-K"], (optional_name,)))
+            except KeyError:
+                pass
+            finally:
+                FACT_SPECS.pop(optional_name, None)
         write_json(run_folder / "facts.json", facts)
         if target in (None, 4):
             print("Step 4 — Read latest fiscal-year XBRL facts")

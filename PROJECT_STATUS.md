@@ -1,5 +1,51 @@
 # Project Status and Session Handoff
 
+## Week 4 through Checkpoint 3 preparation — 2026-11-22
+
+- The Week 4 audit found that the closes reader, student reading lines, factor
+  file, 60-day window, and two manual EDGAR examples were already complete.
+- `week04/seeker.py` now discovers Form 10 candidates from EDGAR full indexes,
+  classifies filing evidence, preserves blank facts, uses the configured closes
+  reader, ranks the student factors, and writes a dated registry and report.
+- The full one-year EDGAR run is `runs/seeker/seeker_20261122_150229`. It keeps
+  21 current registrants and drops 89 current non-spinoff registrants. Vylor is
+  in its window and Sagard is dropped as a fund. Vylor is unranked because all
+  five weighted factor inputs are unavailable; the seeker does not reuse the
+  configured tickerless UBER export or invent values. The report ends with
+  `screens, not recommendations`.
+- `week04/worksheet.py` reads a saved team run, cites saved XBRL facts and
+  filing lines, computes owner cash flow in code, and does not invent a missing
+  rate, price, volume, persona, or filing fact.
+- The UBER practice worksheet computes owner cash flow as
+  `10053000000 + 747000000 - 336000000 = 10464000000`. The value cases and
+  release view remain `not computed` because the student valuation rates and
+  persona are blank. This practice run is after the market reaction.
+- `week04/numeric_guard.py` checks worksheet numbers. Its clean test passes,
+  and the seeded-by-one test refuses the changed result. The local plugin hook
+  is prepared under `plugins/investor-desk/hooks/` but is not trusted or
+  enabled automatically.
+- `investor_desk.py` fixes this order in code: agent team, worksheet, worksheet
+  guard, final assembly, final guard. Replay of the UBER practice run succeeds
+  without a fetch and preserves `view.json`.
+- `agent_team_ui.py` now invokes the joined desk and shows `final_report.md`.
+- The two project skills and the two packaged plugin skills pass the skill
+  validator. All 45 repository tests pass. Python compilation and
+  `git diff --check` pass.
+- `week04/CHECKPOINT3.md` is a prepared proposal for Mrunalini, Aditi, and
+  Shachi. `week04/three_column_check.md` is a practice join check, not the
+  required outside-partner two-name test.
+- Time-sensitive verification found NVIDIA's current-week 8-K was accepted at
+  16:20:51 Eastern on 2026-11-17. Its first reaction close has passed. It
+  cannot become a qualifying pre-reaction live report on 2026-11-22.
+- Required human or external work remains: a student must write the worksheet
+  method, two rates, purchase size, conviction rule, and six-part persona;
+  Aditi and Shachi must confirm the team roles; an outside partner must supply
+  the two Lab 09 names; the team needs a qualifying pre-reaction live run; and
+  a student must review and trust the hook. The seeker also needs VYLR market
+  data and filing-linked factor inputs before it can claim a real rank. Add the live permalink and only
+  then submit the Checkpoint 3 page.
+- No coursework was submitted, uploaded, sent, or published.
+
 ## Lab 05 final technical run — 2026-11-09
 
 - The UBER team ran through the local page service in Orca with peers AMD,

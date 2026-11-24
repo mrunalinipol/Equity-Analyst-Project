@@ -87,7 +87,13 @@ def _file_rows(path: Path, ticker: str, start: date, end: date) -> list[dict[str
                 continue
             if start <= day <= end:
                 output.append(
-                    {"ticker": ticker.upper(), "date": day.isoformat(), "close": close, "source": str(path)}
+                    {
+                        "ticker": ticker.upper(),
+                        "date": day.isoformat(),
+                        "close": close,
+                        "source": str(path),
+                        "source_ticker": row_ticker or None,
+                    }
                 )
     return sorted(output, key=lambda item: item["date"])
 

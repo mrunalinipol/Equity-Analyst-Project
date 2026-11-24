@@ -1,0 +1,35 @@
+{
+  "window_days": 60,
+  "factors": [
+    {
+      "name": "absolute_market_value",
+      "weight": 30,
+      "direction": "lower_is_better",
+      "chapter": "Greenblatt, Chapter 3"
+    },
+    {
+      "name": "relative_size_to_parent",
+      "weight": 25,
+      "direction": "lower_is_better",
+      "chapter": "Greenblatt, Chapter 3"
+    },
+    {
+      "name": "first_weeks_return",
+      "weight": 20,
+      "direction": "lower_is_better",
+      "chapter": "Greenblatt, Chapter 3"
+    },
+    {
+      "name": "analyst_coverage",
+      "weight": 15,
+      "direction": "lower_is_better",
+      "chapter": "Greenblatt, Chapter 3"
+    },
+    {
+      "name": "insider_open_market_purchases",
+      "weight": 10,
+      "direction": "higher_is_better",
+      "chapter": "Greenblatt, Chapter 3"
+    }
+  ]
+}

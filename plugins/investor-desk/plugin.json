@@ -1,0 +1,11 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "investor-desk",
+  "version": "0.1.0",
+  "description": "Evidence-bound spinoff screening and investor worksheets for FIN 67110.",
+  "extensions": {
+    "com.openai": {
+      "hooks": "./hooks/hooks.json"
+    }
+  }
+}

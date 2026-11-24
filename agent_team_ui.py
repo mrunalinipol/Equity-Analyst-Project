@@ -22,7 +22,7 @@ PAGE = r"""<!doctype html>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Equity Research Agent Team</title>
+  <title>Investor Desk</title>
   <style>
     :root { color-scheme: light; --ink:#14213d; --muted:#5f6b7a; --line:#d9e2ec; --blue:#175cd3; --paper:#fff; --wash:#f5f8fc; }
     * { box-sizing:border-box; }
@@ -55,15 +55,15 @@ PAGE = r"""<!doctype html>
 <body>
 <main>
   <header>
-    <h1>Equity Research Agent Team</h1>
-    <p>Run the fixed graph, watch every node, and read the evidence marks.</p>
+    <h1>Investor Desk</h1>
+    <p>Run the fixed team, worksheet, and numeric guard from one command.</p>
   </header>
   <section class="card">
     <form id="run-form">
       <label>Ticker <input id="ticker" placeholder="Ticker" required maxlength="10" autocomplete="off"></label>
       <label>Peers (optional) <input id="peers" placeholder="PEER1,PEER2,PEER3" autocomplete="off"></label>
       <label>Filed time (optional) <input id="filed" placeholder="YYYY-MM-DDTHH:MM:SS"></label>
-      <button id="run" type="submit">Run team</button>
+      <button id="run" type="submit">Run desk</button>
     </form>
   </section>
   <section class="card">
@@ -159,7 +159,7 @@ class AgentTeamHandler(BaseHTTPRequestHandler):
             self.send_error(400, str(exc))
             return
 
-        command = [sys.executable, str(ROOT / "crewai_flow.py"), ticker]
+        command = [sys.executable, str(ROOT / "investor_desk.py"), ticker]
         if peers:
             command.extend(["--peers", peers])
         if filed:
@@ -186,14 +186,10 @@ class AgentTeamHandler(BaseHTTPRequestHandler):
                     self._event({"type": "node", "name": line.removeprefix("Node: ")})
                 self._event({"type": "log", "text": line})
             exit_code = process.wait()
-            candidates = [
-                folder
-                for folder in (ROOT / "outputs").glob(f"{ticker}_*")
-                if folder.is_dir() and folder.stat().st_mtime >= started - 2
-            ]
+            candidates = [folder for parent in (ROOT / "runs" / "desk", ROOT / "runs" / "live") if parent.exists() for folder in parent.glob(f"{ticker}_*") if folder.is_dir() and folder.stat().st_mtime >= started - 2]
             if candidates:
                 latest = max(candidates, key=lambda folder: folder.stat().st_mtime)
-                verified_report = latest / "verified_report.md"
+                verified_report = latest / "final_report.md"
                 if verified_report.exists():
                     self._event(
                         {

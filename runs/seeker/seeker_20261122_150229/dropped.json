@@ -1,0 +1,1337 @@
+[
+  {
+    "cik": "2081628",
+    "company": "Rithm Perpetual Life Residential Trust",
+    "form": "10-12G/A",
+    "filed": "2025-11-25",
+    "path": "edgar/data/2081628/0001104659-25-115977.txt",
+    "classification": "dropped",
+    "drop_reason": "fund",
+    "source": {
+      "accession": "0001104659-25-115977",
+      "form": "10-12G/A",
+      "filed": "2025-11-25",
+      "url": "https://www.sec.gov/Archives/edgar/data/2081628/0001104659-25-115977.txt"
+    }
+  },
+  {
+    "cik": "1807689",
+    "company": "FAST CASUAL CONCEPTS, INC.",
+    "form": "10-12G/A",
+    "filed": "2025-12-09",
+    "path": "edgar/data/1807689/0001171520-25-000364.txt",
+    "classification": "dropped",
+    "drop_reason": "no parent distribution of the registrant",
+    "source": {
+      "accession": "0001171520-25-000364",
+      "form": "10-12G/A",
+      "filed": "2025-12-09",
+      "url": "https://www.sec.gov/Archives/edgar/data/1807689/0001171520-25-000364.txt"
+    }
+  },
+  {
+    "cik": "2089126",
+    "company": "PennantPark Private Income Fund",
+    "form": "10-12G/A",
+    "filed": "2025-12-05",
+    "path": "edgar/data/2089126/0001193125-25-309940.txt",
+    "classification": "dropped",
+    "drop_reason": "fund",
+    "source": {
+      "accession": "0001193125-25-309940",
+      "form": "10-12G/A",
+      "filed": "2025-12-05",
+      "url": "https://www.sec.gov/Archives/edgar/data/2089126/0001193125-25-309940.txt"
+    }
+  },
+  {
+    "cik": "2098382",
+    "company": "Primus Acquisition Inc.",
+    "form": "10-12G",
+    "filed": "2025-11-26",
+    "path": "edgar/data/2098382/0001213900-25-115421.txt",
+    "classification": "dropped",
+    "drop_reason": "fund",
+    "source": {
+      "accession": "0001213900-25-115421",
+      "form": "10-12G",
+      "filed": "2025-11-26",
+      "url": "https://www.sec.gov/Archives/edgar/data/2098382/0001213900-25-115421.txt"
+    }
+  },
+  {
+    "cik": "803097",
+    "company": "SportsQuest, Inc.",
+    "form": "10-12G/A",
+    "filed": "2026-05-14",
+    "path": "edgar/data/803097/0001683168-26-003868.txt",
+    "classification": "dropped",
+    "drop_reason": "Form 10 has no information statement",
+    "source": {
+      "accession": "0001683168-26-003868",
+      "form": "10-12G/A",
+      "filed": "2026-05-14",
+      "url": "https://www.sec.gov/Archives/edgar/data/803097/0001683168-26-003868.txt"
+    }
+  },
+  {
+    "cik": "1170839",
+    "company": "HUMITECH INTERNATIONAL GROUP INC",
+    "form": "10-12G",
+    "filed": "2025-12-01",
+    "path": "edgar/data/1170839/0001829126-25-009558.txt",
+    "classification": "dropped",
+    "drop_reason": "no parent distribution of the registrant",
+    "source": {
+      "accession": "0001829126-25-009558",
+      "form": "10-12G",
+      "filed": "2025-12-01",
+      "url": "https://www.sec.gov/Archives/edgar/data/1170839/0001829126-25-009558.txt"
+    }
+  },
+  {
+    "cik": "95572",
+    "company": "KiNRG, Inc.",
+    "form": "10-12G/A",
+    "filed": "2026-01-23",
+    "path": "edgar/data/95572/0001213900-26-007267.txt",
+    "classification": "dropped",
+    "drop_reason": "no parent distribution of the registrant",
+    "source": {
+      "accession": "0001213900-26-007267",
+      "form": "10-12G/A",
+      "filed": "2026-01-23",
+      "url": "https://www.sec.gov/Archives/edgar/data/95572/0001213900-26-007267.txt"
+    }
+  },
+  {
+    "cik": "1160420",
+    "company": "Adia Nutrition, Inc.",
+    "form": "10-12G",
+    "filed": "2025-12-05",
+    "path": "edgar/data/1160420/0001683168-25-008925.txt",
+    "classification": "dropped",
+    "drop_reason": "Form 10 has no information statement",
+    "source": {
+      "accession": "0001683168-25-008925",
+      "form": "10-12G",
+      "filed": "2025-12-05",
+      "url": "https://www.sec.gov/Archives/edgar/data/1160420/0001683168-25-008925.txt"
+    }
+  },
+  {
+    "cik": "2027033",
+    "company": "Eagle Point Trinity Senior Secured Lending Co",
+    "form": "10-12G/A",
+    "filed": "2025-12-05",
+    "path": "edgar/data/2027033/0001104659-25-118913.txt",
+    "classification": "dropped",
+    "drop_reason": "fund",
+    "source": {
+      "accession": "0001104659-25-118913",
+      "form": "10-12G/A",
+      "filed": "2025-12-05",
+      "url": "https://www.sec.gov/Archives/edgar/data/2027033/0001104659-25-118913.txt"
+    }
+  },
+  {
+    "cik": "2029297",
+    "company": "Grayscale Bittensor Trust (TAO)",
+    "form": "10-12G/A",
+    "filed": "2025-12-09",
+    "path": "edgar/data/2029297/0001193125-25-312006.txt",
+    "classification": "dropped",
+    "drop_reason": "fund",
+    "source": {
+      "accession": "0001193125-25-312006",
+      "form": "10-12G/A",
+      "filed": "2025-12-09",
+      "url": "https://www.sec.gov/Archives/edgar/data/2029297/0001193125-25-312006.txt"
+    }
+  },
+  {
+    "cik": "1192323",
+    "company": "Superstar Platforms Inc.",
+    "form": "10-12G/A",
+    "filed": "2025-12-15",
+    "path": "edgar/data/1192323/0001493152-25-027728.txt",
+    "classification": "dropped",
+    "drop_reason": "Form 10 has no information statement",
+    "source": {
+      "accession": "0001493152-25-027728",
+      "form": "10-12G/A",
+      "filed": "2025-12-15",
+      "url": "https://www.sec.gov/Archives/edgar/data/1192323/0001493152-25-027728.txt"
+    }
+  },
+  {
+    "cik": "2046946",
+    "company": "Ares Sports, Media & Entertainment Opportunities LP",
+    "form": "10-12G/A",
+    "filed": "2025-12-15",
+    "path": "edgar/data/2046946/0001104659-25-121226.txt",
+    "classification": "dropped",
+    "drop_reason": "fund",
+    "source": {
+      "accession": "0001104659-25-121226",
+      "form": "10-12G/A",
+      "filed": "2025-12-15",
+      "url": "https://www.sec.gov/Archives/edgar/data/2046946/0001104659-25-121226.txt"
+    }
+  },
+  {
+    "cik": "2061174",
+    "company": "Sound Point Direct Lending BDC",
+    "form": "10-12G/A",
+    "filed": "2026-02-12",
+    "path": "edgar/data/2061174/0001829126-26-001261.txt",
+    "classification": "dropped",
+    "drop_reason": "fund",
+    "source": {
+      "accession": "0001829126-26-001261",
+      "form": "10-12G/A",
+      "filed": "2026-02-12",
+      "url": "https://www.sec.gov/Archives/edgar/data/2061174/0001829126-26-001261.txt"
+    }
+  },
+  {
+    "cik": "1465311",
+    "company": "Zicix Corp",
+    "form": "10-12G/A",
+    "filed": "2025-12-16",
+    "path": "edgar/data/1465311/0001683168-25-009184.txt",
+    "classification": "dropped",
+    "drop_reason": "Form 10 has no information statement",
+    "source": {
+      "accession": "0001683168-25-009184",
+      "form": "10-12G/A",
+      "filed": "2025-12-16",
+      "url": "https://www.sec.gov/Archives/edgar/data/1465311/0001683168-25-009184.txt"
+    }
+  },
+  {
+    "cik": "1938649",
+    "company": "Partners Group Lending Fund, LLC",
+    "form": "10-12G/A",
+    "filed": "2025-12-19",
+    "path": "edgar/data/1938649/0001398344-25-022745.txt",
+    "classification": "dropped",
+    "drop_reason": "fund",
+    "source": {
+      "accession": "0001398344-25-022745",
+      "form": "10-12G/A",
+      "filed": "2025-12-19",
+      "url": "https://www.sec.gov/Archives/edgar/data/1938649/0001398344-25-022745.txt"
+    }
+  },
+  {
+    "cik": "1977837",
+    "company": "MADE IN USA INC.",
+    "form": "10-12G",
+    "filed": "2025-12-19",
+    "path": "edgar/data/1977837/0001683168-25-009285.txt",
+    "classification": "dropped",
+    "drop_reason": "Form 10 has no information statement",
+    "source": {
+      "accession": "0001683168-25-009285",
+      "form": "10-12G",
+      "filed": "2025-12-19",
+      "url": "https://www.sec.gov/Archives/edgar/data/1977837/0001683168-25-009285.txt"
+    }
+  },
+  {
+    "cik": "2025369",
+    "company": "Third Point Private Capital Partners",
+    "form": "10-12G/A",
+    "filed": "2026-01-05",
+    "path": "edgar/data/2025369/0001104659-26-000253.txt",
+    "classification": "dropped",
+    "drop_reason": "fund",
+    "source": {
+      "accession": "0001104659-26-000253",
+      "form": "10-12G/A",
+      "filed": "2026-01-05",
+      "url": "https://www.sec.gov/Archives/edgar/data/2025369/0001104659-26-000253.txt"
+    }
+  },
+  {
+    "cik": "2074450",
+    "company": "Apollo IG Core Replacement, L.P.",
+    "form": "10-12G/A",
+    "filed": "2025-12-19",
+    "path": "edgar/data/2074450/0001193125-25-326963.txt",
+    "classification": "dropped",
+    "drop_reason": "fund",
+    "source": {
+      "accession": "0001193125-25-326963",
+      "form": "10-12G/A",
+      "filed": "2025-12-19",
+      "url": "https://www.sec.gov/Archives/edgar/data/2074450/0001193125-25-326963.txt"
+    }
+  },
+  {
+    "cik": "2082557",
+    "company": "Golub Capital Private Income Fund S",
+    "form": "10-12G/A",
+    "filed": "2026-03-24",
+    "path": "edgar/data/2082557/0001104659-26-033965.txt",
+    "classification": "dropped",
+    "drop_reason": "fund",
+    "source": {
+      "accession": "0001104659-26-033965",
+      "form": "10-12G/A",
+      "filed": "2026-03-24",
+      "url": "https://www.sec.gov/Archives/edgar/data/2082557/0001104659-26-033965.txt"
+    }
+  },
+  {
+    "cik": "2082559",
+    "company": "Golub Capital Private Income Fund I",
+    "form": "10-12G/A",
+    "filed": "2026-03-24",
+    "path": "edgar/data/2082559/0001104659-26-033964.txt",
+    "classification": "dropped",
+    "drop_reason": "fund",
+    "source": {
+      "accession": "0001104659-26-033964",
+      "form": "10-12G/A",
+      "filed": "2026-03-24",
+      "url": "https://www.sec.gov/Archives/edgar/data/2082559/0001104659-26-033964.txt"
+    }
+  },
+  {
+    "cik": "2096330",
+    "company": "CVC-PE Global Private Equity Fund, LP",
+    "form": "10-12G/A",
+    "filed": "2026-02-18",
+    "path": "edgar/data/2096330/0001193125-26-057161.txt",
+    "classification": "dropped",
+    "drop_reason": "fund",
+    "source": {
+      "accession": "0001193125-26-057161",
+      "form": "10-12G/A",
+      "filed": "2026-02-18",
+      "url": "https://www.sec.gov/Archives/edgar/data/2096330/0001193125-26-057161.txt"
+    }
+  },
+  {
+    "cik": "2056516",
+    "company": "CIFC Direct Lending Evergreen Fund",
+    "form": "10-12G/A",
+    "filed": "2026-07-17",
+    "path": "edgar/data/2056516/0001193125-26-307369.txt",
+    "classification": "dropped",
+    "drop_reason": "fund",
+    "source": {
+      "accession": "0001193125-26-307369",
+      "form": "10-12G/A",
+      "filed": "2026-07-17",
+      "url": "https://www.sec.gov/Archives/edgar/data/2056516/0001193125-26-307369.txt"
+    }
+  },
+  {
+    "cik": "1070789",
+    "company": "HyOrc Corp",
+    "form": "10-12G/A",
+    "filed": "2026-03-23",
+    "path": "edgar/data/1070789/0001493152-26-012036.txt",
+    "classification": "dropped",
+    "drop_reason": "Form 10 has no information statement",
+    "source": {
+      "accession": "0001493152-26-012036",
+      "form": "10-12G/A",
+      "filed": "2026-03-23",
+      "url": "https://www.sec.gov/Archives/edgar/data/1070789/0001493152-26-012036.txt"
+    }
+  },
+  {
+    "cik": "2083477",
+    "company": "APS BDC, LLC",
+    "form": "10-12G/A",
+    "filed": "2026-02-03",
+    "path": "edgar/data/2083477/0001193125-26-035874.txt",
+    "classification": "dropped",
+    "drop_reason": "fund",
+    "source": {
+      "accession": "0001193125-26-035874",
+      "form": "10-12G/A",
+      "filed": "2026-02-03",
+      "url": "https://www.sec.gov/Archives/edgar/data/2083477/0001193125-26-035874.txt"
+    }
+  },
+  {
+    "cik": "1984739",
+    "company": "Investcorp US Private Credit BDC II",
+    "form": "10-12G/A",
+    "filed": "2026-03-04",
+    "path": "edgar/data/1984739/0001193125-26-089532.txt",
+    "classification": "dropped",
+    "drop_reason": "fund",
+    "source": {
+      "accession": "0001193125-26-089532",
+      "form": "10-12G/A",
+      "filed": "2026-03-04",
+      "url": "https://www.sec.gov/Archives/edgar/data/1984739/0001193125-26-089532.txt"
+    }
+  },
+  {
+    "cik": "2089975",
+    "company": "HPS Real Assets Lending Co LP",
+    "form": "10-12G/A",
+    "filed": "2026-04-24",
+    "path": "edgar/data/2089975/0001193125-26-177671.txt",
+    "classification": "dropped",
+    "drop_reason": "fund",
+    "source": {
+      "accession": "0001193125-26-177671",
+      "form": "10-12G/A",
+      "filed": "2026-04-24",
+      "url": "https://www.sec.gov/Archives/edgar/data/2089975/0001193125-26-177671.txt"
+    }
+  },
+  {
+    "cik": "2095486",
+    "company": "Blackstone Multi-Strategy Hedge Fund L.P.",
+    "form": "10-12G/A",
+    "filed": "2026-01-15",
+    "path": "edgar/data/2095486/0001193125-26-014271.txt",
+    "classification": "dropped",
+    "drop_reason": "fund",
+    "source": {
+      "accession": "0001193125-26-014271",
+      "form": "10-12G/A",
+      "filed": "2026-01-15",
+      "url": "https://www.sec.gov/Archives/edgar/data/2095486/0001193125-26-014271.txt"
+    }
+  },
+  {
+    "cik": "2082247",
+    "company": "FedEx Freight Holding Company, Inc.",
+    "form": "10-12B/A",
+    "filed": "2026-04-10",
+    "path": "edgar/data/2082247/0001104659-26-041977.txt",
+    "classification": "dropped",
+    "drop_reason": "no parent distribution of the registrant",
+    "source": {
+      "accession": "0001104659-26-041977",
+      "form": "10-12B/A",
+      "filed": "2026-04-10",
+      "url": "https://www.sec.gov/Archives/edgar/data/2082247/0001104659-26-041977.txt"
+    }
+  },
+  {
+    "cik": "2083785",
+    "company": "Sunbelt Rentals Holdings, Inc.",
+    "form": "10-12B/A",
+    "filed": "2026-02-13",
+    "path": "edgar/data/2083785/0001193125-26-050612.txt",
+    "classification": "dropped",
+    "drop_reason": "Form 10 has no information statement",
+    "source": {
+      "accession": "0001193125-26-050612",
+      "form": "10-12B/A",
+      "filed": "2026-02-13",
+      "url": "https://www.sec.gov/Archives/edgar/data/2083785/0001193125-26-050612.txt"
+    }
+  },
+  {
+    "cik": "2066811",
+    "company": "TCW SPECIALTY LENDING LLC",
+    "form": "10-12G/A",
+    "filed": "2026-03-31",
+    "path": "edgar/data/2066811/0001193125-26-134548.txt",
+    "classification": "dropped",
+    "drop_reason": "fund",
+    "source": {
+      "accession": "0001193125-26-134548",
+      "form": "10-12G/A",
+      "filed": "2026-03-31",
+      "url": "https://www.sec.gov/Archives/edgar/data/2066811/0001193125-26-134548.txt"
+    }
+  },
+  {
+    "cik": "2033382",
+    "company": "Silver Point Private Credit Fund",
+    "form": "10-12G/A",
+    "filed": "2026-03-31",
+    "path": "edgar/data/2033382/0001193125-26-134080.txt",
+    "classification": "dropped",
+    "drop_reason": "fund",
+    "source": {
+      "accession": "0001193125-26-134080",
+      "form": "10-12G/A",
+      "filed": "2026-03-31",
+      "url": "https://www.sec.gov/Archives/edgar/data/2033382/0001193125-26-134080.txt"
+    }
+  },
+  {
+    "cik": "2102386",
+    "company": "Shefford Small Business, Inc.",
+    "form": "10-12G/A",
+    "filed": "2026-04-01",
+    "path": "edgar/data/2102386/0001477932-26-001917.txt",
+    "classification": "dropped",
+    "drop_reason": "Form 10 has no information statement",
+    "source": {
+      "accession": "0001477932-26-001917",
+      "form": "10-12G/A",
+      "filed": "2026-04-01",
+      "url": "https://www.sec.gov/Archives/edgar/data/2102386/0001477932-26-001917.txt"
+    }
+  },
+  {
+    "cik": "2107057",
+    "company": "TCW Specialty Lending IX LLC",
+    "form": "10-12G/A",
+    "filed": "2026-03-19",
+    "path": "edgar/data/2107057/0001193125-26-116167.txt",
+    "classification": "dropped",
+    "drop_reason": "fund",
+    "source": {
+      "accession": "0001193125-26-116167",
+      "form": "10-12G/A",
+      "filed": "2026-03-19",
+      "url": "https://www.sec.gov/Archives/edgar/data/2107057/0001193125-26-116167.txt"
+    }
+  },
+  {
+    "cik": "2108121",
+    "company": "JDEV Acquisition Corp",
+    "form": "10-12G/A",
+    "filed": "2026-03-27",
+    "path": "edgar/data/2108121/0001213900-26-035633.txt",
+    "classification": "dropped",
+    "drop_reason": "Form 10 has no information statement",
+    "source": {
+      "accession": "0001213900-26-035633",
+      "form": "10-12G/A",
+      "filed": "2026-03-27",
+      "url": "https://www.sec.gov/Archives/edgar/data/2108121/0001213900-26-035633.txt"
+    }
+  },
+  {
+    "cik": "2107762",
+    "company": "HPS Net Lease Income REIT",
+    "form": "10-12G/A",
+    "filed": "2026-04-09",
+    "path": "edgar/data/2107762/0001193125-26-149886.txt",
+    "classification": "dropped",
+    "drop_reason": "fund",
+    "source": {
+      "accession": "0001193125-26-149886",
+      "form": "10-12G/A",
+      "filed": "2026-04-09",
+      "url": "https://www.sec.gov/Archives/edgar/data/2107762/0001193125-26-149886.txt"
+    }
+  },
+  {
+    "cik": "1711141",
+    "company": "Leef Brands Inc.",
+    "form": "10-12G/A",
+    "filed": "2026-03-26",
+    "path": "edgar/data/1711141/0001493152-26-012756.txt",
+    "classification": "dropped",
+    "drop_reason": "no parent distribution of the registrant",
+    "source": {
+      "accession": "0001493152-26-012756",
+      "form": "10-12G/A",
+      "filed": "2026-03-26",
+      "url": "https://www.sec.gov/Archives/edgar/data/1711141/0001493152-26-012756.txt"
+    }
+  },
+  {
+    "cik": "1109262",
+    "company": "Allied Energy, Inc.",
+    "form": "10-12G/A",
+    "filed": "2026-02-13",
+    "path": "edgar/data/1109262/0001683168-26-000980.txt",
+    "classification": "dropped",
+    "drop_reason": "no parent distribution of the registrant",
+    "source": {
+      "accession": "0001683168-26-000980",
+      "form": "10-12G/A",
+      "filed": "2026-02-13",
+      "url": "https://www.sec.gov/Archives/edgar/data/1109262/0001683168-26-000980.txt"
+    }
+  },
+  {
+    "cik": "1115864",
+    "company": "ECOMINAS CORP.",
+    "form": "10-12G/A",
+    "filed": "2026-04-09",
+    "path": "edgar/data/1115864/0001477932-26-002091.txt",
+    "classification": "dropped",
+    "drop_reason": "Form 10 has no information statement",
+    "source": {
+      "accession": "0001477932-26-002091",
+      "form": "10-12G/A",
+      "filed": "2026-04-09",
+      "url": "https://www.sec.gov/Archives/edgar/data/1115864/0001477932-26-002091.txt"
+    }
+  },
+  {
+    "cik": "1631463",
+    "company": "Barrel Energy Inc.",
+    "form": "10-12G/A",
+    "filed": "2026-05-08",
+    "path": "edgar/data/1631463/0001477932-26-002858.txt",
+    "classification": "dropped",
+    "drop_reason": "Form 10 has no information statement",
+    "source": {
+      "accession": "0001477932-26-002858",
+      "form": "10-12G/A",
+      "filed": "2026-05-08",
+      "url": "https://www.sec.gov/Archives/edgar/data/1631463/0001477932-26-002858.txt"
+    }
+  },
+  {
+    "cik": "2053365",
+    "company": "Biointra, Corp",
+    "form": "10-12B/A",
+    "filed": "2026-11-05",
+    "path": "edgar/data/2053365/0002053365-26-000007.txt",
+    "classification": "dropped",
+    "drop_reason": "Form 10 has no information statement",
+    "source": {
+      "accession": "0002053365-26-000007",
+      "form": "10-12B/A",
+      "filed": "2026-11-05",
+      "url": "https://www.sec.gov/Archives/edgar/data/2053365/0002053365-26-000007.txt"
+    }
+  },
+  {
+    "cik": "1096296",
+    "company": "MINERALRITE Corp",
+    "form": "10-12G/A",
+    "filed": "2026-03-04",
+    "path": "edgar/data/1096296/0001539497-26-000849.txt",
+    "classification": "dropped",
+    "drop_reason": "Form 10 has no information statement",
+    "source": {
+      "accession": "0001539497-26-000849",
+      "form": "10-12G/A",
+      "filed": "2026-03-04",
+      "url": "https://www.sec.gov/Archives/edgar/data/1096296/0001539497-26-000849.txt"
+    }
+  },
+  {
+    "cik": "1289047",
+    "company": "AI Technology Group Inc.",
+    "form": "10-12G/A",
+    "filed": "2026-03-05",
+    "path": "edgar/data/1289047/0001477932-26-001197.txt",
+    "classification": "dropped",
+    "drop_reason": "no parent distribution of the registrant",
+    "source": {
+      "accession": "0001477932-26-001197",
+      "form": "10-12G/A",
+      "filed": "2026-03-05",
+      "url": "https://www.sec.gov/Archives/edgar/data/1289047/0001477932-26-001197.txt"
+    }
+  },
+  {
+    "cik": "1091326",
+    "company": "BIOMOLECULAR LIFE HOLDINGS, INC.",
+    "form": "10-12G/A",
+    "filed": "2026-10-22",
+    "path": "edgar/data/1091326/0001493152-26-047964.txt",
+    "classification": "dropped",
+    "drop_reason": "Form 10 has no information statement",
+    "source": {
+      "accession": "0001493152-26-047964",
+      "form": "10-12G/A",
+      "filed": "2026-10-22",
+      "url": "https://www.sec.gov/Archives/edgar/data/1091326/0001493152-26-047964.txt"
+    }
+  },
+  {
+    "cik": "96664",
+    "company": "Renewal Fuels, Inc.",
+    "form": "10-12G",
+    "filed": "2026-03-16",
+    "path": "edgar/data/96664/0001079973-26-000309.txt",
+    "classification": "dropped",
+    "drop_reason": "Form 10 has no information statement",
+    "source": {
+      "accession": "0001079973-26-000309",
+      "form": "10-12G",
+      "filed": "2026-03-16",
+      "url": "https://www.sec.gov/Archives/edgar/data/96664/0001079973-26-000309.txt"
+    }
+  },
+  {
+    "cik": "2121708",
+    "company": "Imricor Medical Systems, Inc.",
+    "form": "10-12G/A",
+    "filed": "2026-05-15",
+    "path": "edgar/data/2121708/0001437749-26-017396.txt",
+    "classification": "dropped",
+    "drop_reason": "Form 10 has no information statement",
+    "source": {
+      "accession": "0001437749-26-017396",
+      "form": "10-12G/A",
+      "filed": "2026-05-15",
+      "url": "https://www.sec.gov/Archives/edgar/data/2121708/0001437749-26-017396.txt"
+    }
+  },
+  {
+    "cik": "2122354",
+    "company": "Third Point Private Capital Income Fund",
+    "form": "10-12G/A",
+    "filed": "2026-09-30",
+    "path": "edgar/data/2122354/0001104659-26-112422.txt",
+    "classification": "dropped",
+    "drop_reason": "fund",
+    "source": {
+      "accession": "0001104659-26-112422",
+      "form": "10-12G/A",
+      "filed": "2026-09-30",
+      "url": "https://www.sec.gov/Archives/edgar/data/2122354/0001104659-26-112422.txt"
+    }
+  },
+  {
+    "cik": "1772918",
+    "company": "ADAMS STREET CREDIT SOLUTIONS FUND",
+    "form": "10-12G/A",
+    "filed": "2026-05-15",
+    "path": "edgar/data/1772918/0001193125-26-227113.txt",
+    "classification": "dropped",
+    "drop_reason": "fund",
+    "source": {
+      "accession": "0001193125-26-227113",
+      "form": "10-12G/A",
+      "filed": "2026-05-15",
+      "url": "https://www.sec.gov/Archives/edgar/data/1772918/0001193125-26-227113.txt"
+    }
+  },
+  {
+    "cik": "2127486",
+    "company": "JLM-WNCO Trust",
+    "form": "10-12G",
+    "filed": "2026-04-07",
+    "path": "edgar/data/2127486/0001437749-26-011469.txt",
+    "classification": "dropped",
+    "drop_reason": "Form 10 has no information statement",
+    "source": {
+      "accession": "0001437749-26-011469",
+      "form": "10-12G",
+      "filed": "2026-04-07",
+      "url": "https://www.sec.gov/Archives/edgar/data/2127486/0001437749-26-011469.txt"
+    }
+  },
+  {
+    "cik": "2125316",
+    "company": "Monroe Capital Asset-Backed Finance Company, LP",
+    "form": "10-12G/A",
+    "filed": "2026-09-23",
+    "path": "edgar/data/2125316/0001104659-26-110028.txt",
+    "classification": "dropped",
+    "drop_reason": "fund",
+    "source": {
+      "accession": "0001104659-26-110028",
+      "form": "10-12G/A",
+      "filed": "2026-09-23",
+      "url": "https://www.sec.gov/Archives/edgar/data/2125316/0001104659-26-110028.txt"
+    }
+  },
+  {
+    "cik": "787496",
+    "company": "UBUYHOLDINGS INC",
+    "form": "10-12G",
+    "filed": "2026-04-24",
+    "path": "edgar/data/787496/0001829126-26-003888.txt",
+    "classification": "dropped",
+    "drop_reason": "Form 10 has no information statement",
+    "source": {
+      "accession": "0001829126-26-003888",
+      "form": "10-12G",
+      "filed": "2026-04-24",
+      "url": "https://www.sec.gov/Archives/edgar/data/787496/0001829126-26-003888.txt"
+    }
+  },
+  {
+    "cik": "1953520",
+    "company": "Fidelity Core Real Estate Fund",
+    "form": "10-12G/A",
+    "filed": "2026-06-24",
+    "path": "edgar/data/1953520/0001193125-26-280945.txt",
+    "classification": "dropped",
+    "drop_reason": "fund",
+    "source": {
+      "accession": "0001193125-26-280945",
+      "form": "10-12G/A",
+      "filed": "2026-06-24",
+      "url": "https://www.sec.gov/Archives/edgar/data/1953520/0001193125-26-280945.txt"
+    }
+  },
+  {
+    "cik": "2050229",
+    "company": "Blackstone Infrastructure Strategies (TE) L.P.",
+    "form": "10-12G/A",
+    "filed": "2026-06-23",
+    "path": "edgar/data/2050229/0001193125-26-279443.txt",
+    "classification": "dropped",
+    "drop_reason": "fund",
+    "source": {
+      "accession": "0001193125-26-279443",
+      "form": "10-12G/A",
+      "filed": "2026-06-23",
+      "url": "https://www.sec.gov/Archives/edgar/data/2050229/0001193125-26-279443.txt"
+    }
+  },
+  {
+    "cik": "2097887",
+    "company": "HarbourVest Private Equity Secondaries Fund L.P.",
+    "form": "10-12G/A",
+    "filed": "2026-06-16",
+    "path": "edgar/data/2097887/0001193125-26-272445.txt",
+    "classification": "dropped",
+    "drop_reason": "fund",
+    "source": {
+      "accession": "0001193125-26-272445",
+      "form": "10-12G/A",
+      "filed": "2026-06-16",
+      "url": "https://www.sec.gov/Archives/edgar/data/2097887/0001193125-26-272445.txt"
+    }
+  },
+  {
+    "cik": "2117580",
+    "company": "HarbourVest Private Equity Secondaries Fund (TE) L.P.",
+    "form": "10-12G/A",
+    "filed": "2026-06-16",
+    "path": "edgar/data/2117580/0001193125-26-272456.txt",
+    "classification": "dropped",
+    "drop_reason": "fund",
+    "source": {
+      "accession": "0001193125-26-272456",
+      "form": "10-12G/A",
+      "filed": "2026-06-16",
+      "url": "https://www.sec.gov/Archives/edgar/data/2117580/0001193125-26-272456.txt"
+    }
+  },
+  {
+    "cik": "2011134",
+    "company": "Kioni Holdings Ltd",
+    "form": "10-12B",
+    "filed": "2026-05-05",
+    "path": "edgar/data/2011134/0002011134-26-000009.txt",
+    "classification": "dropped",
+    "drop_reason": "no parent distribution of the registrant",
+    "source": {
+      "accession": "0002011134-26-000009",
+      "form": "10-12B",
+      "filed": "2026-05-05",
+      "url": "https://www.sec.gov/Archives/edgar/data/2011134/0002011134-26-000009.txt"
+    }
+  },
+  {
+    "cik": "2133917",
+    "company": "JBAAM Acquisition Corp II",
+    "form": "10-12G",
+    "filed": "2026-05-13",
+    "path": "edgar/data/2133917/0001731122-26-000719.txt",
+    "classification": "dropped",
+    "drop_reason": "fund",
+    "source": {
+      "accession": "0001731122-26-000719",
+      "form": "10-12G",
+      "filed": "2026-05-13",
+      "url": "https://www.sec.gov/Archives/edgar/data/2133917/0001731122-26-000719.txt"
+    }
+  },
+  {
+    "cik": "1690455",
+    "company": "Feel The World, Inc.",
+    "form": "10-12G",
+    "filed": "2026-07-24",
+    "path": "edgar/data/1690455/0001079973-26-000972.txt",
+    "classification": "dropped",
+    "drop_reason": "no parent distribution of the registrant",
+    "source": {
+      "accession": "0001079973-26-000972",
+      "form": "10-12G",
+      "filed": "2026-07-24",
+      "url": "https://www.sec.gov/Archives/edgar/data/1690455/0001079973-26-000972.txt"
+    }
+  },
+  {
+    "cik": "2119505",
+    "company": "Core University Living Real Estate Income Trust",
+    "form": "10-12G/A",
+    "filed": "2026-07-15",
+    "path": "edgar/data/2119505/0001193125-26-304935.txt",
+    "classification": "dropped",
+    "drop_reason": "fund",
+    "source": {
+      "accession": "0001193125-26-304935",
+      "form": "10-12G/A",
+      "filed": "2026-07-15",
+      "url": "https://www.sec.gov/Archives/edgar/data/2119505/0001193125-26-304935.txt"
+    }
+  },
+  {
+    "cik": "2129664",
+    "company": "Margaree Acquisition Corp.",
+    "form": "10-12G",
+    "filed": "2026-05-18",
+    "path": "edgar/data/2129664/0001213900-26-058540.txt",
+    "classification": "dropped",
+    "drop_reason": "fund",
+    "source": {
+      "accession": "0001213900-26-058540",
+      "form": "10-12G",
+      "filed": "2026-05-18",
+      "url": "https://www.sec.gov/Archives/edgar/data/2129664/0001213900-26-058540.txt"
+    }
+  },
+  {
+    "cik": "1133798",
+    "company": "TX Rail Products, Inc.",
+    "form": "10-12G",
+    "filed": "2026-05-22",
+    "path": "edgar/data/1133798/0001437749-26-018183.txt",
+    "classification": "dropped",
+    "drop_reason": "no parent distribution of the registrant",
+    "source": {
+      "accession": "0001437749-26-018183",
+      "form": "10-12G",
+      "filed": "2026-05-22",
+      "url": "https://www.sec.gov/Archives/edgar/data/1133798/0001437749-26-018183.txt"
+    }
+  },
+  {
+    "cik": "2108359",
+    "company": "BioKey (Cayman), Inc.",
+    "form": "10-12G/A",
+    "filed": "2026-06-22",
+    "path": "edgar/data/2108359/0001213900-26-070604.txt",
+    "classification": "dropped",
+    "drop_reason": "no parent distribution of the registrant",
+    "source": {
+      "accession": "0001213900-26-070604",
+      "form": "10-12G/A",
+      "filed": "2026-06-22",
+      "url": "https://www.sec.gov/Archives/edgar/data/2108359/0001213900-26-070604.txt"
+    }
+  },
+  {
+    "cik": "2112554",
+    "company": "Fidelity Private Credit Co II LLC",
+    "form": "10-12G/A",
+    "filed": "2026-07-24",
+    "path": "edgar/data/2112554/0001193125-26-315714.txt",
+    "classification": "dropped",
+    "drop_reason": "fund",
+    "source": {
+      "accession": "0001193125-26-315714",
+      "form": "10-12G/A",
+      "filed": "2026-07-24",
+      "url": "https://www.sec.gov/Archives/edgar/data/2112554/0001193125-26-315714.txt"
+    }
+  },
+  {
+    "cik": "2062936",
+    "company": "Macquarie Energy Transition Infrastructure Fund, L.P.",
+    "form": "10-12G/A",
+    "filed": "2026-10-08",
+    "path": "edgar/data/2062936/0001213900-26-107833.txt",
+    "classification": "dropped",
+    "drop_reason": "fund",
+    "source": {
+      "accession": "0001213900-26-107833",
+      "form": "10-12G/A",
+      "filed": "2026-10-08",
+      "url": "https://www.sec.gov/Archives/edgar/data/2062936/0001213900-26-107833.txt"
+    }
+  },
+  {
+    "cik": "1881928",
+    "company": "American CryptoFed",
+    "form": "10-12G",
+    "filed": "2026-06-16",
+    "path": "edgar/data/1881928/0001881928-26-000006.txt",
+    "classification": "dropped",
+    "drop_reason": "Form 10 has no information statement",
+    "source": {
+      "accession": "0001881928-26-000006",
+      "form": "10-12G",
+      "filed": "2026-06-16",
+      "url": "https://www.sec.gov/Archives/edgar/data/1881928/0001881928-26-000006.txt"
+    }
+  },
+  {
+    "cik": "1114859",
+    "company": "Glow Holdings, Inc.",
+    "form": "10-12G",
+    "filed": "2026-06-17",
+    "path": "edgar/data/1114859/0001683168-26-004901.txt",
+    "classification": "dropped",
+    "drop_reason": "Form 10 has no information statement",
+    "source": {
+      "accession": "0001683168-26-004901",
+      "form": "10-12G",
+      "filed": "2026-06-17",
+      "url": "https://www.sec.gov/Archives/edgar/data/1114859/0001683168-26-004901.txt"
+    }
+  },
+  {
+    "cik": "1341878",
+    "company": "B-Scada, Inc.",
+    "form": "10-12G/A",
+    "filed": "2026-08-17",
+    "path": "edgar/data/1341878/0001493152-26-038756.txt",
+    "classification": "dropped",
+    "drop_reason": "Form 10 has no information statement",
+    "source": {
+      "accession": "0001493152-26-038756",
+      "form": "10-12G/A",
+      "filed": "2026-08-17",
+      "url": "https://www.sec.gov/Archives/edgar/data/1341878/0001493152-26-038756.txt"
+    }
+  },
+  {
+    "cik": "1365359",
+    "company": "HYDRO POWER TECHNOLOGIES, INC.",
+    "form": "10-12G/A",
+    "filed": "2026-06-29",
+    "path": "edgar/data/1365359/0001376474-26-000461.txt",
+    "classification": "dropped",
+    "drop_reason": "Form 10 has no information statement",
+    "source": {
+      "accession": "0001376474-26-000461",
+      "form": "10-12G/A",
+      "filed": "2026-06-29",
+      "url": "https://www.sec.gov/Archives/edgar/data/1365359/0001376474-26-000461.txt"
+    }
+  },
+  {
+    "cik": "1658678",
+    "company": "BioStem Technologies, Inc.",
+    "form": "10-12B/A",
+    "filed": "2026-08-04",
+    "path": "edgar/data/1658678/0001213900-26-084943.txt",
+    "classification": "dropped",
+    "drop_reason": "Form 10 has no information statement",
+    "source": {
+      "accession": "0001213900-26-084943",
+      "form": "10-12B/A",
+      "filed": "2026-08-04",
+      "url": "https://www.sec.gov/Archives/edgar/data/1658678/0001213900-26-084943.txt"
+    }
+  },
+  {
+    "cik": "1705284",
+    "company": "Private Bancorp of America, Inc.",
+    "form": "10-12B/A",
+    "filed": "2026-07-17",
+    "path": "edgar/data/1705284/0001193125-26-307732.txt",
+    "classification": "dropped",
+    "drop_reason": "Form 10 has no information statement",
+    "source": {
+      "accession": "0001193125-26-307732",
+      "form": "10-12B/A",
+      "filed": "2026-07-17",
+      "url": "https://www.sec.gov/Archives/edgar/data/1705284/0001193125-26-307732.txt"
+    }
+  },
+  {
+    "cik": "2136418",
+    "company": "SLR Secured Specialty Lending Fund",
+    "form": "10-12G/A",
+    "filed": "2026-10-08",
+    "path": "edgar/data/2136418/0001193125-26-417638.txt",
+    "classification": "dropped",
+    "drop_reason": "Form 10 has no information statement",
+    "source": {
+      "accession": "0001193125-26-417638",
+      "form": "10-12G/A",
+      "filed": "2026-10-08",
+      "url": "https://www.sec.gov/Archives/edgar/data/2136418/0001193125-26-417638.txt"
+    }
+  },
+  {
+    "cik": "2088960",
+    "company": "Leach John Peter",
+    "form": "10-12G/A",
+    "filed": "2026-09-03",
+    "path": "edgar/data/2088960/0002088960-26-000009.txt",
+    "classification": "dropped",
+    "drop_reason": "Form 10 has no information statement",
+    "source": {
+      "accession": "0002088960-26-000009",
+      "form": "10-12G/A",
+      "filed": "2026-09-03",
+      "url": "https://www.sec.gov/Archives/edgar/data/2088960/0002088960-26-000009.txt"
+    }
+  },
+  {
+    "cik": "1347491",
+    "company": "ALEXANDER TECH CORP",
+    "form": "10-12B",
+    "filed": "2026-07-30",
+    "path": "edgar/data/1347491/0001347491-26-000004.txt",
+    "classification": "dropped",
+    "drop_reason": "Form 10 has no information statement",
+    "source": {
+      "accession": "0001347491-26-000004",
+      "form": "10-12B",
+      "filed": "2026-07-30",
+      "url": "https://www.sec.gov/Archives/edgar/data/1347491/0001347491-26-000004.txt"
+    }
+  },
+  {
+    "cik": "2050809",
+    "company": "Macquarie Infrastructure Income Opportunities Fund",
+    "form": "10-12G/A",
+    "filed": "2026-09-17",
+    "path": "edgar/data/2050809/0001104659-26-108351.txt",
+    "classification": "dropped",
+    "drop_reason": "fund",
+    "source": {
+      "accession": "0001104659-26-108351",
+      "form": "10-12G/A",
+      "filed": "2026-09-17",
+      "url": "https://www.sec.gov/Archives/edgar/data/2050809/0001104659-26-108351.txt"
+    }
+  },
+  {
+    "cik": "2060192",
+    "company": "G-INFRA LP",
+    "form": "10-12G/A",
+    "filed": "2026-11-20",
+    "path": "edgar/data/2060192/0001193125-26-470331.txt",
+    "classification": "dropped",
+    "drop_reason": "fund",
+    "source": {
+      "accession": "0001193125-26-470331",
+      "form": "10-12G/A",
+      "filed": "2026-11-20",
+      "url": "https://www.sec.gov/Archives/edgar/data/2060192/0001193125-26-470331.txt"
+    }
+  },
+  {
+    "cik": "2060316",
+    "company": "G-Private Equity LP",
+    "form": "10-12G/A",
+    "filed": "2026-11-20",
+    "path": "edgar/data/2060316/0001193125-26-470316.txt",
+    "classification": "dropped",
+    "drop_reason": "fund",
+    "source": {
+      "accession": "0001193125-26-470316",
+      "form": "10-12G/A",
+      "filed": "2026-11-20",
+      "url": "https://www.sec.gov/Archives/edgar/data/2060316/0001193125-26-470316.txt"
+    }
+  },
+  {
+    "cik": "1865120",
+    "company": "Broad Capital Acquisition Corp",
+    "form": "10-12G",
+    "filed": "2026-10-16",
+    "path": "edgar/data/1865120/0001493152-26-047304.txt",
+    "classification": "dropped",
+    "drop_reason": "no parent distribution of the registrant",
+    "source": {
+      "accession": "0001493152-26-047304",
+      "form": "10-12G",
+      "filed": "2026-10-16",
+      "url": "https://www.sec.gov/Archives/edgar/data/1865120/0001493152-26-047304.txt"
+    }
+  },
+  {
+    "cik": "2147245",
+    "company": "Angel Oak Residential Evergreen Trust",
+    "form": "10-12G/A",
+    "filed": "2026-11-04",
+    "path": "edgar/data/2147245/0001104659-26-122722.txt",
+    "classification": "dropped",
+    "drop_reason": "fund",
+    "source": {
+      "accession": "0001104659-26-122722",
+      "form": "10-12G/A",
+      "filed": "2026-11-04",
+      "url": "https://www.sec.gov/Archives/edgar/data/2147245/0001104659-26-122722.txt"
+    }
+  },
+  {
+    "cik": "2105965",
+    "company": "West Coast Community Bancorp",
+    "form": "10-12B",
+    "filed": "2026-08-31",
+    "path": "edgar/data/2105965/0001628280-26-059592.txt",
+    "classification": "dropped",
+    "drop_reason": "Form 10 has no information statement",
+    "source": {
+      "accession": "0001628280-26-059592",
+      "form": "10-12B",
+      "filed": "2026-08-31",
+      "url": "https://www.sec.gov/Archives/edgar/data/2105965/0001628280-26-059592.txt"
+    }
+  },
+  {
+    "cik": "2150214",
+    "company": "JLL Property Finance Trust",
+    "form": "10-12G/A",
+    "filed": "2026-11-13",
+    "path": "edgar/data/2150214/0001628280-26-073915.txt",
+    "classification": "dropped",
+    "drop_reason": "fund",
+    "source": {
+      "accession": "0001628280-26-073915",
+      "form": "10-12G/A",
+      "filed": "2026-11-13",
+      "url": "https://www.sec.gov/Archives/edgar/data/2150214/0001628280-26-073915.txt"
+    }
+  },
+  {
+    "cik": "2133018",
+    "company": "Sagard Private Income Fund Inc.",
+    "form": "10-12G",
+    "filed": "2026-10-28",
+    "path": "edgar/data/2133018/0001193125-26-436342.txt",
+    "classification": "dropped",
+    "drop_reason": "fund",
+    "source": {
+      "accession": "0001193125-26-436342",
+      "form": "10-12G",
+      "filed": "2026-10-28",
+      "url": "https://www.sec.gov/Archives/edgar/data/2133018/0001193125-26-436342.txt"
+    }
+  },
+  {
+    "cik": "758938",
+    "company": "QUALSTAR CORP",
+    "form": "10-12G",
+    "filed": "2026-11-04",
+    "path": "edgar/data/758938/0001096906-26-001670.txt",
+    "classification": "dropped",
+    "drop_reason": "Form 10 has no information statement",
+    "source": {
+      "accession": "0001096906-26-001670",
+      "form": "10-12G",
+      "filed": "2026-11-04",
+      "url": "https://www.sec.gov/Archives/edgar/data/758938/0001096906-26-001670.txt"
+    }
+  },
+  {
+    "cik": "2069925",
+    "company": "American Antimony Corp.",
+    "form": "10-12G",
+    "filed": "2026-11-06",
+    "path": "edgar/data/2069925/0001683168-26-008363.txt",
+    "classification": "dropped",
+    "drop_reason": "fund",
+    "source": {
+      "accession": "0001683168-26-008363",
+      "form": "10-12G",
+      "filed": "2026-11-06",
+      "url": "https://www.sec.gov/Archives/edgar/data/2069925/0001683168-26-008363.txt"
+    }
+  },
+  {
+    "cik": "2113098",
+    "company": "NEXROC Group, Inc.",
+    "form": "10-12G",
+    "filed": "2026-11-10",
+    "path": "edgar/data/2113098/0002113098-26-000025.txt",
+    "classification": "dropped",
+    "drop_reason": "Form 10 has no information statement",
+    "source": {
+      "accession": "0002113098-26-000025",
+      "form": "10-12G",
+      "filed": "2026-11-10",
+      "url": "https://www.sec.gov/Archives/edgar/data/2113098/0002113098-26-000025.txt"
+    }
+  },
+  {
+    "cik": "2037250",
+    "company": "TARGATEK, INC.",
+    "form": "10-12G",
+    "filed": "2026-11-12",
+    "path": "edgar/data/2037250/0001096906-26-001725.txt",
+    "classification": "dropped",
+    "drop_reason": "Form 10 has no information statement",
+    "source": {
+      "accession": "0001096906-26-001725",
+      "form": "10-12G",
+      "filed": "2026-11-12",
+      "url": "https://www.sec.gov/Archives/edgar/data/2037250/0001096906-26-001725.txt"
+    }
+  },
+  {
+    "cik": "2142568",
+    "company": "Navesink Acquisition Corp",
+    "form": "10-12G",
+    "filed": "2026-11-12",
+    "path": "edgar/data/2142568/0001213900-26-118729.txt",
+    "classification": "dropped",
+    "drop_reason": "Form 10 has no information statement",
+    "source": {
+      "accession": "0001213900-26-118729",
+      "form": "10-12G",
+      "filed": "2026-11-12",
+      "url": "https://www.sec.gov/Archives/edgar/data/2142568/0001213900-26-118729.txt"
+    }
+  },
+  {
+    "cik": "2145729",
+    "company": "American Residential Housing Trust",
+    "form": "10-12G",
+    "filed": "2026-11-12",
+    "path": "edgar/data/2145729/0001140361-26-043474.txt",
+    "classification": "dropped",
+    "drop_reason": "fund",
+    "source": {
+      "accession": "0001140361-26-043474",
+      "form": "10-12G",
+      "filed": "2026-11-12",
+      "url": "https://www.sec.gov/Archives/edgar/data/2145729/0001140361-26-043474.txt"
+    }
+  },
+  {
+    "cik": "2159316",
+    "company": "Garry Oak Capital BDC LLC",
+    "form": "10-12G",
+    "filed": "2026-11-17",
+    "path": "edgar/data/2159316/0001104659-26-129080.txt",
+    "classification": "dropped",
+    "drop_reason": "fund",
+    "source": {
+      "accession": "0001104659-26-129080",
+      "form": "10-12G",
+      "filed": "2026-11-17",
+      "url": "https://www.sec.gov/Archives/edgar/data/2159316/0001104659-26-129080.txt"
+    }
+  },
+  {
+    "cik": "2163809",
+    "company": "Pretium Housing Income Trust",
+    "form": "10-12G",
+    "filed": "2026-11-19",
+    "path": "edgar/data/2163809/0001104659-26-130190.txt",
+    "classification": "dropped",
+    "drop_reason": "fund",
+    "source": {
+      "accession": "0001104659-26-130190",
+      "form": "10-12G",
+      "filed": "2026-11-19",
+      "url": "https://www.sec.gov/Archives/edgar/data/2163809/0001104659-26-130190.txt"
+    }
+  },
+  {
+    "cik": "1858206",
+    "company": "Pacaso Inc.",
+    "form": "10-12G",
+    "filed": "2026-11-20",
+    "path": "edgar/data/1858206/0001493152-26-053563.txt",
+    "classification": "dropped",
+    "drop_reason": "no parent distribution of the registrant",
+    "source": {
+      "accession": "0001493152-26-053563",
+      "form": "10-12G",
+      "filed": "2026-11-20",
+      "url": "https://www.sec.gov/Archives/edgar/data/1858206/0001493152-26-053563.txt"
+    }
+  }
+]
